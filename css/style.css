@@ -54,7 +54,7 @@ color:#ffd54f;
 .hero{
 height:90vh;
 background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-url("../images/hero.jpg");
+url("../images/hero.jpg?v=2");;
 background-size:cover;
 background-position:center;
 display:flex;
