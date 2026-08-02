@@ -51,32 +51,59 @@ nav a:hover{
 color:#ffd54f;
 }
 
-.hero{
-height:90vh;
-background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-url("../images/hero.jpg?v=2");;
-background-size:cover;
-background-position:center;
+..hero{
+height:100vh;
+background:url("../images/hero.jpg") center center/cover no-repeat;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.hero-overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.55);
 display:flex;
 justify-content:center;
 align-items:center;
-text-align:center;
 padding:20px;
 }
 
 .hero-text{
-color:white;
-max-width:700px;
+text-align:center;
+color:#fff;
+max-width:800px;
 }
 
-.hero-text h2{
-font-size:52px;
+.hero-text h1{
+font-size:56px;
 margin-bottom:20px;
 }
 
 .hero-text p{
-font-size:20px;
-margin-bottom:30px;
+font-size:22px;
+margin-bottom:35px;
+line-height:1.6;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn-secondary{
+background:#ffffff;
+color:#b11226;
+}
+
+.btn-secondary:hover{
+background:#dddddd;
 }
 
 .btn{
