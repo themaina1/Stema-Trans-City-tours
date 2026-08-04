@@ -160,13 +160,54 @@ business travellers and corporate clients.
 </section>
 <section class="cta">
 
-<h2>Ready To Explore Nairobi?</h2>
+    <h2>Book Your Tour or Transfer</h2>
 
-<p>Book your Nairobi City Tour or Airport Transfer today.</p>
+    <p>
+        Fill in the form below and we'll contact you shortly to confirm your booking.
+    </p>
 
-<a href="booking.html" class="btn">
-Book Now
-</a>
+    <form action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST" class="booking-form">
+
+        <input type="hidden" name="_subject" value="New Booking Request - Stema Trans">
+        <input type="hidden" name="_captcha" value="false">
+
+        <input type="text" name="Full Name" placeholder="Full Name" required>
+
+        <input type="tel" name="Phone Number" placeholder="Phone Number" required>
+
+        <input type="email" name="Email" placeholder="Email Address">
+
+        <select name="Service" required>
+            <option value="">Select Service</option>
+            <option>Nairobi City Tour</option>
+            <option>Airport Transfer</option>
+            <option>Hotel Transfer</option>
+            <option>Giraffe Centre Tour</option>
+            <option>Karen Blixen Museum</option>
+            <option>Private Hire</option>
+        </select>
+
+        <select name="Vehicle">
+            <option value="">Preferred Vehicle</option>
+            <option>Tour Land Cruiser</option>
+            <option>Tour Van</option>
+        </select>
+
+        <input type="date" name="Travel Date">
+
+        <input type="time" name="Pickup Time">
+
+        <input type="number" name="Passengers" placeholder="Number of Passengers">
+
+        <input type="text" name="Pickup Location" placeholder="Pickup Location">
+
+        <textarea name="Message" placeholder="Special Requests" rows="5"></textarea>
+
+        <button type="submit" class="btn">
+            Book Now
+        </button>
+
+    </form>
 
 </section>
 <footer>
