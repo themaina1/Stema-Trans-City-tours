@@ -272,3 +272,62 @@ max-width:320px;
 text-align:center;
 }
 }
+/* BOOKING FORM */
+
+.booking-form{
+    max-width:600px;
+    margin:30px auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea{
+    width:100%;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:16px;
+    font-family:inherit;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus{
+    outline:none;
+    border-color:#b11226;
+}
+
+.booking-form button{
+    background:#b11226;
+    color:#fff;
+    border:none;
+    padding:15px;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.booking-form button:hover{
+    background:#8d0e1f;
+}
+
+.cta{
+    background:#b11226;
+    color:#fff;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.cta h2{
+    color:#fff;
+    margin-bottom:15px;
+}
+
+.cta p{
+    margin-bottom:30px;
+}
