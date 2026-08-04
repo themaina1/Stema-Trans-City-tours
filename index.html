@@ -159,23 +159,45 @@ business travellers and corporate clients.
     </div>
 </section>
 <section class="cta">
+    <h2>Book Your Tour or Transfer</h2>
+    <p>Fill in the form below and we'll contact you shortly to confirm your booking.</p>
 
-<h2>Ready To Explore Nairobi?</h2>
+    <form action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST" class="booking-form">
 
-<p>
+        <input type="text" name="name" placeholder="Full Name" required>
 
-Book your Nairobi City Tour or Airport Transfer today.
+        <input type="tel" name="phone" placeholder="Phone Number" required>
 
-</p>
+        <input type="email" name="email" placeholder="Email Address">
 
-<a href="https://wa.me/254722910913" class="btn">
+        <select name="service" required>
+            <option value="">Select Service</option>
+            <option>Nairobi City Tour</option>
+            <option>Airport Transfer</option>
+            <option>Hotel Transfer</option>
+            <option>Giraffe Centre Tour</option>
+            <option>Karen Blixen Museum</option>
+            <option>Private Hire</option>
+        </select>
 
-Book Now
+        <select name="vehicle">
+            <option>Preferred Vehicle</option>
+            <option>Tour Land Cruiser</option>
+            <option>Tour Van</option>
+        </select>
 
-</a>
+        <input type="date" name="date">
 
+        <input type="number" name="guests" placeholder="Number of Guests">
+
+        <textarea name="message" rows="5" placeholder="Additional Information"></textarea>
+
+        <button type="submit" class="btn">
+            Book Now
+        </button>
+
+    </form>
 </section>
-
 <footer>
 
 <p>
