@@ -3,74 +3,149 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Book Your Tour | Stema Trans</title>
+<title>Book Your Tour - STEMA TRANS</title>
 
 <link rel="stylesheet" href="css/style.css">
+
+<style>
+body{
+font-family:Arial,sans-serif;
+margin:0;
+background:#f5f5f5;
+}
+
+header{
+background:#b30d24;
+color:white;
+padding:25px;
+text-align:center;
+}
+
+.booking{
+max-width:700px;
+margin:30px auto;
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+
+.booking h2{
+text-align:center;
+color:#b30d24;
+margin-bottom:10px;
+}
+
+.booking p{
+text-align:center;
+margin-bottom:20px;
+}
+
+.booking input,
+.booking select,
+.booking textarea{
+width:100%;
+padding:14px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:16px;
+box-sizing:border-box;
+}
+
+.booking textarea{
+height:120px;
+resize:vertical;
+}
+
+button{
+width:100%;
+background:#b30d24;
+color:white;
+padding:16px;
+font-size:18px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{
+background:#8d091c;
+}
+
+footer{
+margin-top:40px;
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+}
+</style>
+
 </head>
 
 <body>
 
 <header>
-<div class="logo">
-<h1>Stema Trans</h1>
-<p>Nairobi City Tours & Airport Transfers</p>
-</div>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="gallery.html">Gallery</a>
-<a href="contact.html">Contact</a>
-</nav>
+<h1>STEMA TRANS</h1>
+<p>Professional Nairobi City Tours & Airport Transfers</p>
 </header>
 
-<section class="cta">
+<section class="booking">
 
-<h2>Book Your Tour or Transfer</h2>
+<h2>Book Your Tour</h2>
 
-<p>Please complete the form below and we will contact you shortly.</p>
+<p>Fill in the details below and we will contact you shortly.</p>
 
-<form class="booking-form">
+<form action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST">
 
-<input type="text" placeholder="Full Name" required>
+<input type="text" name="Name" placeholder="Full Name" required>
 
-<input type="tel" placeholder="Phone Number" required>
+<input type="tel" name="Phone" placeholder="Phone Number" required>
 
-<input type="email" placeholder="Email Address">
+<input type="email" name="Email" placeholder="Email Address">
 
-<select required>
+<select name="Service" required>
 <option value="">Select Service</option>
 <option>Nairobi City Tour</option>
 <option>Airport Transfer</option>
 <option>Hotel Transfer</option>
 <option>Giraffe Centre Tour</option>
 <option>Karen Blixen Tour</option>
-<option>Nairobi National Park</option>
 <option>Private Hire</option>
 </select>
 
-<select>
-<option>Preferred Vehicle</option>
-<option>Tour Land Cruiser</option>
+<select name="Vehicle">
+<option value="">Preferred Vehicle</option>
 <option>Tour Van</option>
+<option>Land Cruiser</option>
+<option>Executive Sedan</option>
 </select>
 
-<input type="date">
+<input type="date" name="Date">
 
-<input type="number" placeholder="Number of Guests">
+<input type="time" name="Time">
 
-<textarea rows="6" placeholder="Special Requests"></textarea>
+<input type="number" name="Passengers" placeholder="Number of Passengers">
 
-<button class="btn" type="submit">
-Submit Booking
-</button>
+<input type="text" name="Pickup" placeholder="Pickup Location">
+
+<input type="text" name="Destination" placeholder="Destination">
+
+<textarea name="Message" placeholder="Special Requests"></textarea>
+
+<button type="submit">Submit Booking</button>
 
 </form>
 
 </section>
 
 <footer>
-<p>&copy; 2026 Stema Trans. All Rights Reserved.</p>
+
+<p>© 2026 STEMA TRANS</p>
+
+<p>Nairobi, Kenya</p>
+
 </footer>
 
 </body>
