@@ -295,7 +295,13 @@ if(price===""){
     price = "Please select a service and vehicle.";
 }
 
-priceBox.innerHTML = "<strong>Transport Charge:</strong> " + price;
+priceBox.innerHTML =
+"<strong>Booking Summary</strong><br><br>" +
+"<strong>Service:</strong> " + (service || "Not selected") + "<br>" +
+"<strong>Vehicle:</strong> " + (vehicle || "Not selected") + "<br>" +
+"<strong>Transport Charge:</strong> " + price + "<br><br>" +
+"<small>✔ Price shown is for the entire vehicle (1–7 passengers).<br>" +
+"✔ Park entry fees and attraction tickets are NOT included.</small>";
 }
 
 vehicleSelect.addEventListener("change", updatePrice);
