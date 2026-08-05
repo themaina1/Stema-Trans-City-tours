@@ -161,7 +161,7 @@ padding:20px;
 <textarea name="Message" placeholder="Special Requests"></textarea>
 
 <button type="submit">Submit Booking</button>
-
+<input type="hidden" id="bookingRef" name="Booking Reference">
 </form>
 
 </section>
@@ -192,6 +192,19 @@ if (service) {
         serviceSelect.value = decodeURIComponent(service);
     }
 }
+
+// Generate booking reference
+const now = new Date();
+
+const ref =
+    "ST-" +
+    now.getFullYear() +
+    String(now.getMonth() + 1).padStart(2, "0") +
+    String(now.getDate()).padStart(2, "0") +
+    "-" +
+    Math.floor(Math.random() * 9000 + 1000);
+
+document.getElementById("bookingRef").value = ref;
 </script>
 </body>
 </html>
