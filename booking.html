@@ -147,7 +147,9 @@ padding:20px;
 <option>Land Cruiser</option>
 <option>Executive Sedan</option>
 </select>
-
+<p id="priceBox" style="font-weight:bold;color:#b30d24;font-size:18px;margin-top:10px;">
+Transport Charge: Select a vehicle
+</p>
 <input type="date" name="Date">
 
 <input type="time" name="Time">
@@ -179,32 +181,53 @@ const params = new URLSearchParams(window.location.search);
 const vehicle = params.get("vehicle");
 const service = params.get("service");
 
-if (vehicle) {
-    const vehicleSelect = document.querySelector('select[name="Vehicle"]');
-    if (vehicleSelect) {
-        vehicleSelect.value = decodeURIComponent(vehicle);
-    }
+const vehicleSelect = document.querySelector('select[name="Vehicle"]');
+const serviceSelect = document.querySelector('select[name="Service"]');
+const priceBox = document.getElementById("priceBox");
+
+if (vehicle && vehicleSelect) {
+    vehicleSelect.value = decodeURIComponent(vehicle);
 }
 
-if (service) {
-    const serviceSelect = document.querySelector('select[name="Service"]');
-    if (serviceSelect) {
-        serviceSelect.value = decodeURIComponent(service);
-    }
+if (service && serviceSelect) {
+    serviceSelect.value = decodeURIComponent(service);
 }
 
-// Generate booking reference
 const now = new Date();
-
 const ref =
-    "ST-" +
-    now.getFullYear() +
-    String(now.getMonth() + 1).padStart(2, "0") +
-    String(now.getDate()).padStart(2, "0") +
-    "-" +
-    Math.floor(Math.random() * 9000 + 1000);
+"ST-" +
+now.getFullYear() +
+String(now.getMonth()+1).padStart(2,"0") +
+String(now.getDate()).padStart(2,"0") +
+"-" +
+Math.floor(Math.random()*9000+1000);
 
 document.getElementById("bookingRef").value = ref;
+
+function updatePrice() {
+
+if(vehicleSelect.value==="Tour Van"){
+priceBox.innerHTML="Transport Charge: <b>KES 5,500 | USD 43</b> (Per Vehicle)";
+}
+
+else if(vehicleSelect.value==="Land Cruiser"){
+priceBox.innerHTML="Transport Charge: <b>KES 8,500 | USD 66</b> (Per Vehicle)";
+}
+
+else if(vehicleSelect.value==="Executive Sedan"){
+priceBox.innerHTML="Transport Charge: Contact us for quotation";
+}
+
+else{
+priceBox.innerHTML="Transport Charge: Select a vehicle";
+}
+
+}
+
+vehicleSelect.addEventListener("change",updatePrice);
+
+updatePrice();
+
 </script>
 </body>
 </html>
