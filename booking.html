@@ -150,6 +150,19 @@ padding:20px;
 <p id="priceBox" style="font-weight:bold;color:#b30d24;font-size:18px;margin-top:10px;">
 <p style="color:#666;font-size:14px;">
 Transport charges are <strong>per vehicle</strong>. Attraction and park entry fees are charged <strong>per person</strong> and are paid separately unless otherwise stated.
+<div id="bookingSummary" style="margin-top:15px;padding:15px;background:#f8f8f8;border-left:4px solid #b30d24;border-radius:8px;">
+
+<h3 style="margin-top:0;color:#b30d24;">Booking Summary</h3>
+
+<p><strong>Service:</strong> <span id="summaryService">Not selected</span></p>
+
+<p><strong>Vehicle:</strong> <span id="summaryVehicle">Not selected</span></p>
+
+<p><strong>Transport Charge:</strong> <span id="summaryPrice">Select a service and vehicle</span></p>
+
+<p><strong>Booking Reference:</strong> <span id="summaryRef"></span></p>
+
+</div>
 </p>
     Transport Charge: Select a vehicle
 </p>
@@ -191,6 +204,7 @@ const priceBox = document.getElementById("priceBox");
 if (vehicle && vehicleSelect) {
     vehicleSelect.value = decodeURIComponent(vehicle);
 }
+     = ref;
 
 if (service && serviceSelect) {
     serviceSelect.value = decodeURIComponent(service);
@@ -206,7 +220,7 @@ String(now.getDate()).padStart(2,"0") +
 Math.floor(Math.random()*9000+1000);
 
 document.getElementById("bookingRef").value = ref;
-
+document.getElementById("summaryRef").textContent = ref;
 function updatePrice() {
 
 const vehicle = vehicleSelect.value;
