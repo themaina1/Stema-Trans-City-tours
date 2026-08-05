@@ -207,7 +207,15 @@ String(now.getMonth()+1).padStart(2,"0") +
 String(now.getDate()).padStart(2,"0") +
 "-" +
 Math.floor(Math.random()*9000+1000);
+const ref =
+"ST-" +
+now.getFullYear() +
+String(now.getMonth()+1).padStart(2,"0") +
+String(now.getDate()).padStart(2,"0") +
+"-" +
+Math.floor(Math.random()*9000+1000);
 
+document.getElementById("bookingRef").value = ref;
 document.getElementById("bookingRef").value = ref;
 document.getElementById("summaryRef").textContent = ref;
 function updatePrice() {
