@@ -175,12 +175,21 @@ padding:20px;
 </footer>
 <script>
 const params = new URLSearchParams(window.location.search);
+
 const vehicle = params.get("vehicle");
+const service = params.get("service");
 
 if (vehicle) {
-    const select = document.querySelector('select[name="Vehicle"]');
-    if (select) {
-        select.value = decodeURIComponent(vehicle);
+    const vehicleSelect = document.querySelector('select[name="Vehicle"]');
+    if (vehicleSelect) {
+        vehicleSelect.value = decodeURIComponent(vehicle);
+    }
+}
+
+if (service) {
+    const serviceSelect = document.querySelector('select[name="Service"]');
+    if (serviceSelect) {
+        serviceSelect.value = decodeURIComponent(service);
     }
 }
 </script>
