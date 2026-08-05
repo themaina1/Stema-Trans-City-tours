@@ -170,9 +170,19 @@ padding:20px;
 
 <p>© 2026 STEMA TRANS</p>
 
-<p>Nairobi, Kenya</p>
+<p>Nairobi, Kenya</fp>
 
 </footer>
+<script>
+const params = new URLSearchParams(window.location.search);
+const vehicle = params.get("vehicle");
 
+if (vehicle) {
+    const select = document.querySelector('select[name="Vehicle"]');
+    if (select) {
+        select.value = decodeURIComponent(vehicle);
+    }
+}
+</script>
 </body>
 </html>
