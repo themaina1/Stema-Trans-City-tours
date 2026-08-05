@@ -148,7 +148,10 @@ padding:20px;
 <option>Executive Sedan</option>
 </select>
 <p id="priceBox" style="font-weight:bold;color:#b30d24;font-size:18px;margin-top:10px;">
-Transport Charge: Select a vehicle
+<p style="color:#666;font-size:14px;">
+Transport charges are <strong>per vehicle</strong>. Attraction and park entry fees are charged <strong>per person</strong> and are paid separately unless otherwise stated.
+</p>
+    Transport Charge: Select a vehicle
 </p>
 <input type="date" name="Date">
 
@@ -206,25 +209,83 @@ document.getElementById("bookingRef").value = ref;
 
 function updatePrice() {
 
-if(vehicleSelect.value==="Tour Van"){
-priceBox.innerHTML="Transport Charge: <b>KES 5,500 | USD 43</b> (Per Vehicle)";
+const vehicle = vehicleSelect.value;
+const service = serviceSelect.value;
+
+let price = "";
+
+if(service === "Nairobi City Tour"){
+
+    if(vehicle === "Tour Van")
+        price = "KES 5,500 | USD 43 (Per Vehicle)";
+
+    else if(vehicle === "Land Cruiser")
+        price = "KES 8,500 | USD 66 (Per Vehicle)";
 }
 
-else if(vehicleSelect.value==="Land Cruiser"){
-priceBox.innerHTML="Transport Charge: <b>KES 8,500 | USD 66</b> (Per Vehicle)";
+else if(service === "Airport Transfer"){
+
+    if(vehicle === "Tour Van")
+        price = "KES 3,500 | USD 27 (Per Vehicle)";
+
+    else if(vehicle === "Land Cruiser")
+        price = "KES 5,500 | USD 43 (Per Vehicle)";
 }
 
-else if(vehicleSelect.value==="Executive Sedan"){
-priceBox.innerHTML="Transport Charge: Contact us for quotation";
+else if(service === "Giraffe Centre Tour"){
+
+    if(vehicle === "Tour Van")
+        price = "KES 5,500 | USD 43 (Per Vehicle)";
+
+    else if(vehicle === "Land Cruiser")
+        price = "KES 8,500 | USD 66 (Per Vehicle)";
 }
 
-else{
-priceBox.innerHTML="Transport Charge: Select a vehicle";
+else if(service === "Karen Blixen Tour"){
+
+    if(vehicle === "Tour Van")
+        price = "KES 5,500 | USD 43 (Per Vehicle)";
+
+    else if(vehicle === "Land Cruiser")
+        price = "KES 8,500 | USD 66 (Per Vehicle)";
 }
 
+else if(service === "Nairobi National Museum"){
+
+    if(vehicle === "Tour Van")
+        price = "KES 5,500 | USD 43 (Per Vehicle)";
+
+    else if(vehicle === "Land Cruiser")
+        price = "KES 8,500 | USD 66 (Per Vehicle)";
 }
 
-vehicleSelect.addEventListener("change",updatePrice);
+else if(service === "Bomas of Kenya"){
+
+    if(vehicle === "Tour Van")
+        price = "KES 5,500 | USD 43 (Per Vehicle)";
+
+    else if(vehicle === "Land Cruiser")
+        price = "KES 8,500 | USD 66 (Per Vehicle)";
+}
+
+else if(service === "Nairobi National Park"){
+
+    if(vehicle === "Tour Van")
+        price = "KES 8,500 | USD 66 (Per Vehicle)";
+
+    else if(vehicle === "Land Cruiser")
+        price = "KES 12,500 | USD 97 (Per Vehicle)";
+}
+
+if(price===""){
+    price = "Please select a service and vehicle.";
+}
+
+priceBox.innerHTML = "<strong>Transport Charge:</strong> " + price;
+}
+
+vehicleSelect.addEventListener("change", updatePrice);
+serviceSelect.addEventListener("change", updatePrice);
 
 updatePrice();
 
