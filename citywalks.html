@@ -6,144 +6,137 @@
 
 <title>Nairobi City Walks - STEMA TRANS</title>
 
-<link rel="stylesheet" href="css/style.css">
-
 <style>
-body {
+body{
     font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f5f5f5;
+    margin:0;
+    background:#f5f5f5;
+    color:#333;
 }
 
-header {
-    background: #b30d24;
-    color: white;
-    padding: 25px;
-    text-align: center;
+header{
+    background:#b30d24;
+    color:white;
+    text-align:center;
+    padding:30px 15px;
 }
 
-header h1 {
-    margin: 0;
+header h1{
+    margin:0;
+    font-size:32px;
 }
 
-header p {
-    margin: 8px 0 0;
+header p{
+    margin:10px 0 0;
+    font-size:17px;
 }
 
-nav {
-    background: #222;
-    text-align: center;
-    padding: 15px;
+nav{
+    background:#222;
+    text-align:center;
+    padding:15px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 12px;
-    font-weight: bold;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-weight:bold;
 }
 
-.container {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 20px;
+.container{
+    max-width:900px;
+    margin:30px auto;
+    padding:0 15px;
 }
 
-.intro {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-    margin-bottom: 30px;
+.intro{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
 
-.intro h2 {
-    color: #b30d24;
-    font-size: 32px;
+.intro h2{
+    color:#b30d24;
 }
 
-.intro p {
-    font-size: 18px;
-    line-height: 1.7;
-    color: #555;
+.walk{
+    background:white;
+    margin-top:25px;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
 
-.walk-card {
-    background: white;
-    margin-bottom: 25px;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+.walk h2{
+    color:#b30d24;
 }
 
-.walk-card h3 {
-    color: #b30d24;
-    font-size: 25px;
-    margin-top: 0;
+.walk ul{
+    line-height:1.8;
 }
 
-.walk-card p {
-    line-height: 1.6;
+.price-box{
+    background:#f8f8f8;
+    border-left:5px solid #b30d24;
+    padding:18px;
+    margin-top:15px;
 }
 
-.price {
-    font-size: 20px;
-    font-weight: bold;
-    color: #b30d24;
-    margin: 15px 0;
+.price{
+    font-size:20px;
+    font-weight:bold;
+    color:#b30d24;
 }
 
-.walk-card ul {
-    line-height: 1.8;
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    background:white;
 }
 
-.book-btn {
-    display: inline-block;
-    background: #b30d24;
-    color: white;
-    padding: 14px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 10px;
+th,td{
+    padding:14px;
+    border:1px solid #ddd;
+    text-align:center;
 }
 
-.book-btn:hover {
-    background: #8d091c;
+th{
+    background:#b30d24;
+    color:white;
 }
 
-.rate-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
+.book-button{
+    display:inline-block;
+    background:#b30d24;
+    color:white;
+    padding:15px 25px;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    margin-top:15px;
 }
 
-.rate-table th,
-.rate-table td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: center;
+.book-button:hover{
+    background:#8d091c;
 }
 
-.rate-table th {
-    background: #b30d24;
-    color: white;
+.note{
+    background:#fff3cd;
+    padding:15px;
+    border-radius:8px;
+    margin-top:20px;
 }
 
-.note {
-    background: #fafafa;
-    padding: 20px;
-    border-left: 5px solid #b30d24;
-    margin-top: 30px;
-    line-height: 1.7;
-}
-
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
 }
 </style>
 </head>
@@ -151,18 +144,19 @@ footer {
 <body>
 
 <header>
-    <h1>STEMA TRANS</h1>
-    <p>Nairobi City Walks & Experiences</p>
+    <h1>Nairobi City Walks</h1>
+    <p>Discover Nairobi on Foot with STEMA TRANS</p>
 </header>
 
 <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="fleet.html">Fleet</a>
+    <a href="tours.html">Tours</a>
+    <a href="transfers.html">Transfers</a>
     <a href="rates.html">Rates</a>
+    <a href="fleet.html">Fleet</a>
+    <a href="gallery.html">Gallery</a>
     <a href="citywalks.html">City Walks</a>
-    <a href="booking.html">Book Now</a>
     <a href="contact.html">Contact</a>
 </nav>
 
@@ -173,274 +167,139 @@ footer {
 <h2>Explore Nairobi on Foot</h2>
 
 <p>
-Discover Nairobi beyond the usual tourist routes.
-Walk through the heart of the city with a knowledgeable
-local guide and learn about Nairobi's history, culture,
-architecture, people and everyday life.
+Experience Nairobi beyond the vehicle. Our guided city walks introduce
+visitors to the history, culture, architecture, markets and everyday life
+of Kenya's capital.
 </p>
 
 <p>
-Our city walks are suitable for solo travellers, couples,
-families and small groups.
+City walks are ideal for visitors who have a few hours in Nairobi and want
+to experience the city with a knowledgeable local guide.
 </p>
 
 </section>
 
 
-<!-- WALK 1 -->
+<section class="walk">
 
-<!-- WALK 1 -->
-
-<div class="walk-card">
-
-<h3>Nairobi Highlights Walk</h3>
-
-<p>
-Discover the heart of Nairobi on foot with a local guide.
-This relaxed walking experience introduces you to Nairobi's
-landmarks, history, architecture and everyday city life.
-</p>
-
-<p><strong>Duration:</strong> 2 Hours</p>
-
-<p><strong>Group size:</strong> 1–6 people</p>
-
-<p class="price">
-KES 2,600 / USD 20 per person
-</p>
+<h2>Popular City Walk Experiences</h2>
 
 <ul>
-<li>Kenyatta International Convention Centre area</li>
-<li>Parliament surroundings</li>
-<li>City Hall area</li>
-<li>Dedan Kimathi Statue</li>
-<li>Jamia Mosque area</li>
-<li>City Market</li>
-<li>National Archives area</li>
-<li>Nairobi CBD streets</li>
+<li>Nairobi CBD Historical Walk</li>
+<li>City Market & Local Life</li>
+<li>Kenya National Archives & Historical Sites</li>
+<li>Parliament & Government Buildings Area</li>
+<li>Uhuru Park & Central Nairobi</li>
+<li>Tom Mboya Street & Downtown Nairobi</li>
+<li>Local Food & Cultural Experience</li>
+<li>Customized Private City Walks</li>
 </ul>
 
-<p>
-<strong>Meeting point:</strong> Central Nairobi CBD
-</p>
+</section>
+
+
+<section class="walk">
+
+<h2>City Walk Rates</h2>
 
 <p>
-<strong>Includes:</strong> Professional local guide and guided
-walking experience.
+Our city walks are charged <strong>per person</strong>.
 </p>
 
-<p>
-<strong>Excludes:</strong> Attraction entrance fees, food,
-drinks, shopping and personal expenses.
-</p>
-
-<a class="book-btn"
-href="booking.html?service=Nairobi%20Highlights%20Walk">
-Book This Walk
-</a>
-
-</div>
-    <!-- WALK DURATION OPTIONS -->
-
-<div class="walk-card">
-
-<h3>Choose Your Walking Experience</h3>
-
-<table class="rate-table">
+<table>
 
 <tr>
 <th>Duration</th>
-<th>Price per Person</th>
-<th>Best For</th>
+<th>1 Person</th>
+<th>2–3 People</th>
+<th>4–6 People</th>
+<th>7–10 People</th>
 </tr>
 
 <tr>
 <td>2 Hours</td>
-<td>KES 2,600 / USD 20</td>
-<td>Quick Nairobi Highlights</td>
+<td>KES 1,500<br>USD 12</td>
+<td>KES 1,300 pp<br>USD 10 pp</td>
+<td>KES 1,100 pp<br>USD 9 pp</td>
+<td>KES 1,000 pp<br>USD 8 pp</td>
 </tr>
 
 <tr>
 <td>3 Hours</td>
-<td>KES 3,600 / USD 28</td>
-<td>History & Culture</td>
+<td>KES 2,000<br>USD 15</td>
+<td>KES 1,700 pp<br>USD 13 pp</td>
+<td>KES 1,500 pp<br>USD 12 pp</td>
+<td>KES 1,300 pp<br>USD 10 pp</td>
 </tr>
 
 <tr>
 <td>4 Hours</td>
-<td>KES 4,500 / USD 35</td>
-<td>Extended Nairobi Experience</td>
+<td>KES 2,500<br>USD 19</td>
+<td>KES 2,200 pp<br>USD 17 pp</td>
+<td>KES 1,900 pp<br>USD 15 pp</td>
+<td>KES 1,700 pp<br>USD 13 pp</td>
 </tr>
 
 </table>
 
-<p>
-<strong>Group size:</strong> 1–6 people per guide.
-</p>
+<div class="note">
+<strong>Please note:</strong> Rates are for guided walking services.
+Entrance fees, museum tickets, meals, drinks, shopping and other personal
+expenses are not included unless specifically stated.
+</div>
+
+</section>
+
+
+<section class="walk">
+
+<h2>What's Included</h2>
+
+<ul>
+<li>Professional local city guide</li>
+<li>Guided walking tour</li>
+<li>Historical and cultural information</li>
+<li>Flexible route depending on guest interests</li>
+<li>Photo stops at suitable locations</li>
+</ul>
+
+</section>
+
+
+<section class="walk">
+
+<h2>Who Are City Walks For?</h2>
+
+<ul>
+<li>First-time visitors to Nairobi</li>
+<li>Tourists with a few free hours</li>
+<li>Business travellers</li>
+<li>Hotel guests</li>
+<li>Solo travellers</li>
+<li>Couples and families</li>
+<li>Small private groups</li>
+</ul>
+
+</section>
+
+
+<section class="walk" style="text-align:center;">
+
+<h2>Ready to Explore Nairobi?</h2>
 
 <p>
-Larger groups can be arranged on request.
+Choose your preferred duration and group size and contact STEMA TRANS
+to arrange your city walk.
 </p>
 
-<a class="book-btn"
-href="booking.html?service=City%20Walk">
+<a class="book-button" href="booking.html">
 Book a City Walk
 </a>
 
-</div>
-
-
-<!-- WALK 2 -->
-
-<div class="walk-card">
-
-<h3>Nairobi History & Culture Walk</h3>
-
-<p>
-Go deeper into Nairobi's story. Learn how the city developed,
-experience its historic landmarks and discover the people,
-events and cultures that shaped modern Nairobi.
-</p>
-
-<p><strong>Duration:</strong> Approximately 3 Hours</p>
-
-<p><strong>Group size:</strong> 1–6 people</p>
-
-<p class="price">
-From KES 4,500 / USD 35
-</p>
-
-<ul>
-<li>Nairobi's origins and early development</li>
-<li>Colonial-era history</li>
-<li>Kenya's independence story</li>
-<li>Historic buildings and architecture</li>
-<li>Local markets</li>
-<li>Kenyan culture and traditions</li>
-<li>Modern Nairobi life</li>
-</ul>
-
-<a class="book-btn" href="booking.html?service=Nairobi%20History%20%26%20Culture%20Walk">
-Book This Walk
-</a>
+</section>
 
 </div>
 
-
-<!-- WALK 3 -->
-
-<div class="walk-card">
-
-<h3>Nairobi Food & Local Life Walk</h3>
-
-<p>
-Experience Nairobi through its food, markets and everyday
-street life. A great option for visitors who want to see
-how locals eat, shop and move around the city.
-</p>
-
-<p><strong>Duration:</strong> Approximately 3 Hours</p>
-
-<p><strong>Group size:</strong> 1–6 people</p>
-
-<p class="price">
-KES 5,000 / USD 39 per person
-</p>
-
-<ul>
-<li>Local market experience</li>
-<li>Kenyan fruits and snacks</li>
-<li>Introduction to Kenyan foods</li>
-<li>Street-life experience</li>
-<li>Local shopping opportunities</li>
-<li>Kenyan food and culture stories</li>
-</ul>
-
-<p>
-Food and personal purchases are not included unless
-specifically stated.
-</p>
-
-<a class="book-btn" href="booking.html?service=Nairobi%20Food%20%26%20Local%20Life%20Walk">
-Book This Walk
-</a>
-
-</div>
-
-
-<!-- WALK 4 -->
-
-<div class="walk-card">
-
-<h3>Private Custom City Walk</h3>
-
-<p>
-Have something specific you want to see? Create a private
-walking experience based on your interests, available time
-and preferred areas of Nairobi.
-</p>
-
-<p><strong>Minimum duration:</strong> 2 Hours</p>
-
-<p><strong>Rate:</strong></p>
-
-<table class="rate-table">
-
-<tr>
-<th>Duration</th>
-<th>KES</th>
-<th>USD</th>
-</tr>
-
-<tr>
-<td>2 Hours</td>
-<td>6,000</td>
-<td>USD 46</td>
-</tr>
-
-<tr>
-<td>3 Hours</td>
-<td>9,000</td>
-<td>USD 69</td>
-</tr>
-
-<tr>
-<td>4 Hours</td>
-<td>12,000</td>
-<td>USD 92</td>
-</tr>
-
-</table>
-
-<p>
-Suitable for private travellers, couples, families and
-small groups.
-</p>
-
-<a class="book-btn" href="booking.html?service=Private%20Custom%20City%20Walk">
-Book This Walk
-</a>
-
-</div>
-
-
-<div class="note">
-
-<strong>Please Note:</strong><br>
-
-City Walk prices cover professional guiding and the walking
-experience. Attraction entrance fees, food, drinks, shopping,
-transport and other personal expenses are not included unless
-specifically stated.
-
-<br><br>
-
-<strong>Group size:</strong> Our standard city walks are designed
-for 1–6 people. Larger groups can be arranged on request.
-
-</div>
-
-</div>
 
 <footer>
 
