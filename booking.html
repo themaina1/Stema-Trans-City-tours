@@ -582,20 +582,24 @@ function updateBookingType() {
 
     const service = serviceSelect.value;
 
-    if (
+    const isCityWalk =
         service === "Nairobi Highlights Walk" ||
         service === "Nairobi History & Culture Walk" ||
-        service === "Nairobi Food & Local Life Walk"
-    ) {
+        service === "Nairobi Food & Local Life Walk";
+
+    if (isCityWalk) {
 
         vehicleSection.style.display = "none";
         walkSection.style.display = "block";
+
+        passengersInput.placeholder = "Number of People";
 
     } else {
 
         vehicleSection.style.display = "block";
         walkSection.style.display = "none";
 
+        passengersInput.placeholder = "Number of Passengers";
     }
 }
 
