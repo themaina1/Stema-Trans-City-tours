@@ -1,619 +1,528 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Book Your Tour - STEMA TRANS</title>
 
 <style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f5f5f5;
+  color:#333;
+}
+header{
+  background:#b30d24;
+  color:white;
+  text-align:center;
+  padding:22px 15px;
+}
+header h1{margin:0;font-size:28px}
+header p{margin:7px 0 0}
 
-* {
-    box-sizing: border-box;
+nav{
+  background:#222;
+  text-align:center;
+  padding:14px 8px;
+}
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 9px;
+  font-weight:bold;
+  display:inline-block;
+  padding:4px 0;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
-    color: #333;
+.booking{
+  max-width:720px;
+  margin:35px auto;
+  background:white;
+  padding:28px;
+  border-radius:18px;
+  box-shadow:0 3px 18px rgba(0,0,0,.10);
 }
 
-header {
-    background: #b30d24;
-    color: white;
-    text-align: center;
-    padding: 25px 15px;
+h2{
+  text-align:center;
+  color:#b30d24;
+  font-size:38px;
+  margin:0 0 12px;
+}
+.intro{
+  text-align:center;
+  color:#666;
+  font-size:20px;
+  line-height:1.5;
+  margin-bottom:28px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 28px;
+label{
+  display:block;
+  font-weight:bold;
+  margin:18px 0 7px;
+  font-size:17px;
 }
 
-header p {
-    margin: 8px 0 0;
+input,select,textarea{
+  width:100%;
+  padding:16px;
+  border:1px solid #ccc;
+  border-radius:12px;
+  font-size:17px;
+  background:#fff;
 }
 
-nav {
-    background: #222;
-    text-align: center;
-    padding: 15px;
+textarea{
+  min-height:110px;
+  resize:vertical;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
+.notice{
+  background:#f7f7f7;
+  border-left:7px solid #b30d24;
+  padding:18px;
+  margin:22px 0;
+  line-height:1.7;
+  font-size:16px;
 }
 
-.booking-container {
-    max-width: 700px;
-    margin: 35px auto;
-    background: white;
-    padding: 35px;
-    border-radius: 18px;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+.price-box{
+  background:#fafafa;
+  border-radius:12px;
+  padding:20px;
+  margin:22px 0;
+  font-size:18px;
+  line-height:1.7;
+  border:1px solid #eee;
 }
 
-h2 {
-    text-align: center;
-    color: #b30d24;
-    font-size: 38px;
-    margin-bottom: 10px;
+.price-box strong{color:#b30d24}
+
+button{
+  width:100%;
+  padding:17px;
+  background:#b30d24;
+  color:white;
+  border:0;
+  border-radius:12px;
+  font-size:19px;
+  font-weight:bold;
+  cursor:pointer;
+  margin-top:18px;
 }
 
-.intro {
-    text-align: center;
-    color: #666;
-    font-size: 18px;
-    margin-bottom: 30px;
+button:hover{background:#8f0a1d}
+
+.hidden{display:none !important}
+
+footer{
+  text-align:center;
+  background:#222;
+  color:white;
+  padding:25px 15px;
+  margin-top:35px;
 }
 
-label {
-    display: block;
-    margin-top: 18px;
-    margin-bottom: 7px;
-    font-weight: bold;
+@media(max-width:600px){
+  .booking{margin:18px 10px;padding:22px 16px}
+  h2{font-size:34px}
+  .intro{font-size:18px}
+  nav a{margin:4px 6px}
 }
-
-input,
-select,
-textarea {
-    width: 100%;
-    padding: 16px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    font-size: 17px;
-    background: white;
-}
-
-textarea {
-    min-height: 110px;
-    resize: vertical;
-}
-
-.notice {
-    margin: 25px 0;
-    padding: 18px;
-    background: #f8f8f8;
-    border-left: 5px solid #b30d24;
-    line-height: 1.6;
-}
-
-.price-box {
-    margin: 25px 0;
-    padding: 20px;
-    background: #fafafa;
-    border-radius: 12px;
-    border: 1px solid #eee;
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-.price-title {
-    color: #b30d24;
-    font-size: 21px;
-    font-weight: bold;
-}
-
-.walk-box {
-    margin-top: 20px;
-    padding: 20px;
-    background: #fff8f8;
-    border: 1px solid #f0d0d0;
-    border-radius: 12px;
-}
-
-button {
-    width: 100%;
-    margin-top: 25px;
-    padding: 17px;
-    background: #b30d24;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 19px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #8f091c;
-}
-
-footer {
-    margin-top: 40px;
-    padding: 25px;
-    background: #222;
-    color: white;
-    text-align: center;
-}
-
-.hidden {
-    display: none !important;
-}
-
-.small-note {
-    font-size: 14px;
-    color: #666;
-    margin-top: 8px;
-}
-
 </style>
 </head>
-
 
 <body>
 
 <header>
-    <h1>STEMA TRANS</h1>
-    <p>City Tours, Transfers & Guided Experiences</p>
+  <h1>STEMA TRANS</h1>
+  <p>City Tours, Transfers & Guided Experiences</p>
 </header>
 
-
 <nav>
-
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="tours.html">Tours</a>
-<a href="transfers.html">Transfers</a>
-<a href="rates.html">Rates</a>
-<a href="fleet.html">Fleet</a>
-<a href="gallery.html">Gallery</a>
-<a href="contact.html">Contact</a>
-<a href="citywalks.html">City Walks</a>
-
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="tours.html">Tours</a>
+  <a href="transfers.html">Transfers</a>
+  <a href="rates.html">Rates</a>
+  <a href="fleet.html">Fleet</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="citywalks.html">City Walks</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
-
-<div class="booking-container">
+<section class="booking">
 
 <h2>Book Your Tour</h2>
 
-<p class="intro">
-Fill in the details below and we will contact you shortly.
-</p>
-
-
-<form
-action="https://formsubmit.co/stemawatrans@gmail.com"
-method="POST"
-id="bookingForm"
->
-
-<input
-type="hidden"
-name="_next"
-value="https://themaina1.github.io/Stema-Trans-City-tours/thankyou.html"
->
-
-<input
-type="hidden"
-name="_captcha"
-value="false"
->
-
-<input
-type="hidden"
-id="bookingRef"
-name="Booking Reference"
->
-
-
-<label>Full Name</label>
-
-<input
-type="text"
-name="Name"
-placeholder="Full Name"
-required
->
-
-
-<label>Phone Number</label>
-
-<input
-type="tel"
-name="Phone"
-placeholder="Phone Number"
-required
->
-
-
-<label>Email Address</label>
-
-<input
-type="email"
-name="Email"
-placeholder="Email Address"
-required
->
-
-
-<label>Service</label>
-
-<select
-name="Service"
-id="serviceSelect"
-required
->
-
-<option value="">Select Service</option>
-
-<option value="Nairobi City Tour">
-Nairobi City Tour
-</option>
-
-<option value="City Walk">
-City Walk
-</option>
-
-<option value="Airport Transfer">
-Airport Transfer
-</option>
-
-<option value="Hotel Transfer">
-Hotel Transfer
-</option>
-
-<option value="Giraffe Centre Tour">
-Giraffe Centre Tour
-</option>
-
-<option value="Karen Blixen Tour">
-Karen Blixen Tour
-</option>
-
-<option value="Nairobi National Museum">
-Nairobi National Museum
-</option>
-
-<option value="Bomas of Kenya">
-Bomas of Kenya
-</option>
-
-<option value="Nairobi National Park">
-Nairobi National Park
-</option>
-
-<option value="Private Custom City Walk">
-Private Custom City Walk
-</option>
-
-<option value="Private Hire">
-Private Hire
-</option>
-
-</select>
-
-
-<!-- VEHICLE SECTION -->
-
-<div id="vehicleSection">
-
-<label>Preferred Vehicle</label>
-
-<select
-name="Vehicle"
-id="vehicleSelect"
->
-
-<option value="">
-Preferred Vehicle
-</option>
-
-<option value="Tour Van">
-Tour Van
-</option>
-
-<option value="Land Cruiser">
-Land Cruiser
-</option>
-
-<option value="Executive Sedan">
-Executive Sedan
-</option>
-
-</select>
-
+<div class="intro">
+  Fill in the details below and we will contact you shortly.
 </div>
 
+<form action="https://formsubmit.co/stemawastrans@gmail.com" method="POST">
 
-<!-- CITY WALK SECTION -->
+  <input type="hidden" name="_next"
+         value="https://themaina1.github.io/Stema-Trans-City-tours/thankyou.html">
 
-<div
-id="walkSection"
-class="walk-box hidden"
->
+  <input type="hidden" name="_captcha" value="false">
 
-<h3 style="color:#b30d24;">
-City Walk Details
-</h3>
+  <label>Full Name</label>
+  <input type="text" name="Name" placeholder="Full Name" required>
 
+  <label>Phone Number</label>
+  <input type="tel" name="Phone" placeholder="Phone Number" required>
 
-<label>Walk Type</label>
+  <label>Email Address</label>
+  <input type="email" name="Email" placeholder="Email Address" required>
 
-<select
-name="Walk Type"
-id="walkType"
->
+  <label>Service</label>
+  <select name="Service" id="serviceSelect" required>
+    <option value="">Select Service</option>
 
-<option value="">
-Select City Walk
-</option>
+    <option value="Nairobi City Tour">Nairobi City Tour</option>
+    <option value="City Walk">City Walk</option>
+    <option value="Airport Transfer">Airport Transfer</option>
+    <option value="Hotel Transfer">Hotel Transfer</option>
+    <option value="Giraffe Centre Tour">Giraffe Centre Tour</option>
+    <option value="Karen Blixen Tour">Karen Blixen Tour</option>
+    <option value="Nairobi National Museum">Nairobi National Museum</option>
+    <option value="Bomas of Kenya">Bomas of Kenya</option>
+    <option value="Nairobi National Park">Nairobi National Park</option>
 
-<option value="Nairobi Highlights Walk">
-Nairobi Highlights Walk
-</option>
+    <option value="Nairobi Highlights Walk">Nairobi Highlights Walk</option>
+    <option value="Nairobi History & Culture Walk">Nairobi History & Culture Walk</option>
+    <option value="Nairobi Food & Local Life Walk">Nairobi Food & Local Life Walk</option>
+    <option value="Private Custom City Walk">Private Custom City Walk</option>
+    <option value="Private Hire">Private Hire</option>
+  </select>
 
-<option value="Nairobi History & Culture Walk">
-Nairobi History & Culture Walk
-</option>
+  <!-- VEHICLE SECTION: ONLY FOR VEHICLE-BASED SERVICES -->
+  <div id="vehicleSection">
 
-<option value="Nairobi Food & Local Life Walk">
-Nairobi Food & Local Life Walk
-</option>
+    <label>Preferred Vehicle</label>
+    <select name="Vehicle" id="vehicleSelect">
+      <option value="">Preferred Vehicle</option>
+      <option value="Tour Van">Tour Van</option>
+      <option value="Land Cruiser">Land Cruiser</option>
+      <option value="Executive Sedan">Executive Sedan</option>
+    </select>
 
-<option value="Private Custom City Walk">
-Private Custom City Walk
-</option>
+  </div>
 
-</select>
+  <!-- CITY WALK SECTION: ONLY FOR CITY WALKS -->
+  <div id="walkSection" class="hidden">
 
+    <label>City Walk Type</label>
+    <select name="Walk Type" id="walkType">
+      <option value="">Select City Walk</option>
+      <option value="Nairobi Highlights Walk">Nairobi Highlights Walk</option>
+      <option value="Nairobi History & Culture Walk">Nairobi History & Culture Walk</option>
+      <option value="Nairobi Food & Local Life Walk">Nairobi Food & Local Life Walk</option>
+      <option value="Private Custom City Walk">Private Custom City Walk</option>
+    </select>
 
-<label>Duration</label>
+    <label>Duration</label>
+    <select name="Duration" id="walkDuration">
+      <option value="">Select Duration</option>
+      <option value="2 Hours">2 Hours</option>
+      <option value="3 Hours">3 Hours</option>
+    </select>
 
-<select
-name="Duration"
-id="walkDuration"
->
+  </div>
 
-<option value="">
-Select Duration
-</option>
+  <label>Number of Passengers</label>
+  <input type="number" id="passengersInput" name="Passengers"
+         placeholder="Number of Passengers" min="1" required>
 
-<option value="2 Hours">
-2 Hours
-</option>
+  <div class="notice">
+    <strong>Important:</strong><br>
+    Transport charges for vehicle-based services are <strong>per vehicle</strong>.<br><br>
+    City Walk charges are <strong>per person</strong>.<br><br>
+    Attraction and park entry fees are charged <strong>separately</strong>
+    unless otherwise stated.
+  </div>
 
-<option value="3 Hours">
-3 Hours
-</option>
+  <div class="price-box" id="priceBox">
+    <strong>Price:</strong> Select a service and enter the number of passengers.
+  </div>
 
-</select>
+  <label>Date</label>
+  <input type="date" name="Date" required>
 
+  <label>Time</label>
+  <input type="time" name="Time" required>
 
-<label>Number of People</label>
+  <label>Pickup Location</label>
+  <input type="text" name="Pickup" placeholder="Pickup Location">
 
-<input
-type="number"
-name="Passengers"
-id="passengersInput"
-min="1"
-max="10"
-placeholder="Number of People"
->
+  <label>Destination</label>
+  <input type="text" name="Destination" placeholder="Destination">
 
+  <label>Special Requests</label>
+  <textarea name="Message" placeholder="Special Requests"></textarea>
 
-<p class="small-note">
-City walk rates are charged per person.
-Children and groups above 10 people can be quoted separately.
-</p>
+  <input type="hidden" id="bookingRef" name="Booking Reference">
 
-</div>
-
-
-<!-- NORMAL TOUR PASSENGERS -->
-
-<div id="vehiclePassengers">
-
-<label>Number of Passengers</label>
-
-<input
-type="number"
-name="Vehicle Passengers"
-id="vehiclePassengersInput"
-min="1"
-max="7"
-placeholder="Number of Passengers"
->
-
-</div>
-
-
-<div class="notice">
-
-<strong>Important:</strong><br>
-
-Transport charges for vehicle-based services
-are <strong>per vehicle</strong>.
-
-<br><br>
-
-City Walk charges are
-<strong>per person</strong>.
-
-<br><br>
-
-Attraction and park entry fees are charged
-<strong>separately</strong> unless otherwise stated.
-
-</div>
-
-
-<!-- PRICE BOX -->
-
-<div
-id="priceBox"
-class="price-box"
->
-
-<div class="price-title">
-Booking Price
-</div>
-
-<p>
-Select a service to see the applicable rate.
-</p>
-
-</div>
-
-
-<label>Date</label>
-
-<input
-type="date"
-name="Date"
-required
->
-
-
-<label>Time</label>
-
-<input
-type="time"
-name="Time"
-required
->
-
-
-<label>Pickup Location</label>
-
-<input
-type="text"
-name="Pickup"
-placeholder="Pickup Location"
-required
->
-
-
-<label>Destination</label>
-
-<input
-type="text"
-name="Destination"
-placeholder="Destination"
->
-
-
-<label>Special Requests</label>
-
-<textarea
-name="Message"
-placeholder="Special Requests"
-></textarea>
-
-
-<button type="submit">
-Submit Booking
-</button>
+  <button type="submit">Submit Booking</button>
 
 </form>
-
-</div>
-
+</section>
 
 <footer>
-
-<p>© 2026 STEMA TRANS</p>
-
-<p>Nairobi, Kenya</p>
-
+  <p>&copy; 2026 STEMA TRANS</p>
+  <p>Nairobi, Kenya</p>
+  <p>0722910913 | stemawastrans@gmail.com</p>
 </footer>
 
-
 <script>
+document.addEventListener("DOMContentLoaded", function(){
 
-/* =========================================
-   ELEMENTS
-========================================= */
+  const serviceSelect = document.getElementById("serviceSelect");
+  const vehicleSection = document.getElementById("vehicleSection");
+  const vehicleSelect = document.getElementById("vehicleSelect");
+  const walkSection = document.getElementById("walkSection");
+  const walkType = document.getElementById("walkType");
+  const walkDuration = document.getElementById("walkDuration");
+  const passengersInput = document.getElementById("passengersInput");
+  const priceBox = document.getElementById("priceBox");
+  const bookingRef = document.getElementById("bookingRef");
 
-const form = document.getElementById("bookingForm");
+  /* Generate booking reference */
+  const now = new Date();
+  const ref =
+    "ST-" +
+    now.getFullYear() +
+    String(now.getMonth()+1).padStart(2,"0") +
+    String(now.getDate()).padStart(2,"0") +
+    "-" +
+    Math.floor(Math.random()*9000 + 1000);
 
-const serviceSelect =
-document.getElementById("serviceSelect");
+  bookingRef.value = ref;
 
-const vehicleSection =
-document.getElementById("vehicleSection");
+  const cityWalkServices = [
+    "City Walk",
+    "Nairobi Highlights Walk",
+    "Nairobi History & Culture Walk",
+    "Nairobi Food & Local Life Walk",
+    "Private Custom City Walk"
+  ];
 
-const vehicleSelect =
-document.getElementById("vehicleSelect");
+  function isCityWalk(){
+    return cityWalkServices.includes(serviceSelect.value);
+  }
 
-const walkSection =
-document.getElementById("walkSection");
+  /* THIS FUNCTION CONTROLS THE VEHICLE/WALK FIELDS */
+  function updateBookingType(){
 
-const walkType =
-document.getElementById("walkType");
+    if(isCityWalk()){
 
-const walkDuration =
-document.getElementById("walkDuration");
+      vehicleSection.classList.add("hidden");
+      walkSection.classList.remove("hidden");
 
-const passengersInput =
-document.getElementById("passengersInput");
+      vehicleSelect.value = "";
+      vehicleSelect.removeAttribute("required");
 
-const vehiclePassengersInput =
-document.getElementById("vehiclePassengersInput");
+      walkType.setAttribute("required","");
+      walkDuration.setAttribute("required","");
 
-const vehiclePassengers =
-document.getElementById("vehiclePassengers");
+    }else{
 
-const priceBox =
-document.getElementById("priceBox");
+      vehicleSection.classList.remove("hidden");
+      walkSection.classList.add("hidden");
 
-const bookingRef =
-document.getElementById("bookingRef");
+      walkType.value = "";
+      walkDuration.value = "";
 
+      walkType.removeAttribute("required");
+      walkDuration.removeAttribute("required");
 
-/* =========================================
-   CITY WALK CHECK
-========================================= */
+      vehicleSelect.setAttribute("required","");
+    }
 
-function isCityWalk(service) {
+    updatePrice();
+  }
 
-    return (
-        service === "City Walk" ||
-        service === "Private Custom City Walk"
-    );
+  function updatePrice(){
 
-}
+    const service = serviceSelect.value;
+    const vehicle = vehicleSelect.value;
+    const passengers = parseInt(passengersInput.value) || 0;
+    const walk = walkType.value;
+    const duration = walkDuration.value;
 
+    if(!service){
+      priceBox.innerHTML =
+        "<strong>Price:</strong> Select a service.";
+      return;
+    }
 
-/* =========================================
-   BOOKING REFERENCE
-========================================= */
+    /* CITY WALK PRICING - PER PERSON */
+    if(isCityWalk()){
 
-function generateBookingReference() {
+      if(!walk){
+        priceBox.innerHTML =
+          "<strong>City Walk Price:</strong><br>Select a walk type.";
+        return;
+      }
 
-    const now = new Date();
+      if(!duration){
+        priceBox.innerHTML =
+          "<strong>City Walk Price:</strong><br>Select a duration.";
+        return;
+      }
 
-    const year =
-        now.getFullYear();
+      if(passengers < 1){
+        priceBox.innerHTML =
+          "<strong>City Walk Price:</strong><br>Enter number of people.";
+        return;
+      }
 
-    const month =
-        String(now.getMonth() + 1)
-        .padStart(2, "0");
+      let rateKES = 0;
+      let rateUSD = 0;
 
-   
+      if(walk === "Nairobi Food & Local Life Walk"){
+
+        if(passengers === 1){
+          rateKES = 3500;
+          rateUSD = 27;
+        }else if(passengers <= 4){
+          rateKES = 2500;
+          rateUSD = 19;
+        }else if(passengers <= 10){
+          rateKES = 2000;
+          rateUSD = 15;
+        }
+
+      }else if(walk === "Private Custom City Walk"){
+
+        priceBox.innerHTML =
+          "<strong>Private Custom City Walk</strong><br>" +
+          "Contact us for a quotation based on your group size, duration and requirements.";
+        return;
+
+      }else{
+
+        if(passengers === 1){
+          rateKES = 2500;
+          rateUSD = 19;
+        }else if(passengers <= 4){
+          rateKES = 1800;
+          rateUSD = 14;
+        }else if(passengers <= 10){
+          rateKES = 1500;
+          rateUSD = 12;
+        }
+
+      }
+
+      const totalKES = rateKES * passengers;
+      const totalUSD = rateUSD * passengers;
+
+      priceBox.innerHTML =
+        "<strong>City Walk Price</strong><br><br>" +
+        "<strong>Walk:</strong> " + walk + "<br>" +
+        "<strong>Duration:</strong> " + duration + "<br>" +
+        "<strong>Number of people:</strong> " + passengers + "<br>" +
+        "<strong>Rate:</strong> KES " + rateKES.toLocaleString() +
+        " / USD " + rateUSD + " per person<br>" +
+        "<strong>Total:</strong> KES " + totalKES.toLocaleString() +
+        " / USD " + totalUSD;
+
+      return;
+    }
+
+    /* VEHICLE-BASED PRICING - PER VEHICLE */
+    if(!vehicle){
+      priceBox.innerHTML =
+        "<strong>Transport Charge:</strong> Select a vehicle.";
+      return;
+    }
+
+    let price = "";
+
+    if(service === "Nairobi City Tour"){
+
+      if(vehicle === "Tour Van")
+        price = "KES 5,500 | USD 43 (Per Vehicle)";
+
+      else if(vehicle === "Land Cruiser")
+        price = "KES 8,500 | USD 66 (Per Vehicle)";
+
+      else
+        price = "Contact us for quotation";
+
+    }else if(service === "Airport Transfer"){
+
+      if(vehicle === "Tour Van")
+        price = "KES 3,500 | USD 27 (Per Vehicle)";
+
+      else if(vehicle === "Land Cruiser")
+        price = "KES 5,500 | USD 43 (Per Vehicle)";
+
+      else
+        price = "Contact us for quotation";
+
+    }else if(service === "Hotel Transfer"){
+
+      if(vehicle === "Tour Van")
+        price = "KES 3,500 | USD 27 (Per Vehicle)";
+
+      else if(vehicle === "Land Cruiser")
+        price = "KES 5,500 | USD 43 (Per Vehicle)";
+
+      else
+        price = "Contact us for quotation";
+
+    }else if(service === "Giraffe Centre Tour"){
+
+      if(vehicle === "Tour Van")
+        price = "KES 5,500 | USD 43 (Per Vehicle)";
+
+      else if(vehicle === "Land Cruiser")
+        price = "KES 8,500 | USD 66 (Per Vehicle)";
+
+      else
+        price = "Contact us for quotation";
+
+    }else if(service === "Nairobi National Park"){
+
+      if(vehicle === "Tour Van")
+        price = "KES 8,500 | USD 66 (Per Vehicle)";
+
+      else if(vehicle === "Land Cruiser")
+        price = "KES 12,500 | USD 97 (Per Vehicle)";
+
+      else
+        price = "Contact us for quotation";
+
+    }else if(service === "Private Hire"){
+
+      price = "Contact us for quotation";
+
+    }else{
+
+      price = "Contact us for quotation";
+    }
+
+    priceBox.innerHTML =
+      "<strong>Transport Charge:</strong> " + price;
+
+  }
+
+  serviceSelect.addEventListener("change", updateBookingType);
+  vehicleSelect.addEventListener("change", updatePrice);
+  walkType.addEventListener("change", updatePrice);
+  walkDuration.addEventListener("change", updatePrice);
+  passengersInput.addEventListener("input", updatePrice);
+
+  /* Run once when page opens */
+  updateBookingType();
+
+});
+</script>
+
+</body>
+</html>
