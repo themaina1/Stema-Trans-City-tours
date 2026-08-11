@@ -258,6 +258,7 @@ footer {
 <input
     type="number"
     name="Passengers"
+    id="passengersInput"
     placeholder="Number of Passengers"
     min="1"
     required
@@ -326,6 +327,66 @@ function updatePrice() {
 
     const vehicle = vehicleSelect.value;
     const service = serviceSelect.value;
+        const passengers = parseInt(
+        document.querySelector('input[name="Passengers"]').value
+    ) || 0;
+
+    // CITY WALK PRICING
+    if (service === "Nairobi Highlights Walk" ||
+        service === "Nairobi History & Culture Walk" ||
+        service === "Nairobi Food & Local Life Walk") {
+
+        if (passengers < 1) {
+            priceBox.innerHTML =
+                "<strong>City Walk Price:</strong><br>" +
+                "Please enter number of people.";
+            return;
+        }
+
+        let rateKES = 0;
+        let rateUSD = 0;
+
+        if (service === "Nairobi Food & Local Life Walk") {
+
+            if (passengers === 1) {
+                rateKES = 3500;
+                rateUSD = 27;
+            } else if (passengers <= 4) {
+                rateKES = 2500;
+                rateUSD = 19;
+            } else if (passengers <= 10) {
+                rateKES = 2000;
+                rateUSD = 15;
+            }
+
+        } else {
+
+            if (passengers === 1) {
+                rateKES = 2500;
+                rateUSD = 19;
+            } else if (passengers <= 4) {
+                rateKES = 1800;
+                rateUSD = 14;
+            } else if (passengers <= 10) {
+                rateKES = 1500;
+                rateUSD = 12;
+            }
+        }
+
+        const totalKES = rateKES * passengers;
+        const totalUSD = rateUSD * passengers;
+
+        priceBox.innerHTML =
+            "<strong>City Walk Price</strong><br><br>" +
+            "<strong>" + service + "</strong><br>" +
+            "Number of people: " + passengers + "<br>" +
+            "Rate: KES " + rateKES.toLocaleString() +
+            " / USD " + rateUSD + " per person<br>" +
+            "<strong>Total: KES " + totalKES.toLocaleString() +
+            " / USD " + totalUSD + "</strong>";
+
+        return;
+    }
 
     let price = "";
     if (
@@ -502,10 +563,16 @@ function updatePrice() {
 
 vehicleSelect.addEventListener("change", updatePrice);
 serviceSelect.addEventListener("change", updatePrice);
+    document.querySelector('input[name="Passengers"]')
+    .addEventListener("input", updatePrice);
+
+walkType.addEventListener("change", updatePrice);
+walkDuration.addEventListener("change", updatePrice);
 passengersInput.addEventListener("input", updatePrice);
 
 updatePrice();
     const serviceSelect = document.querySelector('select[name="Service"]');
+    const passengersInput = document.getElementById("passengersInput");
 const vehicleSection = document.getElementById('vehicleSection');
 const walkSection = document.getElementById('walkSection');
 const walkType = document.getElementById('walkType');
