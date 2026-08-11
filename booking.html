@@ -208,13 +208,31 @@ footer {
     <option value="Private Hire">Private Hire</option>
 </select>
 
-<select name="Vehicle" id="vehicleSelect" required>
-    <option value="">Preferred Vehicle</option>
-    <option value="Tour Van">Tour Van</option>
-    <option value="Land Cruiser">Land Cruiser</option>
-    <option value="Executive Sedan">Executive Sedan</option>
-</select>
+<div id="vehicleSection">
+    <select name="Vehicle" id="vehicleSelect">
+        <option value="">Preferred Vehicle</option>
+        <option value="Tour Van">Tour Van</option>
+        <option value="Land Cruiser">Land Cruiser</option>
+        <option value="Executive Sedan">Executive Sedan</option>
+    </select>
+</div>
 
+<div id="walkSection" style="display:none;">
+
+    <select name="Walk Type" id="walkType">
+        <option value="">Select City Walk</option>
+        <option value="Nairobi Highlights Walk">Nairobi Highlights Walk</option>
+        <option value="Nairobi History & Culture Walk">Nairobi History & Culture Walk</option>
+        <option value="Nairobi Food & Local Life Walk">Nairobi Food & Local Life Walk</option>
+    </select>
+
+    <select name="Duration" id="walkDuration">
+        <option value="">Select Duration</option>
+        <option value="2 Hours">2 Hours</option>
+        <option value="3 Hours">3 Hours</option>
+    </select>
+
+</div>
 <div class="notice">
     Transport charges are <strong>per vehicle</strong>.<br>
     Attraction and park entry fees are charged <strong>per person</strong>
@@ -487,6 +505,36 @@ serviceSelect.addEventListener("change", updatePrice);
 passengersInput.addEventListener("input", updatePrice);
 
 updatePrice();
+    const serviceSelect = document.querySelector('select[name="Service"]');
+const vehicleSection = document.getElementById('vehicleSection');
+const walkSection = document.getElementById('walkSection');
+const walkType = document.getElementById('walkType');
+const walkDuration = document.getElementById('walkDuration');
+
+function updateBookingType() {
+
+    const service = serviceSelect.value;
+
+    if (
+        service === "Nairobi Highlights Walk" ||
+        service === "Nairobi History & Culture Walk" ||
+        service === "Nairobi Food & Local Life Walk"
+    ) {
+
+        vehicleSection.style.display = "none";
+        walkSection.style.display = "block";
+
+    } else {
+
+        vehicleSection.style.display = "block";
+        walkSection.style.display = "none";
+
+    }
+}
+
+serviceSelect.addEventListener("change", updateBookingType);
+
+updateBookingType();
 
 </script>
 
