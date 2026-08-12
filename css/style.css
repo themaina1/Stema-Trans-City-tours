@@ -1,360 +1,423 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+/* =========================================================
+   STEMA TRANS - COMPLETE WEBSITE CSS
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-font-family:'Poppins',sans-serif;
-background:#f7f7f7;
-color:#333;
-line-height:1.7;
+html {
+  scroll-behavior: smooth;
 }
 
-header{
-background:#b11226;
-color:#fff;
-padding:30px 20px;
-text-align:center;
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: #f7f7f7;
+  color: #333;
+  line-height: 1.7;
 }
 
-.logo h1{
-font-size:52px;
-font-weight:700;
-margin-bottom:10px;
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+  background: #b11226;
+  color: #fff;
+  text-align: center;
+  padding: 35px 20px 30px;
 }
 
-.logo p{
-font-size:22px;
+.logo h1 {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
 }
 
-nav {
-  margin-top: 25px;
+.logo p {
+  font-size: 22px;
+  color: #fff;
+  margin: 0;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+header nav {
+  background: #222;
+  margin: 30px -20px -30px;
+  padding: 25px 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 18px;
 }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 24px;
-  padding: 12px 20px;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  background: #fff;
-  color: #b11226;
-}
-.hero{
-height:85vh;
-background:url("../images/hero.jpg") center center;
-background-size:cover;
-background-repeat:no-repeat;
-display:flex;
-justify-content:center;
-align-items:center;
-position:relative;
-}
-
-.hero::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.55);
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-text-align:center;
-color:#fff;
-max-width:800px;
-padding:20px;
-}
-
-.hero-content h2{
-font-size:58px;
-margin-bottom:20px;
-}
-
-.hero-content p{
-font-size:24px;
-margin-bottom:35px;
-}
-
-.btn{
-display:inline-block;
-background:#b11226;
-color:#fff;
-text-decoration:none;
-padding:16px 36px;
-border-radius:8px;
-font-weight:700;
-font-size:18px;
-transition:.3s;
-}
-
-.btn:hover{
-background:#870d1c;
-}
-
-section{
-padding:70px 8%;
-}
-
-section h2{
-text-align:center;
-font-size:42px;
-color:#b11226;
-margin-bottom:30px;
-}
-
-.intro p{
-font-size:20px;
-text-align:center;
-max-width:900px;
-margin:auto;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-margin-top:30px;
-}
-
-.card{
-background:#fff;
-padding:25px;
-border-radius:12px;
-box-shadow:0 8px 20px rgba(0,0,0,.08);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.card h3{
-color:#b11226;
-margin-bottom:15px;
-font-size:26px;
-}
-
-.card p{
-font-size:18px;
-}
-
-.card img{
-width:100%;
-height:220px;
-object-fit:cover;
-border-radius:10px;
-margin-bottom:15px;
-}
-
-.fleet{
-background:#f2f2f2;
-}
-
-.cta{
-background:#b11226;
-color:#fff;
-text-align:center;
-}
-
-.cta h2{
-color:#fff;
-}
-
-.cta p{
-font-size:20px;
-margin-bottom:25px;
-}
-
-.cta .btn{
-background:#fff;
-color:#b11226;
-}
-
-.cta .btn:hover{
-background:#eeeeee;
-}
-
-footer{
-background:#222;
-color:#fff;
-text-align:center;
-padding:35px 20px;
-}
-
-footer p{
-margin:8px 0;
-}
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-width:60px;
-height:60px;
-background:#25D366;
-color:#fff;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:30px;
-text-decoration:none;
-box-shadow:0 6px 15px rgba(0,0,0,.25);
-z-index:999;
-}
-
-.whatsapp:hover{
-transform:scale(1.1);
-}
-
-@media(max-width:768px){
-
-.logo h1{
-font-size:38px;
-}
-
-.logo p{
-font-size:18px;
-}
-
-nav{
-gap:10px;
-}
-
-nav a{
-font-size:18px;
-padding:8px 12px;
-}
-
-.hero{
-height:70vh;
-}
-
-.hero-content h2{
-font-size:38px;
-}
-
-.hero-content p{
-font-size:20px;
-}
-
-section{
-padding:50px 6%;
-}
-
-section h2{
-font-size:34px;
-}
-
-.card img{
-height:180px;
-}
-
-.btn{
-width:100%;
-max-width:320px;
-text-align:center;
-}
-}
-/* BOOKING FORM */
-
-.booking-form{
-    max-width:600px;
-    margin:30px auto;
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-}
-
-.booking-form input,
-.booking-form select,
-.booking-form textarea{
-    width:100%;
-    padding:15px;
-    border:1px solid #ddd;
-    border-radius:8px;
-    font-size:16px;
-    font-family:inherit;
-}
-
-.booking-form input:focus,
-.booking-form select:focus,
-.booking-form textarea:focus{
-    outline:none;
-    border-color:#b11226;
-}
-
-.booking-form button{
-    background:#b11226;
-    color:#fff;
-    border:none;
-    padding:15px;
-    font-size:18px;
-    font-weight:bold;
-    border-radius:8px;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.booking-form button:hover{
-    background:#8d0e1f;
-}
-
-.cta{
-    background:#b11226;
-    color:#fff;
-    text-align:center;
-    padding:60px 20px;
-}
-
-.cta h2{
-    color:#fff;
-    margin-bottom:15px;
-}
-
-.cta p{
-    margin-bottom:30px;
-}
-/* FRONT PAGE NAVIGATION SIZE OVERRIDE */
 header nav {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  flex-wrap: wrap !important;
-  gap: 18px !important;
-  margin-top: 25px !important;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  justify-content: center;
+  align-items: center;
+  column-gap: 35px;
+  row-gap: 12px;
 }
+
+/* All navigation links */
 
 header nav a {
-  display: inline-block !important;
-  color: #ffffff !important;
-  text-decoration: none !important;
-  font-size: 24px !important;
-  font-weight: 600 !important;
-  padding: 12px 20px !important;
-  margin: 0 !important;
-  border-radius: 6px !important;
-  line-height: 1.2 !important;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 4px 8px;
+  margin: 0;
+  border-radius: 4px;
+  white-space: nowrap;
+  transition: 0.3s ease;
+}
+
+/* Put Gallery, City Walks and Contact on row 2 */
+
+header nav a:nth-child(7) {
+  grid-column: 2;
+}
+
+header nav a:nth-child(8) {
+  grid-column: 3;
+}
+
+header nav a:nth-child(9) {
+  grid-column: 4;
 }
 
 header nav a:hover {
-  background: #ffffff !important;
-  color: #b11226 !important;
+  background: #fff;
+  color: #b11226;
 }
 
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  min-height: 85vh;
+  background: url("../images/hero.jpg") center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  max-width: 900px;
+  padding: 30px;
+}
+
+.hero-content h2 {
+  font-size: 58px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero-content p {
+  font-size: 24px;
+  margin-bottom: 35px;
+  color: #fff;
+}
+
+.btn {
+  display: inline-block;
+  background: #b11226;
+  color: #fff;
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #870d1c;
+}
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+section {
+  padding: 70px 8%;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 42px;
+  color: #b11226;
+  margin-bottom: 30px;
+}
+
+.intro p {
+  font-size: 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  color: #b11226;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 17px;
+}
+
+/* =========================================================
+   GALLERY
+   ========================================================= */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* =========================================================
+   FORMS
+   ========================================================= */
+
+form {
+  max-width: 800px;
+  margin: auto;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 16px;
+  background: #fff;
+}
+
+form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+form button {
+  background: #b11226;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #870d1c;
+}
+
+/* =========================================================
+   PRICE BOX
+   ========================================================= */
+
+#priceBox {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  margin: 25px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+#priceBox strong {
+  color: #b11226;
+}
+
+/* =========================================================
+   NOTICE
+   ========================================================= */
+
+.notice {
+  background: #f5f5f5;
+  border-left: 6px solid #b11226;
+  padding: 25px;
+  margin: 25px 0;
+  border-radius: 4px;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 25px 15px 20px;
+  }
+
+  .logo h1 {
+    font-size: 40px;
+  }
+
+  .logo p {
+    font-size: 18px;
+  }
+
+  /*
+     Mobile navigation:
+     Keep it compact instead of the huge
+     two-column menu from before.
+  */
+
+  header nav {
+    margin: 25px -15px -20px;
+    padding: 18px 10px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  header nav a {
+    font-size: 17px;
+    padding: 8px 3px;
+    text-align: center;
+  }
+
+  /* Reset desktop positioning */
+
+  header nav a:nth-child(7),
+  header nav a:nth-child(8),
+  header nav a:nth-child(9) {
+    grid-column: auto;
+  }
+
+  .hero {
+    min-height: 65vh;
+  }
+
+  .hero-content {
+    padding: 20px;
+  }
+
+  .hero-content h2 {
+    font-size: 38px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  section {
+    padding: 50px 6%;
+  }
+
+  section h2 {
+    font-size: 34px;
+  }
+}
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .logo h1 {
+    font-size: 34px;
+  }
+
+  .logo p {
+    font-size: 16px;
+  }
+
+  header nav {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3px;
+    row-gap: 5px;
+  }
+
+  header nav a {
+    font-size: 15px;
+    padding: 7px 2px;
+  }
+
+  .hero-content h2 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 17px;
+  }
+}
