@@ -9,10 +9,6 @@
 <link rel="stylesheet" href="css/style.css">
 
 <style>
-/* ================================
-   BOOKING PAGE
-================================ */
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -74,8 +70,6 @@ body {
     resize: vertical;
 }
 
-/* Notice */
-
 .notice {
     background: #f5f5f5;
     border-left: 6px solid #b11226;
@@ -87,8 +81,6 @@ body {
 .notice strong {
     color: #b11226;
 }
-
-/* Price box */
 
 .price-box {
     background: #fff;
@@ -116,13 +108,9 @@ body {
     margin-top: 15px;
 }
 
-/* Hidden sections */
-
 .hidden {
     display: none !important;
 }
-
-/* Submit button */
 
 .submit-btn {
     width: 100%;
@@ -140,7 +128,55 @@ body {
     background: #870d1c;
 }
 
-/* Mobile */
+/* SUCCESS MESSAGE */
+
+.success-message {
+    display: none;
+    background: #fff;
+    border-left: 7px solid #16823b;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 30px auto;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+    text-align: center;
+}
+
+.success-message h2 {
+    color: #16823b;
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.success-message p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.success-message .back-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 25px;
+    background: #b11226;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.success-message .back-btn:hover {
+    background: #870d1c;
+}
+
+/* SUBMITTING */
+
+.submitting {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    color: #b11226;
+    font-weight: bold;
+    font-size: 17px;
+}
 
 @media (max-width: 600px) {
 
@@ -162,11 +198,8 @@ body {
 
 <body>
 
-<!-- ================================
-     HEADER
-================================ -->
-
 <header>
+
     <div class="logo">
         <h1>STEMA TRANS</h1>
         <p>City Tours, Transfers & Guided Experiences</p>
@@ -183,12 +216,9 @@ body {
         <a href="city-walks.html">City Walks</a>
         <a href="contact.html">Contact</a>
     </nav>
+
 </header>
 
-
-<!-- ================================
-     BOOKING
-================================ -->
 
 <main class="booking-page">
 
@@ -199,42 +229,69 @@ Fill in the details below and we will contact you shortly.
 </p>
 
 
-<!-- ================================
-     FORM
-================================ -->
+<!-- SUCCESS MESSAGE -->
+
+<div id="successMessage" class="success-message">
+
+    <h2>✓ Booking Submitted Successfully!</h2>
+
+    <p>
+        Thank you for booking with <strong>Stema Trans</strong>.
+    </p>
+
+    <p>
+        Your booking request has been received.
+        We will contact you shortly to confirm the details.
+    </p>
+
+    <a href="index.html" class="back-btn">
+        Return to Home
+    </a>
+
+</div>
+
+
+<!-- BOOKING FORM -->
 
 <form
+    id="bookingForm"
     class="booking-form"
     action="https://formsubmit.co/stemawastrans@gmail.com"
     method="POST"
 >
 
-<!-- FormSubmit settings -->
+<input
+    type="hidden"
+    name="_subject"
+    value="New Stema Trans Booking Request"
+>
 
-<input type="hidden" name="_subject"
-       value="New Stema Trans Booking Request">
+<input
+    type="hidden"
+    name="_captcha"
+    value="false"
+>
 
-<input type="hidden" name="_captcha"
-       value="false">
+<!-- RETURN TO THIS SAME PAGE -->
 
-<!-- IMPORTANT:
-     Redirect to an EXISTING page.
-     This prevents the GitHub 404 problem.
--->
+<input
+    type="hidden"
+    name="_next"
+    value="https://themaina1.github.io/Stema-Trans-City-tours/booking.html?success=1"
+>
 
-<input type="hidden" name="_next"
-       value="https://themaina1.github.io/Stema-Trans-City-tours/index.html">
+<input
+    type="hidden"
+    name="_template"
+    value="table"
+>
 
 
-<!-- ================================
-     CUSTOMER DETAILS
-================================ -->
+<!-- CUSTOMER -->
 
 <div class="form-group">
 
-<label for="fullName">
-Full Name
-</label>
+<label for="fullName">Full Name</label>
 
 <input
     type="text"
@@ -249,9 +306,7 @@ Full Name
 
 <div class="form-group">
 
-<label for="phone">
-Phone Number
-</label>
+<label for="phone">Phone Number</label>
 
 <input
     type="tel"
@@ -266,9 +321,7 @@ Phone Number
 
 <div class="form-group">
 
-<label for="email">
-Email Address
-</label>
+<label for="email">Email Address</label>
 
 <input
     type="email"
@@ -281,15 +334,11 @@ Email Address
 </div>
 
 
-<!-- ================================
-     SERVICE
-================================ -->
+<!-- SERVICE -->
 
 <div class="form-group">
 
-<label for="service">
-Service
-</label>
+<label for="service">Service</label>
 
 <select
     id="service"
@@ -297,9 +346,7 @@ Service
     required
 >
 
-<option value="">
-Select Service
-</option>
+<option value="">Select Service</option>
 
 <option value="Nairobi City Tour">
 Nairobi City Tour
@@ -350,26 +397,20 @@ Private Hire
 </div>
 
 
-<!-- ================================
-     VEHICLE SECTION
-================================ -->
+<!-- VEHICLE -->
 
 <div id="vehicleSection">
 
 <div class="form-group">
 
-<label for="vehicle">
-Preferred Vehicle
-</label>
+<label for="vehicle">Preferred Vehicle</label>
 
 <select
     id="vehicle"
     name="Preferred Vehicle"
 >
 
-<option value="">
-Preferred Vehicle
-</option>
+<option value="">Preferred Vehicle</option>
 
 <option value="Tour Van">
 Tour Van
@@ -390,26 +431,20 @@ Executive Sedan
 </div>
 
 
-<!-- ================================
-     CITY WALK SECTION
-================================ -->
+<!-- CITY WALK -->
 
 <div id="walkSection" class="hidden">
 
 <div class="form-group">
 
-<label for="walkType">
-City Walk Type
-</label>
+<label for="walkType">City Walk Type</label>
 
 <select
     id="walkType"
     name="City Walk Type"
 >
 
-<option value="">
-Select City Walk
-</option>
+<option value="">Select City Walk</option>
 
 <option value="Nairobi Highlights Walk">
 Nairobi Highlights Walk
@@ -430,18 +465,14 @@ Nairobi Food & Local Life Walk
 
 <div class="form-group">
 
-<label for="walkDuration">
-Duration
-</label>
+<label for="walkDuration">Duration</label>
 
 <select
     id="walkDuration"
     name="Walk Duration"
 >
 
-<option value="">
-Select Duration
-</option>
+<option value="">Select Duration</option>
 
 <option value="2 Hours">
 2 Hours
@@ -458,9 +489,7 @@ Select Duration
 </div>
 
 
-<!-- ================================
-     PASSENGERS
-================================ -->
+<!-- PASSENGERS -->
 
 <div class="form-group">
 
@@ -481,9 +510,7 @@ Number of Passengers
 </div>
 
 
-<!-- ================================
-     NOTICE
-================================ -->
+<!-- NOTICE -->
 
 <div class="notice">
 
@@ -507,11 +534,9 @@ Attraction and park entry fees are charged
 </div>
 
 
-<!-- ================================
-     PRICE DISPLAY
-================================ -->
+<!-- PRICE -->
 
-<div class="price-box" id="priceBox">
+<div class="price-box">
 
 <h2>Booking Price</h2>
 
@@ -524,15 +549,11 @@ Select a service and enter the number of passengers.
 </div>
 
 
-<!-- ================================
-     DATE
-================================ -->
+<!-- DATE -->
 
 <div class="form-group">
 
-<label for="date">
-Date
-</label>
+<label for="date">Date</label>
 
 <input
     type="date"
@@ -544,15 +565,11 @@ Date
 </div>
 
 
-<!-- ================================
-     TIME
-================================ -->
+<!-- TIME -->
 
 <div class="form-group">
 
-<label for="time">
-Time
-</label>
+<label for="time">Time</label>
 
 <input
     type="time"
@@ -564,15 +581,11 @@ Time
 </div>
 
 
-<!-- ================================
-     PICKUP
-================================ -->
+<!-- PICKUP -->
 
 <div class="form-group">
 
-<label for="pickup">
-Pickup Location
-</label>
+<label for="pickup">Pickup Location</label>
 
 <input
     type="text"
@@ -585,9 +598,7 @@ Pickup Location
 </div>
 
 
-<!-- ================================
-     DESTINATION
-================================ -->
+<!-- DESTINATION -->
 
 <div class="form-group">
 
@@ -605,9 +616,7 @@ Destination / Drop-off
 </div>
 
 
-<!-- ================================
-     MESSAGE
-================================ -->
+<!-- MESSAGE -->
 
 <div class="form-group">
 
@@ -624,12 +633,14 @@ Additional Information
 </div>
 
 
-<!-- ================================
-     SUBMIT
-================================ -->
+<div id="submitting" class="submitting">
+Submitting your booking...
+</div>
+
 
 <button
     type="submit"
+    id="submitButton"
     class="submit-btn"
 >
 Submit Booking
@@ -640,10 +651,6 @@ Submit Booking
 </main>
 
 
-<!-- ================================
-     FOOTER
-================================ -->
-
 <footer>
 
 <p>
@@ -653,13 +660,14 @@ Submit Booking
 </footer>
 
 
-<!-- ================================
-     JAVASCRIPT
-================================ -->
-
 <script>
 
-const service = document.getElementById("service");
+/* ================================
+   ELEMENTS
+================================ */
+
+const service =
+    document.getElementById("service");
 
 const vehicleSection =
     document.getElementById("vehicleSection");
@@ -682,11 +690,22 @@ const passengers =
 const priceDetails =
     document.getElementById("priceDetails");
 
+const bookingForm =
+    document.getElementById("bookingForm");
+
+const successMessage =
+    document.getElementById("successMessage");
+
+const submitButton =
+    document.getElementById("submitButton");
+
+const submitting =
+    document.getElementById("submitting");
 
 
-/* =================================
-   CITY WALK SERVICES
-================================= */
+/* ================================
+   CITY WALK CHECK
+================================ */
 
 function isCityWalk(serviceName) {
 
@@ -698,10 +717,9 @@ function isCityWalk(serviceName) {
 }
 
 
-
-/* =================================
-   SHOW / HIDE VEHICLE AND WALK
-================================= */
+/* ================================
+   SHOW / HIDE SECTIONS
+================================ */
 
 function updateSections() {
 
@@ -722,6 +740,7 @@ function updateSections() {
         walkSection.classList.add("hidden");
 
         walkType.value = "";
+
         walkDuration.value = "";
     }
 
@@ -729,22 +748,21 @@ function updateSections() {
 }
 
 
-
-/* =================================
-   CALCULATE PRICE
-================================= */
+/* ================================
+   PRICE CALCULATION
+================================ */
 
 function calculatePrice() {
 
-    const selectedService = service.value;
+    const selectedService =
+        service.value;
 
-    const selectedVehicle = vehicle.value;
+    const selectedVehicle =
+        vehicle.value;
 
     const numberOfPassengers =
         parseInt(passengers.value) || 0;
 
-
-    /* Nothing selected */
 
     if (!selectedService) {
 
@@ -755,13 +773,12 @@ function calculatePrice() {
     }
 
 
-    /* ================================
-       CITY WALKS
-    ================================= */
+    /* CITY WALKS */
 
     if (isCityWalk(selectedService)) {
 
-        const selectedWalk = walkType.value;
+        const selectedWalk =
+            walkType.value;
 
         if (!selectedWalk) {
 
@@ -783,10 +800,8 @@ function calculatePrice() {
         }
 
 
-        let pricePerPerson = 0;
+        let pricePerPerson = 2500;
 
-
-        /* Food walk */
 
         if (
             selectedWalk ===
@@ -798,17 +813,9 @@ function calculatePrice() {
         }
 
 
-        /* Other walks */
-
-        else {
-
-            pricePerPerson = 2500;
-
-        }
-
-
         const total =
-            pricePerPerson * numberOfPassengers;
+            pricePerPerson *
+            numberOfPassengers;
 
 
         priceDetails.innerHTML =
@@ -824,7 +831,7 @@ function calculatePrice() {
             "</div>" +
 
             "<div class='price-line'>" +
-            "<strong>Number of people:</strong> " +
+            "<strong>People:</strong> " +
             numberOfPassengers +
             "</div>" +
 
@@ -842,10 +849,7 @@ function calculatePrice() {
     }
 
 
-
-    /* ================================
-       VEHICLE SERVICES
-    ================================= */
+    /* VEHICLE */
 
     if (!selectedVehicle) {
 
@@ -859,10 +863,6 @@ function calculatePrice() {
 
     let vehiclePrice = 0;
 
-
-    /* ================================
-       TOUR VAN
-    ================================= */
 
     if (selectedVehicle === "Tour Van") {
 
@@ -882,11 +882,9 @@ function calculatePrice() {
     }
 
 
-    /* ================================
-       LAND CRUISER
-    ================================= */
-
-    else if (selectedVehicle === "Land Cruiser") {
+    else if (
+        selectedVehicle === "Land Cruiser"
+    ) {
 
         if (
             selectedService ===
@@ -903,10 +901,6 @@ function calculatePrice() {
 
     }
 
-
-    /* ================================
-       EXECUTIVE SEDAN
-    ================================= */
 
     else if (
         selectedVehicle ===
@@ -937,16 +931,13 @@ function calculatePrice() {
             "</div>" +
 
             "<div class='price-line'>" +
-            "<strong>Price:</strong> Contact us for quotation" +
+            "<strong>Price:</strong> " +
+            "Contact us for quotation" +
             "</div>";
 
         return;
     }
 
-
-    /* ================================
-       VEHICLE TOTAL
-    ================================= */
 
     priceDetails.innerHTML =
 
@@ -975,14 +966,12 @@ function calculatePrice() {
         "Transport Total: KES " +
         vehiclePrice.toLocaleString() +
         "</div>";
-
 }
 
 
-
-/* =================================
+/* ================================
    EVENTS
-================================= */
+================================ */
 
 service.addEventListener(
     "change",
@@ -1010,18 +999,14 @@ passengers.addEventListener(
 );
 
 
-
-/* =================================
-   READ URL PARAMETERS
-   Allows links such as:
-
-   booking.html?vehicle=Tour%20Van
-
-   booking.html?service=City%20Walk
-================================= */
+/* ================================
+   URL PARAMETERS
+================================ */
 
 const urlParams =
-    new URLSearchParams(window.location.search);
+    new URLSearchParams(
+        window.location.search
+    );
 
 const urlVehicle =
     urlParams.get("vehicle");
@@ -1045,6 +1030,42 @@ if (urlVehicle) {
 
 
 updateSections();
+
+
+/* ================================
+   SUCCESS RETURN
+================================ */
+
+if (
+    urlParams.get("success") === "1"
+) {
+
+    bookingForm.style.display = "none";
+
+    successMessage.style.display = "block";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+/* ================================
+   SUBMIT BUTTON
+================================ */
+
+bookingForm.addEventListener(
+    "submit",
+    function() {
+
+        submitButton.style.display = "none";
+
+        submitting.style.display = "block";
+
+    }
+);
 
 </script>
 
