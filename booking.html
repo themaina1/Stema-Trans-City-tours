@@ -809,3 +809,571 @@ Monday – Sunday | 6:00 AM – 10:00 PM
    ========================================================= */
 
 const service = document.getElementById("service");
+
+const cityWalkType = document.getElementById("cityWalkType");
+
+const duration = document.getElementById("duration");
+
+const vehicle = document.getElementById("vehicle");
+
+const people = document.getElementById("people");
+
+const cityWalkTypeGroup =
+document.getElementById("cityWalkTypeGroup");
+
+const durationGroup =
+document.getElementById("durationGroup");
+
+const vehicleGroup =
+document.getElementById("vehicleGroup");
+
+const pricePerPerson =
+document.getElementById("pricePerPerson");
+
+const totalPrice =
+document.getElementById("totalPrice");
+
+const priceExplanation =
+document.getElementById("priceExplanation");
+
+const hiddenPrice =
+document.getElementById("hiddenPrice");
+
+const hiddenPricePerPerson =
+document.getElementById("hiddenPricePerPerson");
+
+const bookingReference =
+document.getElementById("bookingReference");
+
+const summaryReference =
+document.getElementById("summaryReference");
+
+const summaryService =
+document.getElementById("summaryService");
+
+const summaryWalk =
+document.getElementById("summaryWalk");
+
+const summaryDuration =
+document.getElementById("summaryDuration");
+
+const summaryVehicle =
+document.getElementById("summaryVehicle");
+
+const summaryPeople =
+document.getElementById("summaryPeople");
+
+const summaryTotal =
+document.getElementById("summaryTotal");
+
+const summaryWalkRow =
+document.getElementById("summaryWalkRow");
+
+const summaryDurationRow =
+document.getElementById("summaryDurationRow");
+
+const summaryVehicleRow =
+document.getElementById("summaryVehicleRow");
+
+
+/* =========================================================
+   BOOKING REFERENCE
+   ========================================================= */
+
+function generateBookingReference() {
+
+  const now = new Date();
+
+  const year =
+    now.getFullYear();
+
+  const random =
+    Math.floor(1000 + Math.random() * 9000);
+
+  return "ST-" + year + "-" + random;
+
+}
+
+const reference =
+generateBookingReference();
+
+bookingReference.value = reference;
+
+summaryReference.textContent = reference;
+
+
+/* =========================================================
+   CITY WALK RATES
+   ========================================================= */
+
+/*
+   2 HOURS
+   1 person      = 1500 pp
+   2–3 people    = 1300 pp
+   4–6 people    = 1100 pp
+   7–10 people   = 1000 pp
+
+   3 HOURS
+   1 person      = 2000 pp
+   2–3 people    = 1700 pp
+   4–6 people    = 1500 pp
+   7–10 people   = 1300 pp
+
+   4 HOURS
+   1 person      = 2500 pp
+   2–3 people    = 2200 pp
+   4–6 people    = 1900 pp
+   7–10 people   = 1700 pp
+*/
+
+function getCityWalkRate(hours, numberOfPeople) {
+
+  if (hours === 2) {
+
+    if (numberOfPeople === 1) return 1500;
+
+    if (numberOfPeople <= 3) return 1300;
+
+    if (numberOfPeople <= 6) return 1100;
+
+    if (numberOfPeople <= 10) return 1000;
+
+  }
+
+
+  if (hours === 3) {
+
+    if (numberOfPeople === 1) return 2000;
+
+    if (numberOfPeople <= 3) return 1700;
+
+    if (numberOfPeople <= 6) return 1500;
+
+    if (numberOfPeople <= 10) return 1300;
+
+  }
+
+
+  if (hours === 4) {
+
+    if (numberOfPeople === 1) return 2500;
+
+    if (numberOfPeople <= 3) return 2200;
+
+    if (numberOfPeople <= 6) return 1900;
+
+    if (numberOfPeople <= 10) return 1700;
+
+  }
+
+  return 0;
+
+}
+
+
+/* =========================================================
+   VEHICLE RATES
+   ========================================================= */
+
+function getVehicleRate(vehicleName) {
+
+  if (vehicleName === "Tour Van") {
+    return 5500;
+  }
+
+  if (vehicleName === "Land Cruiser") {
+    return 8500;
+  }
+
+  return 0;
+
+}
+
+
+/* =========================================================
+   UPDATE FORM
+   ========================================================= */
+
+function updateBookingForm() {
+
+  const selectedService =
+    service.value;
+
+  const numberOfPeople =
+    parseInt(people.value) || 1;
+
+
+  /* CITY WALK */
+
+  if (selectedService === "City Walk") {
+
+    cityWalkTypeGroup.classList.remove("hidden");
+
+    durationGroup.classList.remove("hidden");
+
+    vehicleGroup.classList.add("hidden");
+
+    vehicle.value = "";
+
+    summaryVehicleRow.classList.add("hidden");
+
+    summaryWalkRow.classList.remove("hidden");
+
+    summaryDurationRow.classList.remove("hidden");
+
+
+    const hours =
+      parseInt(duration.value) || 0;
+
+
+    if (hours > 0) {
+
+      const rate =
+        getCityWalkRate(
+          hours,
+          numberOfPeople
+        );
+
+
+      const total =
+        rate * numberOfPeople;
+
+
+      pricePerPerson.textContent =
+        "KES " + rate.toLocaleString();
+
+
+      totalPrice.textContent =
+        "KES " + total.toLocaleString();
+
+
+      priceExplanation.textContent =
+        rate.toLocaleString() +
+        " × " +
+        numberOfPeople +
+        " person(s)";
+
+
+      hiddenPrice.value =
+        "KES " + total.toLocaleString();
+
+
+      hiddenPricePerPerson.value =
+        "KES " + rate.toLocaleString();
+
+
+      summaryTotal.textContent =
+        "KES " + total.toLocaleString();
+
+    } else {
+
+      pricePerPerson.textContent =
+        "Select duration";
+
+      totalPrice.textContent =
+        "KES 0";
+
+      priceExplanation.textContent =
+        "Choose a City Walk duration";
+
+      hiddenPrice.value = "";
+
+      hiddenPricePerPerson.value = "";
+
+      summaryTotal.textContent =
+        "KES 0";
+
+    }
+
+  }
+
+
+  /* NORMAL VEHICLE SERVICE */
+
+  else {
+
+    cityWalkTypeGroup.classList.add("hidden");
+
+    durationGroup.classList.add("hidden");
+
+    vehicleGroup.classList.remove("hidden");
+
+    summaryWalkRow.classList.add("hidden");
+
+    summaryDurationRow.classList.add("hidden");
+
+    summaryVehicleRow.classList.remove("hidden");
+
+
+    const rate =
+      getVehicleRate(vehicle.value);
+
+
+    if (rate > 0) {
+
+      pricePerPerson.textContent =
+        "KES " + rate.toLocaleString();
+
+
+      totalPrice.textContent =
+        "KES " + rate.toLocaleString();
+
+
+      priceExplanation.textContent =
+        "Vehicle rate for the booking";
+
+
+      hiddenPrice.value =
+        "KES " + rate.toLocaleString();
+
+
+      hiddenPricePerPerson.value =
+        "KES " + rate.toLocaleString();
+
+
+      summaryTotal.textContent =
+        "KES " + rate.toLocaleString();
+
+    } else {
+
+      pricePerPerson.textContent =
+        "Select vehicle";
+
+      totalPrice.textContent =
+        "KES 0";
+
+      priceExplanation.textContent =
+        "";
+
+      hiddenPrice.value = "";
+
+      hiddenPricePerPerson.value = "";
+
+      summaryTotal.textContent =
+        "KES 0";
+
+    }
+
+  }
+
+
+  /* SUMMARY */
+
+  summaryService.textContent =
+    selectedService ||
+    "Not selected";
+
+
+  summaryWalk.textContent =
+    cityWalkType.value ||
+    "Not selected";
+
+
+  summaryDuration.textContent =
+    duration.value
+      ? duration.value + " Hours"
+      : "Not selected";
+
+
+  summaryVehicle.textContent =
+    vehicle.value ||
+    "Not selected";
+
+
+  summaryPeople.textContent =
+    numberOfPeople;
+
+}
+
+
+/* =========================================================
+   URL PARAMETERS
+   ========================================================= */
+
+function readURLParameters() {
+
+  const params =
+    new URLSearchParams(
+      window.location.search
+    );
+
+
+  const urlService =
+    params.get("service");
+
+
+  const urlVehicle =
+    params.get("vehicle");
+
+
+  if (urlService) {
+
+    const matchingOption =
+      Array.from(
+        service.options
+      ).find(
+        option =>
+          option.value.toLowerCase() ===
+          urlService.toLowerCase()
+      );
+
+
+    if (matchingOption) {
+
+      service.value =
+        matchingOption.value;
+
+    }
+
+  }
+
+
+  if (urlVehicle) {
+
+    const matchingVehicle =
+      Array.from(
+        vehicle.options
+      ).find(
+        option =>
+          option.value.toLowerCase() ===
+          urlVehicle.toLowerCase()
+      );
+
+
+    if (matchingVehicle) {
+
+      vehicle.value =
+        matchingVehicle.value;
+
+    }
+
+  }
+
+
+  updateBookingForm();
+
+}
+
+
+/* =========================================================
+   EVENTS
+   ========================================================= */
+
+service.addEventListener(
+  "change",
+  updateBookingForm
+);
+
+cityWalkType.addEventListener(
+  "change",
+  updateBookingForm
+);
+
+duration.addEventListener(
+  "change",
+  updateBookingForm
+);
+
+vehicle.addEventListener(
+  "change",
+  updateBookingForm
+);
+
+people.addEventListener(
+  "input",
+  updateBookingForm
+);
+
+
+/* =========================================================
+   FORM SUBMISSION
+   ========================================================= */
+
+document
+.getElementById("bookingForm")
+.addEventListener(
+  "submit",
+  function(event) {
+
+    const selectedService =
+      service.value;
+
+
+    if (!selectedService) {
+
+      alert(
+        "Please select a service."
+      );
+
+      event.preventDefault();
+
+      return;
+
+    }
+
+
+    if (
+      selectedService === "City Walk"
+    ) {
+
+      if (!cityWalkType.value) {
+
+        alert(
+          "Please select a City Walk type."
+        );
+
+        event.preventDefault();
+
+        return;
+
+      }
+
+
+      if (!duration.value) {
+
+        alert(
+          "Please select the City Walk duration."
+        );
+
+        event.preventDefault();
+
+        return;
+
+      }
+
+    }
+
+
+    if (
+      selectedService !== "City Walk" &&
+      !vehicle.value
+    ) {
+
+      alert(
+        "Please select your preferred vehicle."
+      );
+
+      event.preventDefault();
+
+      return;
+
+    }
+
+
+    updateBookingForm();
+
+  }
+);
+
+
+/* =========================================================
+   START
+   ========================================================= */
+
+readURLParameters();
+
+</script>
+
+
+</body>
+</html>
