@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="css/style.css">
 
 <style>
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -16,462 +17,614 @@ body {
     color: #333;
 }
 
-.tour-page {
+/* =========================
+   TOUR HERO
+========================= */
+
+.tour-hero {
+    background: #b11226;
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.tour-hero h1 {
+    margin: 0 0 15px;
+    font-size: 44px;
+}
+
+.tour-hero p {
+    max-width: 850px;
+    margin: auto;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.tour-container {
     max-width: 1100px;
-    margin: 35px auto;
-    padding: 20px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-.hero {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.10);
-}
+/* =========================
+   IMAGE
+========================= */
 
-.hero img {
+.tour-image {
     width: 100%;
-    height: 420px;
+    max-height: 500px;
     object-fit: cover;
+    border-radius: 18px;
+    display: block;
+    margin-bottom: 35px;
 }
 
-.hero-content {
+/* =========================
+   DESCRIPTION
+========================= */
+
+.tour-description {
+    background: white;
     padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    margin-bottom: 35px;
 }
 
-.hero h1 {
+.tour-description h2 {
     color: #b11226;
-    font-size: 38px;
     margin-top: 0;
 }
 
-.hero p {
+.tour-description p {
     font-size: 18px;
-    line-height: 1.7;
+    line-height: 1.8;
 }
+
+/* =========================
+   INFORMATION CARDS
+========================= */
 
 .info-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    margin: 25px 0;
+    gap: 18px;
+    margin: 30px 0;
 }
 
-.info-box {
-    background: #f5f5f5;
-    padding: 18px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.info-box strong {
-    display: block;
-    color: #b11226;
-    margin-bottom: 7px;
-}
-
-.section {
+.info-card {
     background: white;
-    padding: 28px;
-    margin-top: 25px;
-    border-radius: 12px;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+    padding: 25px 15px;
+    text-align: center;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
-.section h2 {
+.info-card h3 {
     color: #b11226;
     margin-top: 0;
 }
 
-.section p,
-.section li {
-    line-height: 1.7;
+.info-card p {
+    margin-bottom: 0;
+    font-size: 17px;
 }
 
-.itinerary li {
-    margin-bottom: 12px;
-}
+/* =========================
+   BOOK NOW
+========================= */
 
-.price-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.price-table th,
-.price-table td {
-    padding: 15px;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-
-.price-table th {
+.main-book-button {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 45px;
     background: #b11226;
     color: white;
+    text-decoration: none;
+    padding: 17px 45px;
+    border-radius: 8px;
+    font-size: 21px;
+    font-weight: bold;
 }
 
-.price-table tr:nth-child(even) {
-    background: #f8f8f8;
+.main-book-button:hover {
+    background: #870d1c;
 }
 
-.book-box {
-    background: #b11226;
-    color: white;
+/* =========================
+   PRICING
+========================= */
+
+.pricing-section {
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+}
+
+.pricing-section h2 {
     text-align: center;
-    padding: 35px 25px;
-    margin-top: 25px;
-    border-radius: 12px;
-}
-
-.book-box h2 {
+    color: #b11226;
+    font-size: 32px;
     margin-top: 0;
-    font-size: 30px;
 }
 
-.book-box p {
-    font-size: 18px;
+.pricing-note {
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+/* =========================
+   PRICE CARDS
+========================= */
+
+.price-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.price-card {
+    border: 2px solid #eee;
+    border-radius: 15px;
+    padding: 28px;
+    text-align: center;
+}
+
+.price-card h3 {
+    color: #b11226;
+    font-size: 25px;
+    margin-top: 0;
+}
+
+.price {
+    font-size: 30px;
+    font-weight: bold;
+    color: #b11226;
+    margin: 15px 0;
+}
+
+.price-card p {
+    font-size: 17px;
     line-height: 1.6;
 }
 
-.book-btn {
+.book-vehicle {
     display: inline-block;
-    background: white;
-    color: #b11226;
-    padding: 15px 30px;
-    border-radius: 8px;
+    background: #b11226;
+    color: white;
     text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 7px;
     font-weight: bold;
-    font-size: 18px;
     margin-top: 10px;
 }
 
-.book-btn:hover {
-    background: #f0f0f0;
+.book-vehicle:hover {
+    background: #870d1c;
 }
 
-.back-btn {
-    display: inline-block;
-    margin-top: 25px;
+/* =========================
+   INCLUDED
+========================= */
+
+.details-box {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+}
+
+.details-box h2 {
     color: #b11226;
-    text-decoration: none;
-    font-weight: bold;
 }
 
-@media (max-width: 800px) {
+.details-box li {
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #b11226;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .tour-hero {
+        padding: 40px 15px;
+    }
+
+    .tour-hero h1 {
+        font-size: 34px;
+    }
+
+    .tour-hero p {
+        font-size: 18px;
+    }
+
+    .tour-container {
+        padding: 0 14px;
+        margin-top: 25px;
+    }
 
     .info-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .hero img {
-        height: 300px;
+    .price-grid {
+        grid-template-columns: 1fr;
     }
 
-    .hero h1 {
-        font-size: 30px;
+    .tour-description,
+    .pricing-section,
+    .details-box {
+        padding: 22px;
+    }
+
+    .main-book-button {
+        width: 90%;
+        text-align: center;
+        padding: 16px 10px;
     }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 430px) {
 
-    .tour-page {
-        padding: 12px;
-        margin: 20px auto;
+    .tour-hero h1 {
+        font-size: 30px;
     }
 
     .info-grid {
         grid-template-columns: 1fr 1fr;
+        gap: 12px;
     }
 
-    .hero-content,
-    .section {
-        padding: 20px;
+    .info-card {
+        padding: 20px 10px;
     }
 
-    .price-table {
-        font-size: 14px;
+    .info-card h3 {
+        font-size: 17px;
     }
 
-    .price-table th,
-    .price-table td {
-        padding: 10px 7px;
+    .info-card p {
+        font-size: 15px;
     }
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
 
-<div class="logo">
-<h1>STEMA TRANS</h1>
-<p>City Tours, Transfers & Guided Experiences</p>
-</div>
+    <div class="logo">
+        <h1>STEMA TRANS</h1>
+        <p>City Tours, Transfers & Guided Experiences</p>
+    </div>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="tours.html">Tours</a>
-<a href="transfers.html">Transfers</a>
-<a href="rates.html">Rates</a>
-<a href="fleet.html">Fleet</a>
-<a href="gallery.html">Gallery</a>
-<a href="city-walks.html">City Walks</a>
-<a href="contact.html">Contact</a>
-</nav>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="tours.html">Tours</a>
+        <a href="transfers.html">Transfers</a>
+        <a href="rates.html">Rates</a>
+        <a href="fleet.html">Fleet</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="city-walks.html">City Walks</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
 </header>
 
 
-<main class="tour-page">
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="tour-hero">
+
+    <h1>Nairobi National Park Safari</h1>
+
+    <p>
+        Experience the unique wildlife of Nairobi National Park,
+        one of the world's few national parks located next to a
+        capital city.
+    </p>
+
+</section>
 
 
-<!-- HERO -->
+<!-- =========================
+     CONTENT
+========================= -->
 
-<div class="hero">
+<main class="tour-container">
+
+
+<!-- =========================
+     IMAGE
+========================= -->
 
 <img
-src="images/nairobi-national-park.jpg"
-alt="Nairobi National Park Safari"
+    class="tour-image"
+    src="images/nairobi-national-park.jpg"
+    alt="Nairobi National Park Safari"
+    onerror="this.onerror=null;this.src='images/hero.jpg';"
 >
 
-<div class="hero-content">
 
-<h1>Nairobi National Park Safari</h1>
+<!-- =========================
+     DESCRIPTION
+========================= -->
 
-<p>
-Experience the unique wildlife of Nairobi National Park,
-one of the world's few national parks located next to a capital city.
-Enjoy a guided game drive with Stema Trans and discover wildlife,
-scenery and the story of Nairobi's famous conservation area.
-</p>
+<section class="tour-description">
 
-<div class="info-grid">
+    <h2>Discover Nairobi National Park</h2>
 
-<div class="info-box">
-<strong>Duration</strong>
-4–5 Hours
-</div>
+    <p>
+        Enjoy a guided game drive through Nairobi National Park
+        with Stema Trans and discover wildlife, beautiful scenery
+        and the fascinating conservation story of Nairobi's
+        famous national park.
+    </p>
 
-<div class="info-box">
-<strong>Group</strong>
-1–7 People
-</div>
-
-<div class="info-box">
-<strong>Departure</strong>
-Nairobi
-</div>
-
-<div class="info-box">
-<strong>Experience</strong>
-Game Drive
-</div>
-
-</div>
-
-</div>
-</div>
-
-
-<!-- ABOUT -->
-
-<section class="section">
-
-<h2>About the Experience</h2>
-
-<p>
-Our Nairobi National Park experience is ideal for visitors who want
-to experience Kenya's wildlife without travelling far from Nairobi.
-The park offers opportunities to see lions, giraffes, zebras,
-buffaloes, rhinos, antelopes and many species of birds.
-</p>
-
-<p>
-Your Stema Trans driver-guide will accompany you throughout the
-experience, helping you understand the wildlife, landscape,
-conservation and history of the park.
-</p>
+    <p>
+        The park offers the unusual experience of seeing wildlife
+        against the backdrop of Nairobi's skyline. Depending on
+        the season and conditions, guests may encounter lions,
+        giraffes, zebras, buffaloes, rhinos, elands, warthogs,
+        hippos and many species of birds.
+    </p>
 
 </section>
 
 
-<!-- ITINERARY -->
+<!-- =========================
+     TOUR INFORMATION
+========================= -->
 
-<section class="section itinerary">
+<section class="info-grid">
 
-<h2>Suggested Itinerary</h2>
+    <div class="info-card">
+        <h3>Duration</h3>
+        <p>4–5 Hours</p>
+    </div>
 
-<ul>
+    <div class="info-card">
+        <h3>Group</h3>
+        <p>1–7 People</p>
+    </div>
 
-<li>
-<strong>Pickup:</strong>
-Pickup from your Nairobi hotel, residence or agreed location.
-</li>
+    <div class="info-card">
+        <h3>Departure</h3>
+        <p>Nairobi</p>
+    </div>
 
-<li>
-<strong>Journey to the park:</strong>
-Drive to Nairobi National Park and proceed through the park entrance.
-</li>
-
-<li>
-<strong>Game drive:</strong>
-Explore the park's different habitats while looking for wildlife.
-</li>
-
-<li>
-<strong>Wildlife viewing:</strong>
-Possible sightings include lions, rhinos, giraffes, zebras,
-buffaloes, antelopes and numerous bird species.
-</li>
-
-<li>
-<strong>Refreshment break:</strong>
-Optional stop depending on the agreed itinerary and park conditions.
-</li>
-
-<li>
-<strong>Return:</strong>
-Exit the park and drive back to your Nairobi drop-off location.
-</li>
-
-</ul>
+    <div class="info-card">
+        <h3>Experience</h3>
+        <p>Guided Game Drive</p>
+    </div>
 
 </section>
 
 
-<!-- PRICING -->
-
-<section class="section">
-
-<h2>Transport Pricing</h2>
-
-<p>
-Transport charges are based on the vehicle, not the number of
-passengers within the vehicle's capacity.
-</p>
-
-<table class="price-table">
-
-<tr>
-<th>Vehicle</th>
-<th>Capacity</th>
-<th>Transport Price</th>
-</tr>
-
-<tr>
-<td>Tour Van</td>
-<td>1–7 passengers</td>
-<td>
-<strong>KES 8,500</strong><br>
-USD 66
-</td>
-</tr>
-
-<tr>
-<td>Land Cruiser</td>
-<td>1–7 passengers</td>
-<td>
-<strong>KES 12,500</strong><br>
-USD 97
-</td>
-</tr>
-
-</table>
-
-<p>
-<strong>Important:</strong>
-Park entrance fees, accommodation, meals and other attraction
-charges are not included unless specifically stated.
-</p>
-
-</section>
-
-
-<!-- WHAT IS INCLUDED -->
-
-<section class="section">
-
-<h2>What's Included</h2>
-
-<ul>
-
-<li>Transport in the selected vehicle</li>
-
-<li>Professional Stema Trans driver-guide</li>
-
-<li>Pickup and drop-off within the agreed Nairobi area</li>
-
-<li>Game-drive transport inside the park</li>
-
-<li>Driver-guide assistance during the experience</li>
-
-</ul>
-
-</section>
-
-
-<!-- NOT INCLUDED -->
-
-<section class="section">
-
-<h2>What's Not Included</h2>
-
-<ul>
-
-<li>National park entrance fees</li>
-
-<li>Meals and drinks</li>
-
-<li>Personal expenses</li>
-
-<li>Optional activities</li>
-
-<li>Accommodation</li>
-
-</ul>
-
-</section>
-
-
-<!-- BOOKING -->
-
-<div class="book-box">
-
-<h2>Ready to Explore Nairobi National Park?</h2>
-
-<p>
-Choose your vehicle and complete your booking request.
-Your booking will be sent to Stema Trans for confirmation.
-</p>
+<!-- =========================
+     MAIN BOOK BUTTON
+========================= -->
 
 <a
-class="book-btn"
-href="booking.html?service=Nairobi%20National%20Park"
+    class="main-book-button"
+    href="booking.html?service=Nairobi%20National%20Park"
 >
-Book This Tour
+    BOOK THIS TOUR
 </a>
 
-</div>
 
+<!-- =========================
+     PRICING
+========================= -->
+
+<section class="pricing-section">
+
+    <h2>Safari Transport Rates</h2>
+
+    <p class="pricing-note">
+        Transport charges are per vehicle.
+        Park and attraction entry fees are charged separately.
+    </p>
+
+
+    <div class="price-grid">
+
+
+        <!-- TOUR VAN -->
+
+        <div class="price-card">
+
+            <h3>Tour Van</h3>
+
+            <div class="price">
+                KES 8,500
+            </div>
+
+            <p>
+                Capacity: 1–7 passengers
+            </p>
+
+            <p>
+                Guided Nairobi National Park
+                safari transport.
+            </p>
+
+            <a
+                class="book-vehicle"
+                href="booking.html?service=Nairobi%20National%20Park&vehicle=Tour%20Van"
+            >
+                BOOK TOUR VAN
+            </a>
+
+        </div>
+
+
+        <!-- LAND CRUISER -->
+
+        <div class="price-card">
+
+            <h3>Land Cruiser</h3>
+
+            <div class="price">
+                KES 12,500
+            </div>
+
+            <p>
+                Capacity: 1–7 passengers
+            </p>
+
+            <p>
+                Comfortable safari vehicle
+                suitable for game viewing.
+            </p>
+
+            <a
+                class="book-vehicle"
+                href="booking.html?service=Nairobi%20National%20Park&vehicle=Land%20Cruiser"
+            >
+                BOOK LAND CRUISER
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WHAT TO EXPECT
+========================= -->
+
+<section class="details-box">
+
+    <h2>What to Expect</h2>
+
+    <ul>
+
+        <li>
+            Guided game drive through Nairobi National Park.
+        </li>
+
+        <li>
+            Opportunities to see wildlife in their natural
+            environment.
+        </li>
+
+        <li>
+            Professional Stema Trans driver/guide.
+        </li>
+
+        <li>
+            Comfortable transport from your Nairobi pickup point.
+        </li>
+
+        <li>
+            Opportunities for photography and wildlife viewing.
+        </li>
+
+        <li>
+            Flexible departure arrangements depending on
+            your booking.
+        </li>
+
+    </ul>
+
+</section>
+
+
+<!-- =========================
+     IMPORTANT INFORMATION
+========================= -->
+
+<section class="details-box">
+
+    <h2>Important Information</h2>
+
+    <ul>
+
+        <li>
+            Park entrance fees are not included in the transport
+            rate unless specifically stated.
+        </li>
+
+        <li>
+            Transport rates shown above are per vehicle,
+            not per passenger.
+        </li>
+
+        <li>
+            Please provide the number of passengers when booking.
+        </li>
+
+        <li>
+            Booking confirmation will be sent after your request
+            has been received.
+        </li>
+
+    </ul>
+
+</section>
+
+
+<!-- =========================
+     FINAL BOOK BUTTON
+========================= -->
 
 <a
-class="back-btn"
-href="tours.html"
+    class="main-book-button"
+    href="booking.html?service=Nairobi%20National%20Park"
 >
-← Back to All Tours
+    BOOK YOUR NAIROBI SAFARI
 </a>
 
 
 </main>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
-<p>
-© 2026 Stema Trans — Nairobi City Tours, Transfers & Guided Experiences
-</p>
+    <p>
+        © 2026 Stema Trans — Nairobi City Tours,
+        Transfers & Guided Experiences
+    </p>
 
 </footer>
 
