@@ -1,132 +1,528 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nairobi City Tours | Stema Trans</title>
+<title>Nairobi Tours | Stema Trans</title>
 
 <link rel="stylesheet" href="css/style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    color: #333;
+}
 
+.tours-page {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.tours-page h1 {
+    text-align: center;
+    color: #b11226;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 40px;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.tours-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tour-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+    display: flex;
+    flex-direction: column;
+}
+
+.tour-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.tour-content {
+    padding: 22px;
+    flex: 1;
+}
+
+.tour-content h2 {
+    color: #b11226;
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.tour-content p {
+    line-height: 1.6;
+}
+
+.tour-info {
+    margin: 15px 0;
+    line-height: 1.8;
+}
+
+.tour-price {
+    font-size: 19px;
+    font-weight: bold;
+    color: #b11226;
+    margin: 15px 0;
+}
+
+.tour-btn {
+    display: block;
+    text-align: center;
+    background: #b11226;
+    color: white;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.tour-btn:hover {
+    background: #870d1c;
+}
+
+@media (max-width: 900px) {
+
+    .tours-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .tours-page {
+        margin: 20px auto;
+        padding: 12px;
+    }
+
+    .tours-page h1 {
+        font-size: 31px;
+    }
+
+    .tours-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tour-card img {
+        height: 220px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
 
-<div class="logo">
+    <div class="logo">
+        <h1>STEMA TRANS</h1>
+        <p>City Tours, Transfers & Guided Experiences</p>
+    </div>
 
-<h1>STEMA TRANS</h1>
-
-<p>Explore Nairobi with Comfort, Safety & Professionalism</p>
-
-</div>
-
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="tours.html">Tours</a>
-  <a href="transfers.html">Transfers</a>
-  <a href="rates.html">Rates</a>
-  <a href="fleet.html">Fleet</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="citywalks.html">City Walks</a>
-  <a href="contact.html">Contact</a>
-</nav>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="tours.html">Tours</a>
+        <a href="transfers.html">Transfers</a>
+        <a href="rates.html">Rates</a>
+        <a href="fleet.html">Fleet</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="city-walks.html">City Walks</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
 </header>
 
-<section>
 
-<h2>Nairobi City Tours</h2>
+<main class="tours-page">
 
-<div class="cards">
+<h1>Our Nairobi Tours</h1>
 
-<div class="card">
-<h3>🦁 Nairobi National Park</h3>
-<p>Experience lions, rhinos, giraffes, zebras, buffaloes and over 400 bird species against Nairobi's unique skyline.</p>
-</div>
+<p class="intro">
+Discover Nairobi with Stema Trans. Choose an experience below to
+see the tour details, duration, pricing and booking options.
+</p>
 
-<div class="card">
-<h3>🦒 Giraffe Centre</h3>
-<p>Feed the endangered Rothschild's giraffes and learn about conservation in a beautiful natural setting.</p>
-</div>
 
-<div class="card">
-<h3>🐘 David Sheldrick Elephant Orphanage</h3>
-<p>Meet rescued baby elephants and discover the inspiring conservation work taking place in Kenya.</p>
-</div>
+<div class="tours-grid">
 
-<div class="card">
-<h3>🏛 Karen Blixen Museum</h3>
-<p>Visit the famous home of the author of <em>Out of Africa</em> and explore Kenya's colonial history.</p>
-</div>
 
-<div class="card">
-<h3>🌳 Karura Forest</h3>
-<p>Enjoy peaceful walking trails, waterfalls, caves and beautiful indigenous forest just minutes from the city.</p>
-</div>
+<!-- =========================
+     NAIROBI NATIONAL PARK
+========================= -->
 
-<div class="card">
-<h3>🎭 Bomas of Kenya</h3>
-<p>Experience traditional dances, music and cultural performances from Kenya's diverse communities.</p>
-</div>
+<div class="tour-card">
 
-<div class="card">
-<h3>🏙 KICC Rooftop</h3>
-<p>Take in spectacular panoramic views of Nairobi from one of the city's most iconic landmarks.</p>
-</div>
+<img src="images/nairobi-national-park.jpg"
+     alt="Nairobi National Park">
 
-<div class="card">
-<h3>🏺 Nairobi National Museum</h3>
-<p>Explore Kenya's rich history, archaeology, wildlife and cultural heritage.</p>
-</div>
+<div class="tour-content">
 
-<div class="card">
-<h3>🛍 Maasai Market</h3>
-<p>Shop for authentic Kenyan souvenirs, handmade jewellery, paintings and African crafts.</p>
-</div>
+<h2>Nairobi National Park</h2>
+
+<p>
+Experience wildlife just outside Nairobi with a guided game drive
+through Nairobi National Park.
+</p>
+
+<div class="tour-info">
+
+<strong>Duration:</strong> 4–5 hours<br>
+
+<strong>Group:</strong> 1–7 people<br>
+
+<strong>Vehicle:</strong> Tour Van or Land Cruiser
 
 </div>
 
-</section>
+<div class="tour-price">
+From KES 8,500 / USD 66 per vehicle
+</div>
 
-<section class="cta">
+<a class="tour-btn"
+   href="nairobi-national-park.html">
 
-<h2>Book Your Nairobi Adventure Today</h2>
-
-<p>We offer private, family, corporate and group tours throughout Nairobi.</p>
-
-<a class="btn" href="https://wa.me/254722910913">
-
-Book via WhatsApp
+View Tour & Prices
 
 </a>
 
-</section>
+</div>
+</div>
+
+
+<!-- =========================
+     GIRAFFE CENTRE
+========================= -->
+
+<div class="tour-card">
+
+<img src="images/giraffe-centre.jpg"
+     alt="Giraffe Centre">
+
+<div class="tour-content">
+
+<h2>Giraffe Centre</h2>
+
+<p>
+Get close to Rothschild's giraffes and learn about conservation
+at one of Nairobi's best-known attractions.
+</p>
+
+<div class="tour-info">
+
+<strong>Duration:</strong> 2–3 hours<br>
+
+<strong>Group:</strong> 1–7 people<br>
+
+<strong>Vehicle:</strong> Tour Van or Sedan
+
+</div>
+
+<div class="tour-price">
+From KES 5,500 / USD 43 per vehicle
+</div>
+
+<a class="tour-btn"
+   href="giraffe-centre.html">
+
+View Tour & Prices
+
+</a>
+
+</div>
+</div>
+
+
+<!-- =========================
+     KAREN BLIXEN
+========================= -->
+
+<div class="tour-card">
+
+<img src="images/karen-blixen.jpg"
+     alt="Karen Blixen Museum">
+
+<div class="tour-content">
+
+<h2>Karen Blixen Museum</h2>
+
+<p>
+Explore the former home of Karen Blixen and discover the history
+behind one of Kenya's most famous literary figures.
+</p>
+
+<div class="tour-info">
+
+<strong>Duration:</strong> 2–3 hours<br>
+
+<strong>Group:</strong> 1–7 people<br>
+
+<strong>Vehicle:</strong> Tour Van or Sedan
+
+</div>
+
+<div class="tour-price">
+From KES 5,500 / USD 43 per vehicle
+</div>
+
+<a class="tour-btn"
+   href="karen-blixen.html">
+
+View Tour & Prices
+
+</a>
+
+</div>
+</div>
+
+
+<!-- =========================
+     NAIROBI NATIONAL MUSEUM
+========================= -->
+
+<div class="tour-card">
+
+<img src="images/nairobi-national-museum.jpg"
+     alt="Nairobi National Museum">
+
+<div class="tour-content">
+
+<h2>Nairobi National Museum</h2>
+
+<p>
+Discover Kenya's history, culture, art, archaeology and natural
+heritage at the Nairobi National Museum.
+</p>
+
+<div class="tour-info">
+
+<strong>Duration:</strong> 2–3 hours<br>
+
+<strong>Group:</strong> 1–7 people<br>
+
+<strong>Vehicle:</strong> Tour Van or Sedan
+
+</div>
+
+<div class="tour-price">
+From KES 5,500 / USD 43 per vehicle
+</div>
+
+<a class="tour-btn"
+   href="nairobi-national-museum.html">
+
+View Tour & Prices
+
+</a>
+
+</div>
+</div>
+
+
+<!-- =========================
+     BOMAS OF KENYA
+========================= -->
+
+<div class="tour-card">
+
+<img src="images/bomas-of-kenya.jpg"
+     alt="Bomas of Kenya">
+
+<div class="tour-content">
+
+<h2>Bomas of Kenya</h2>
+
+<p>
+Experience Kenya's diverse cultures through traditional
+homesteads, music, dance and cultural performances.
+</p>
+
+<div class="tour-info">
+
+<strong>Duration:</strong> 3–4 hours<br>
+
+<strong>Group:</strong> 1–7 people<br>
+
+<strong>Vehicle:</strong> Tour Van or Sedan
+
+</div>
+
+<div class="tour-price">
+From KES 5,500 / USD 43 per vehicle
+</div>
+
+<a class="tour-btn"
+   href="bomas-of-kenya.html">
+
+View Tour & Prices
+
+</a>
+
+</div>
+</div>
+
+
+<!-- =========================
+     NAIROBI CITY TOUR
+========================= -->
+
+<div class="tour-card">
+
+<img src="images/nairobi-city.jpg"
+     alt="Nairobi City Tour">
+
+<div class="tour-content">
+
+<h2>Nairobi City Tour</h2>
+
+<p>
+Explore Nairobi's landmarks, history, culture, markets and
+modern city life with a local driver-guide.
+</p>
+
+<div class="tour-info">
+
+<strong>Duration:</strong> 4–5 hours<br>
+
+<strong>Group:</strong> 1–7 people<br>
+
+<strong>Vehicle:</strong> Tour Van or Land Cruiser
+
+</div>
+
+<div class="tour-price">
+From KES 5,500 / USD 43 per vehicle
+</div>
+
+<a class="tour-btn"
+   href="nairobi-city-tour.html">
+
+View Tour & Prices
+
+</a>
+
+</div>
+</div>
+
+
+<!-- =========================
+     CITY WALK
+========================= -->
+
+<div class="tour-card">
+
+<img src="images/city-walk.jpg"
+     alt="Nairobi City Walk">
+
+<div class="tour-content">
+
+<h2>Nairobi City Walk</h2>
+
+<p>
+Walk through the heart of Nairobi while discovering its history,
+culture, architecture, markets and everyday local life.
+</p>
+
+<div class="tour-info">
+
+<strong>Duration:</strong> 2–3 hours<br>
+
+<strong>Group:</strong> 1–10 people<br>
+
+<strong>Experience:</strong> Walking tour
+
+</div>
+
+<div class="tour-price">
+From KES 2,500 / USD 20 per person
+</div>
+
+<a class="tour-btn"
+   href="city-walks.html">
+
+View Walks & Prices
+
+</a>
+
+</div>
+</div>
+
+
+<!-- =========================
+     CUSTOM TOUR
+========================= -->
+
+<div class="tour-card">
+
+<img src="images/hero.jpg"
+     alt="Private Nairobi Tour">
+
+<div class="tour-content">
+
+<h2>Private Custom Tour</h2>
+
+<p>
+Create your own Nairobi experience. Tell us where you want to go
+and we can help design a private itinerary around your interests.
+</p>
+
+<div class="tour-info">
+
+<strong>Duration:</strong> Flexible<br>
+
+<strong>Group:</strong> 1–7 people<br>
+
+<strong>Vehicle:</strong> Subject to itinerary
+
+</div>
+
+<div class="tour-price">
+Custom quotation
+</div>
+
+<a class="tour-btn"
+   href="booking.html?service=Private%20Hire">
+
+Request a Quote
+
+</a>
+
+</div>
+</div>
+
+
+</div>
+
+</main>
+
 
 <footer>
 
-<h3>STEMA TRANS</h3>
-
-<p>Nairobi, Kenya</p>
-
-<p>Phone: +254 722 910 913</p>
-
-<p>Email: info@stematranstours.com</p>
-
-<p>© 2026 Stema Trans. All Rights Reserved.</p>
+<p>
+© 2026 Stema Trans — Nairobi City Tours, Transfers & Guided Experiences
+</p>
 
 </footer>
-  <a href="https://wa.me/254722910913" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
-💬
-</a>
-<script src="js/script.js"></script>
-</body>
-  
 
+</body>
 </html>
