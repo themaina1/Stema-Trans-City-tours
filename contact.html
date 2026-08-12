@@ -3,121 +3,459 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | Stema Trans</title>
 
-<link rel="stylesheet" href="css/style.css">
+<title>Contact Us | STEMA TRANS</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  color: #333;
+}
+
+/* HEADER */
+
+header {
+  background: #b11226;
+  color: white;
+  text-align: center;
+  padding: 28px 15px 25px;
+}
+
+header h1 {
+  margin: 0 0 8px;
+  font-size: 36px;
+}
+
+header p {
+  margin: 0 0 22px;
+  font-size: 18px;
+}
+
+/* NAVIGATION */
+
+nav {
+  background: #222;
+  padding: 18px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 6px 8px;
+}
+
+nav a:hover {
+  background: white;
+  color: #b11226;
+  border-radius: 5px;
+}
+
+/* MAIN */
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 55px 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #b11226;
+  font-size: 42px;
+  margin-bottom: 35px;
+}
+
+/* CONTACT CARDS */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.contact-card {
+  background: white;
+  padding: 28px;
+  border-radius: 15px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+.contact-card h3 {
+  color: #b11226;
+  margin-top: 0;
+  font-size: 25px;
+}
+
+.contact-card p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.contact-card a {
+  color: #b11226;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* FORM */
+
+.form-section {
+  margin-top: 40px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+.form-section h3 {
+  color: #b11226;
+  font-size: 28px;
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin: 15px 0 7px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+button {
+  margin-top: 18px;
+  background: #b11226;
+  color: white;
+  border: none;
+  padding: 15px 28px;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #870d1c;
+}
+
+/* WHATSAPP */
+
+.whatsapp {
+  text-align: center;
+  margin-top: 35px;
+}
+
+.whatsapp a {
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  padding: 15px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* FOOTER */
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 6px 0;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  header h1 {
+    font-size: 30px;
+  }
+
+  nav {
+    gap: 6px 12px;
+  }
+
+  nav a {
+    font-size: 15px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+
+}
+
+</style>
 </head>
+
 
 <body>
 
+
 <header>
 
-<div class="logo">
 <h1>STEMA TRANS</h1>
-<p>Explore Nairobi with Comfort, Safety & Professionalism</p>
-</div>
+
+<p>
+Explore Nairobi with Comfort, Safety & Professionalism
+</p>
+
 
 <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="tours.html">Tours</a>
-  <a href="transfers.html">Transfers</a>
-  <a href="rates.html">Rates</a>
-  <a href="fleet.html">Fleet</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="citywalks.html">City Walks</a>
-  <a href="contact.html">Contact</a>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="tours.html">Tours</a>
+<a href="transfers.html">Transfers</a>
+<a href="rates.html">Rates</a>
+<a href="fleet.html">Fleet</a>
+<a href="gallery.html">Gallery</a>
+<a href="citywalks.html">City Walks</a>
+<a href="contact.html">Contact</a>
+
 </nav>
 
 </header>
 
-<section>
+
+<main>
+
 
 <h2>Contact Us</h2>
 
-<div class="cards">
 
-<div class="card">
+<div class="contact-grid">
+
+
+<div class="contact-card">
 
 <h3>Contact Information</h3>
 
-<p><strong>📍 Location:</strong> Nairobi, Kenya</p>
+<p>
+📍 <strong>Location:</strong><br>
+Nairobi, Kenya
+</p>
 
-<p><strong>📞 Phone:</strong> +254 722 910 913</p>
+<p>
+📞 <strong>Phone:</strong><br>
+<a href="tel:+254722910913">
++254 722 910 913
+</a>
+</p>
 
-<p><strong>💬 WhatsApp:</strong> +254 722 910 913</p>
+<p>
+💬 <strong>WhatsApp:</strong><br>
+<a href="https://wa.me/254722910913">
++254 722 910 913
+</a>
+</p>
 
-<p><strong>✉ Email:</strong> info@stematranstours.com</p>
+<p>
+✉ <strong>General Enquiries:</strong><br>
+<a href="mailto:info@stematranstours.com">
+info@stematranstours.com
+</a>
+</p>
 
-<p><strong>🕒 Working Hours:</strong><br>
-Monday - Sunday<br>
-6:00 AM - 10:00 PM
+<p>
+🕒 <strong>Working Hours:</strong><br>
+Monday – Sunday<br>
+6:00 AM – 10:00 PM
 </p>
 
 </div>
 
-<div class="card">
+
+<div class="contact-card">
+
+<h3>Booking Enquiries</h3>
+
+<p>
+For tour and transfer bookings, you can use our online booking form.
+</p>
+
+<p>
+<strong>Booking notifications:</strong><br>
+stemawastrans@gmail.com
+</p>
+
+<p>
+For general questions, please use:
+</p>
+
+<p>
+<a href="mailto:info@stematranstours.com">
+info@stematranstours.com
+</a>
+</p>
+
+</div>
+
+
+</div>
+
+
+<section class="form-section">
 
 <h3>Send an Enquiry</h3>
 
-<form>
 
-<p>Name</p>
-<input type="text" placeholder="Your Name" style="width:100%;padding:12px;margin-bottom:15px;">
+<form
+action="https://formsubmit.co/info@stematranstours.com"
+method="POST"
+>
 
-<p>Email</p>
-<input type="email" placeholder="Your Email" style="width:100%;padding:12px;margin-bottom:15px;">
 
-<p>Phone</p>
-<input type="text" placeholder="Phone Number" style="width:100%;padding:12px;margin-bottom:15px;">
+<input
+type="hidden"
+name="_subject"
+value="New STEMA TRANS Website Enquiry"
+>
 
-<p>Message</p>
-<textarea placeholder="Tell us about your trip..." style="width:100%;height:120px;padding:12px;"></textarea>
+<input
+type="hidden"
+name="_captcha"
+value="false"
+>
 
-<br><br>
 
-<button class="btn" type="submit">Send Enquiry</button>
+<label for="name">
+Name
+</label>
+
+<input
+type="text"
+id="name"
+name="Name"
+placeholder="Your Name"
+required
+>
+
+
+<label for="email">
+Email
+</label>
+
+<input
+type="email"
+id="email"
+name="Email"
+placeholder="Your Email"
+required
+>
+
+
+<label for="phone">
+Phone
+</label>
+
+<input
+type="tel"
+id="phone"
+name="Phone"
+placeholder="Phone Number"
+>
+
+
+<label for="message">
+Message
+</label>
+
+<textarea
+id="message"
+name="Message"
+placeholder="How can we help you?"
+required
+></textarea>
+
+
+<button type="submit">
+Send Enquiry
+</button>
 
 </form>
 
-</div>
-
-</div>
-
 </section>
 
-<section class="cta">
 
-<h2>Ready to Explore Nairobi?</h2>
+<div class="whatsapp">
 
-<p>Contact us today for tours, airport transfers and private transport.</p>
-
-<a class="btn" href="https://wa.me/254722910913">
-
-Chat on WhatsApp
-
+<a href="https://wa.me/254722910913">
+💬 Chat on WhatsApp
 </a>
 
-</section>
+</div>
+
+
+</main>
+
 
 <footer>
 
-<h3>STEMA TRANS</h3>
+<p>
+<strong>STEMA TRANS</strong>
+</p>
 
-<p>Nairobi, Kenya</p>
+<p>
+Nairobi, Kenya
+</p>
 
-<p>Phone: +254 722 910 913</p>
+<p>
+Phone: +254 722 910 913
+</p>
 
-<p>Email: info@stematranstours.com</p>
+<p>
+General Enquiries:
+info@stematranstours.com
+</p>
 
-<p>© 2026 Stema Trans. All Rights Reserved.</p>
+<p>
+Booking Enquiries:
+stemawastrans@gmail.com
+</p>
+
+<p>
+© 2026 Stema Trans. All Rights Reserved.
+</p>
 
 </footer>
-  <a href="https://wa.me/254722910913" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
-💬
-</a>
-<script src="js/script.js"></script>
+
+
 </body>
 </html>
