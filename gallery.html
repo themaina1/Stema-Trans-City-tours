@@ -1,250 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Gallery - STEMA TRANS</title>
+<title>Gallery - STEMA TRANS</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      color: #333;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    header {
-      background: #b30d24;
-      color: white;
-      text-align: center;
-      padding: 22px 10px;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
 
-    header h1 {
-      margin: 0 0 15px;
-      font-size: 32px;
-    }
+/* HEADER */
 
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+header {
+  background: #b30d24;
+  color: white;
+  padding: 18px 10px;
+  text-align: center;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 18px;
-    }
+header h1 {
+  margin: 0 0 18px;
+  font-size: 28px;
+}
 
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 55px 20px;
-    }
+/* NAVIGATION */
 
-    .page-title {
-      text-align: center;
-      color: #b30d24;
-      font-size: 48px;
-      margin-bottom: 45px;
-    }
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
-    }
+nav a {
+  display: inline-block;
+  color: white;
+  background: #8f0b1d;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 10px 12px;
+  border-radius: 8px;
+}
 
-    .card {
-      background: white;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.10);
-    }
+nav a:hover {
+  background: #700817;
+}
 
-    .card img {
-      display: block;
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-    }
+/* CITY WALKS BUTTON */
 
-    .card-content {
-      padding: 20px;
-    }
+nav a.citywalk {
+  background: white;
+  color: #b30d24;
+  border: 2px solid white;
+}
 
-    .card h2 {
-      margin: 0 0 8px;
-      color: #b30d24;
-      font-size: 25px;
-    }
+/* MAIN */
 
-    .card p {
-      margin: 0;
-      font-size: 17px;
-      line-height: 1.5;
-    }
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 45px 20px;
+}
 
-    .vehicles {
-      margin-top: 55px;
-    }
+.page-title {
+  text-align: center;
+  color: #b30d24;
+  font-size: 44px;
+  margin: 0 0 40px;
+}
 
-    footer {
-      background: #b30d24;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-      margin-top: 30px;
-    }
+/* GALLERY */
 
-    @media (max-width: 700px) {
-      .gallery {
-        grid-template-columns: 1fr;
-      }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
 
-      .page-title {
-        font-size: 38px;
-      }
+.card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+}
 
-      .card img {
-        height: 250px;
-      }
+.card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
 
-      nav {
-        gap: 14px;
-      }
+.card-content {
+  padding: 20px;
+}
 
-      nav a {
-        font-size: 16px;
-      }
-    }
-  </style>
+.card h2 {
+  margin: 0 0 8px;
+  color: #b30d24;
+  font-size: 25px;
+}
+
+.card p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+/* VEHICLES */
+
+.vehicles {
+  margin-top: 55px;
+}
+
+/* FOOTER */
+
+footer {
+  background: #b30d24;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  header h1 {
+    font-size: 25px;
+  }
+
+  nav {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 5px 2px 10px;
+    gap: 8px;
+  }
+
+  nav a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 14px;
+  }
+
+  nav a.citywalk {
+    background: white;
+    color: #b30d24;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .page-title {
+    font-size: 36px;
+  }
+
+  .card img {
+    height: 250px;
+  }
+}
+
+</style>
+
 </head>
+
 
 <body>
 
+
+<!-- HEADER -->
+
 <header>
 
-  <h1>STEMA TRANS</h1>
+<h1>STEMA TRANS CITY TOURS</h1>
 
-  <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="tours.html">Tours</a>
-  <a href="transfers.html">Transfers</a>
-  <a href="rates.html">Rates</a>
-  <a href="fleet.html">Fleet</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="citywalks.html">City Walks</a>
-  <a href="contact.html">Contact</a>
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="tours.html">Tours</a>
+
+<a href="transfers.html">Transfers</a>
+
+<a href="rates.html">Rates</a>
+
+<a href="fleet.html">Fleet</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a class="citywalk" href="citywalks.html">
+CITY WALKS
+</a>
+
+<a href="contact.html">Contact</a>
+
 </nav>
 
 </header>
 
 
+<!-- MAIN CONTENT -->
+
 <main>
 
-  <h1 class="page-title">Our Gallery</h1>
+
+<h1 class="page-title">
+Our Gallery
+</h1>
 
 
-  <section class="gallery">
-
-    <div class="card">
-      <img src="images/hero.jpg" alt="Nairobi National Park">
-
-      <div class="card-content">
-        <h2>Nairobi National Park</h2>
-        <p>
-          Experience Nairobi's wildlife just outside the city.
-        </p>
-      </div>
-    </div>
+<section class="gallery">
 
 
-    <div class="card">
-      <img src="images/giraffe-center.jpg" alt="Giraffe Centre">
+<!-- NAIROBI NATIONAL PARK -->
 
-      <div class="card-content">
-        <h2>Giraffe Centre</h2>
-        <p>
-          Meet and learn about the famous Rothschild's giraffes.
-        </p>
-      </div>
-    </div>
+<div class="card">
 
+<img
+src="images/hero.jpg"
+alt="Nairobi National Park"
+>
 
-    <div class="card">
-      <img src="images/Screenshot_20260801_163624_Gallery.jpg"
-           alt="Nairobi Wildlife Experience">
+<div class="card-content">
 
-      <div class="card-content">
-        <h2>Wildlife Experience</h2>
-        <p>
-          Discover memorable Nairobi attractions and wildlife experiences.
-        </p>
-      </div>
-    </div>
+<h2>
+Nairobi National Park
+</h2>
 
-  </section>
+<p>
+Experience Nairobi's wildlife just outside the city.
+</p>
+
+</div>
+
+</div>
 
 
-  <section class="vehicles">
+<!-- GIRAFFE CENTRE -->
 
-    <h1 class="page-title">Our Vehicles</h1>
+<div class="card">
+
+<img
+src="images/giraffe-center.jpg"
+alt="Giraffe Centre"
+>
+
+<div class="card-content">
+
+<h2>
+Giraffe Centre
+</h2>
+
+<p>
+Meet and learn about the famous Rothschild's giraffes.
+</p>
+
+</div>
+
+</div>
 
 
-    <div class="gallery">
+<!-- WILDLIFE -->
 
-      <div class="card">
+<div class="card">
 
-        <img src="images/landcruiser.jpg"
-             alt="Stema Trans Land Cruiser">
+<img
+src="images/Screenshot_20260801_163624_Gallery.jpg"
+alt="Nairobi wildlife experience"
+>
 
-        <div class="card-content">
-          <h2>Land Cruiser</h2>
-          <p>
-            Comfortable and reliable transport for safari and city journeys.
-          </p>
-        </div>
+<div class="card-content">
 
-      </div>
+<h2>
+Nairobi Wildlife Experience
+</h2>
+
+<p>
+Discover memorable Nairobi attractions and wildlife experiences.
+</p>
+
+</div>
+
+</div>
 
 
-      <div class="card">
+</section>
 
-        <img src="images/tourvan.jpg"
-             alt="Stema Trans Tour Van">
 
-        <div class="card-content">
-          <h2>Tour Van</h2>
-          <p>
-            Comfortable transport for city tours, transfers and sightseeing.
-          </p>
-        </div>
+<!-- VEHICLES -->
 
-      </div>
+<section class="vehicles">
 
-    </div>
 
-  </section>
+<h1 class="page-title">
+Our Vehicles
+</h1>
+
+
+<div class="gallery">
+
+
+<!-- LAND CRUISER -->
+
+<div class="card">
+
+<img
+src="images/landcruiser.jpg"
+alt="Stema Trans Land Cruiser"
+>
+
+<div class="card-content">
+
+<h2>
+Land Cruiser
+</h2>
+
+<p>
+Comfortable and reliable transport for safari and city journeys.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- TOUR VAN -->
+
+<div class="card">
+
+<img
+src="images/tourvan.jpg"
+alt="Stema Trans Tour Van"
+>
+
+<div class="card-content">
+
+<h2>
+Tour Van
+</h2>
+
+<p>
+Comfortable transport for city tours, transfers and sightseeing.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
 
 </main>
 
 
+<!-- FOOTER -->
+
 <footer>
 
-  <p><strong>STEMA TRANS CITY TOURS</strong></p>
-  <p>Nairobi, Kenya</p>
+<strong>
+STEMA TRANS CITY TOURS
+</strong>
+
+<p>
+Nairobi, Kenya
+</p>
 
 </footer>
 
+
 </body>
+
 </html>
