@@ -331,3 +331,30 @@ text-align:center;
 .cta p{
     margin-bottom:30px;
 }
+/* FRONT PAGE NAVIGATION SIZE OVERRIDE */
+header nav {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 18px !important;
+  margin-top: 25px !important;
+}
+
+header nav a {
+  display: inline-block !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-size: 24px !important;
+  font-weight: 600 !important;
+  padding: 12px 20px !important;
+  margin: 0 !important;
+  border-radius: 6px !important;
+  line-height: 1.2 !important;
+}
+
+header nav a:hover {
+  background: #ffffff !important;
+  color: #b11226 !important;
+}
+
