@@ -4,422 +4,378 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contact Us | STEMA TRANS</title>
+<title>Contact | Stema Trans</title>
+
+<link rel="stylesheet" href="css/style.css">
 
 <style>
 
-* {
-  box-sizing: border-box;
-}
-
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f7f7f7;
-  color: #333;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    color: #333;
 }
 
-/* HEADER */
-
-header {
-  background: #b11226;
-  color: white;
-  text-align: center;
-  padding: 28px 15px 25px;
+.contact-page {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
 }
 
-header h1 {
-  margin: 0 0 8px;
-  font-size: 36px;
+.contact-page h1 {
+    text-align: center;
+    color: #b11226;
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
-header p {
-  margin: 0 0 22px;
-  font-size: 18px;
+.contact-intro {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 35px;
 }
 
-/* NAVIGATION */
-
-nav {
-  background: #222;
-  padding: 18px 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px 24px;
+.contact-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+    margin-bottom: 30px;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 600;
-  padding: 6px 8px;
+.contact-box h2 {
+    color: #b11226;
+    margin-top: 0;
 }
 
-nav a:hover {
-  background: white;
-  color: #b11226;
-  border-radius: 5px;
+.contact-info {
+    line-height: 2;
+    font-size: 17px;
 }
 
-/* MAIN */
-
-main {
-  max-width: 1000px;
-  margin: auto;
-  padding: 55px 20px;
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.10);
 }
 
-h2 {
-  text-align: center;
-  color: #b11226;
-  font-size: 42px;
-  margin-bottom: 35px;
+.form-group {
+    margin-bottom: 20px;
 }
 
-/* CONTACT CARDS */
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
-.contact-card {
-  background: white;
-  padding: 28px;
-  border-radius: 15px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
 }
 
-.contact-card h3 {
-  color: #b11226;
-  margin-top: 0;
-  font-size: 25px;
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
 }
 
-.contact-card p {
-  font-size: 18px;
-  line-height: 1.8;
+.send-btn {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    background: #b11226;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.contact-card a {
-  color: #b11226;
-  font-weight: bold;
-  text-decoration: none;
+.send-btn:hover {
+    background: #870d1c;
 }
 
-/* FORM */
+/* SUCCESS MESSAGE */
 
-.form-section {
-  margin-top: 40px;
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+.success-message {
+    display: none;
+    background: #e8f7e8;
+    border-left: 6px solid #218838;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    color: #155724;
 }
 
-.form-section h3 {
-  color: #b11226;
-  font-size: 28px;
-  margin-top: 0;
+.success-message h2 {
+    margin-top: 0;
+    color: #218838;
 }
 
-label {
-  display: block;
-  font-weight: bold;
-  margin: 15px 0 7px;
-}
+@media (max-width: 600px) {
 
-input,
-textarea {
-  width: 100%;
-  padding: 14px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
-}
+    .contact-page {
+        margin: 20px auto;
+        padding: 12px;
+    }
 
-textarea {
-  min-height: 130px;
-  resize: vertical;
-}
+    .contact-page h1 {
+        font-size: 30px;
+    }
 
-button {
-  margin-top: 18px;
-  background: #b11226;
-  color: white;
-  border: none;
-  padding: 15px 28px;
-  border-radius: 8px;
-  font-size: 17px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #870d1c;
-}
-
-/* WHATSAPP */
-
-.whatsapp {
-  text-align: center;
-  margin-top: 35px;
-}
-
-.whatsapp a {
-  display: inline-block;
-  background: #25D366;
-  color: white;
-  text-decoration: none;
-  padding: 15px 28px;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-/* FOOTER */
-
-footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 30px 15px;
-  margin-top: 40px;
-}
-
-footer p {
-  margin: 6px 0;
-}
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-  header h1 {
-    font-size: 30px;
-  }
-
-  nav {
-    gap: 6px 12px;
-  }
-
-  nav a {
-    font-size: 15px;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  h2 {
-    font-size: 34px;
-  }
-
+    .contact-box,
+    .contact-form {
+        padding: 20px;
+    }
 }
 
 </style>
-</head>
 
+</head>
 
 <body>
 
-
 <header>
 
-<h1>STEMA TRANS</h1>
+    <div class="logo">
 
-<p>
-Explore Nairobi with Comfort, Safety & Professionalism
-</p>
+        <h1>STEMA TRANS</h1>
 
+        <p>
+            City Tours, Transfers & Guided Experiences
+        </p>
 
-<nav>
+    </div>
 
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="tours.html">Tours</a>
-<a href="transfers.html">Transfers</a>
-<a href="rates.html">Rates</a>
-<a href="fleet.html">Fleet</a>
-<a href="gallery.html">Gallery</a>
-<a href="citywalks.html">City Walks</a>
-<a href="contact.html">Contact</a>
+    <nav>
 
-</nav>
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="tours.html">Tours</a>
+
+        <a href="transfers.html">Transfers</a>
+
+        <a href="rates.html">Rates</a>
+
+        <a href="fleet.html">Fleet</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="city-walks.html">City Walks</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
 
 </header>
 
 
-<main>
+<main class="contact-page">
+
+<h1>Contact Stema Trans</h1>
+
+<p class="contact-intro">
+
+Have a question, need a quotation, or want to plan a Nairobi
+tour or transfer? Send us a message and we will get back to you.
+
+</p>
 
 
-<h2>Contact Us</h2>
+<!-- SUCCESS MESSAGE -->
 
+<div id="successMessage" class="success-message">
 
-<div class="contact-grid">
-
-
-<div class="contact-card">
-
-<h3>Contact Information</h3>
+<h2>Message Sent Successfully!</h2>
 
 <p>
-📍 <strong>Location:</strong><br>
+Thank you for contacting Stema Trans.
+Your inquiry has been received and we will get back to you shortly.
+</p>
+
+</div>
+
+
+<!-- CONTACT INFORMATION -->
+
+<div class="contact-box">
+
+<h2>Get In Touch</h2>
+
+<div class="contact-info">
+
+<strong>Phone:</strong>
+<a href="tel:0722910913">
+0722 910 913
+</a>
+
+<br>
+
+<strong>Email:</strong>
+<a href="mailto:stemawastrans@gmail.com">
+stemawastrans@gmail.com
+</a>
+
+<br>
+
+<strong>Location:</strong>
 Nairobi, Kenya
-</p>
 
-<p>
-📞 <strong>Phone:</strong><br>
-<a href="tel:+254722910913">
-+254 722 910 913
-</a>
-</p>
-
-<p>
-💬 <strong>WhatsApp:</strong><br>
-<a href="https://wa.me/254722910913">
-+254 722 910 913
-</a>
-</p>
-
-<p>
-✉ <strong>Email:</strong><br>
-<a href="mailto:stemawastrans@gmail.com">
-stemawastrans@gmail.com
-</a>
-</p>
-
-<p>
-🕒 <strong>Working Hours:</strong><br>
-Monday – Sunday<br>
-6:00 AM – 10:00 PM
-</p>
+</div>
 
 </div>
 
 
-<div class="contact-card">
-
-<h3>Booking Enquiries</h3>
-
-<p>
-For tours, airport transfers, private transport and City Walk bookings, contact us directly.
-</p>
-
-<p>
-<strong>Booking & General Enquiries:</strong><br>
-
-<a href="mailto:stemawastrans@gmail.com">
-stemawastrans@gmail.com
-</a>
-
-</p>
-
-<p>
-We aim to respond to all enquiries as soon as possible.
-</p>
-
-</div>
-
-
-</div>
-
-
-<section class="form-section">
-
-<h3>Send an Enquiry</h3>
-
+<!-- CONTACT FORM -->
 
 <form
-action="https://formsubmit.co/stemawastrans@gmail.com"
-method="POST"
+    class="contact-form"
+    action="https://formsubmit.co/stemawastrans@gmail.com"
+    method="POST"
 >
 
+
+<!-- EMAIL SUBJECT -->
 
 <input
-type="hidden"
-name="_subject"
-value="New STEMA TRANS Website Enquiry"
+    type="hidden"
+    name="_subject"
+    value="New Stema Trans Website Inquiry"
 >
+
+
+<!-- DO NOT SHOW CAPTCHA -->
 
 <input
-type="hidden"
-name="_captcha"
-value="false"
+    type="hidden"
+    name="_captcha"
+    value="false"
 >
 
+
+<!-- RETURN TO OUR WEBSITE -->
+
+<input
+    type="hidden"
+    name="_next"
+    value="https://themaina1.github.io/Stema-Trans-City-tours/contact.html?sent=1"
+>
+
+
+<!-- NAME -->
+
+<div class="form-group">
 
 <label for="name">
-Name
+Full Name
 </label>
 
 <input
-type="text"
-id="name"
-name="Name"
-placeholder="Your Name"
-required
+    type="text"
+    id="name"
+    name="Full Name"
+    placeholder="Your full name"
+    required
 >
 
+</div>
+
+
+<!-- EMAIL -->
+
+<div class="form-group">
 
 <label for="email">
-Email
+Email Address
 </label>
 
 <input
-type="email"
-id="email"
-name="Email"
-placeholder="Your Email"
-required
+    type="email"
+    id="email"
+    name="Email Address"
+    placeholder="Your email address"
+    required
 >
 
+</div>
+
+
+<!-- PHONE -->
+
+<div class="form-group">
 
 <label for="phone">
-Phone
+Phone Number
 </label>
 
 <input
-type="tel"
-id="phone"
-name="Phone"
-placeholder="Phone Number"
+    type="tel"
+    id="phone"
+    name="Phone Number"
+    placeholder="Your phone number"
+    required
 >
 
+</div>
+
+
+<!-- SUBJECT -->
+
+<div class="form-group">
+
+<label for="subject">
+Subject
+</label>
+
+<input
+    type="text"
+    id="subject"
+    name="Inquiry Subject"
+    placeholder="What can we help you with?"
+    required
+>
+
+</div>
+
+
+<!-- MESSAGE -->
+
+<div class="form-group">
 
 <label for="message">
-Message
+Your Message
 </label>
 
 <textarea
-id="message"
-name="Message"
-placeholder="How can we help you?"
-required
+    id="message"
+    name="Message"
+    placeholder="Write your inquiry here..."
+    required
 ></textarea>
-
-
-<button type="submit">
-Send Enquiry
-</button>
-
-</form>
-
-</section>
-
-
-<div class="whatsapp">
-
-<a href="https://wa.me/254722910913">
-💬 Chat on WhatsApp
-</a>
 
 </div>
 
+
+<!-- SEND -->
+
+<button
+    type="submit"
+    class="send-btn"
+>
+Send Inquiry
+</button>
+
+</form>
 
 </main>
 
@@ -427,31 +383,31 @@ Send Enquiry
 <footer>
 
 <p>
-<strong>STEMA TRANS</strong>
-</p>
-
-<p>
-Nairobi, Kenya
-</p>
-
-<p>
-Phone: +254 722 910 913
-</p>
-
-<p>
-Email: stemawastrans@gmail.com
-</p>
-
-<p>
-Monday – Sunday | 6:00 AM – 10:00 PM
-</p>
-
-<p>
-© 2026 Stema Trans. All Rights Reserved.
+© 2026 Stema Trans — Nairobi City Tours, Transfers & Guided Experiences
 </p>
 
 </footer>
 
+
+<script>
+
+/* Show Stema Trans success message after FormSubmit returns */
+
+const params =
+    new URLSearchParams(window.location.search);
+
+if (params.get("sent") === "1") {
+
+    document.getElementById("successMessage").style.display = "block";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+</script>
 
 </body>
 </html>
