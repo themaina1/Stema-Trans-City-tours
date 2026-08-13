@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,422 +9,269 @@
 <link rel="stylesheet" href="css/style.css">
 
 <style>
-
-/* =========================
-   BOOKING PAGE
-========================= */
-
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#f7f7f7;
-    color:#333;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    color: #333;
 }
 
-.booking-page{
-    max-width:850px;
-    margin:40px auto;
-    padding:20px;
+.booking-page {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 20px;
 }
 
-.booking-page h1{
-    text-align:center;
-    color:#b11226;
-    font-size:38px;
-    margin-bottom:10px;
+.booking-page h1 {
+    text-align: center;
+    color: #b11226;
+    font-size: 38px;
+    margin-bottom: 10px;
 }
 
-.booking-intro{
-    text-align:center;
-    font-size:18px;
-    margin-bottom:30px;
+.booking-intro {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
 }
 
-.booking-form{
-    background:#fff;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,.10);
+.booking-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.10);
 }
 
-.form-group{
-    margin-bottom:20px;
+.form-group {
+    margin-bottom: 20px;
 }
 
-.form-group label{
-    display:block;
-    font-weight:bold;
-    margin-bottom:8px;
-    font-size:17px;
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
 .form-group input,
 .form-group select,
-.form-group textarea{
-    width:100%;
-    padding:15px;
-    border:1px solid #ccc;
-    border-radius:8px;
-    font-size:16px;
-    box-sizing:border-box;
-    background:#fff;
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
-.form-group textarea{
-    min-height:120px;
-    resize:vertical;
+.form-group textarea {
+    min-height: 120px;
 }
 
-/* =========================
-   NOTICE
-========================= */
-
-.notice{
-    background:#f5f5f5;
-    border-left:6px solid #b11226;
-    padding:20px;
-    margin:25px 0;
-    line-height:1.7;
+.notice {
+    background: #f5f5f5;
+    border-left: 6px solid #b11226;
+    padding: 20px;
+    margin: 25px 0;
+    line-height: 1.7;
 }
 
-.notice strong{
-    color:#b11226;
+.price-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-left: 6px solid #b11226;
+    border-radius: 10px;
+    padding: 22px;
+    margin: 25px 0;
 }
 
-/* =========================
-   PRICE BOX
-========================= */
-
-.price-box{
-    background:#fff;
-    border:1px solid #ddd;
-    border-left:6px solid #b11226;
-    border-radius:10px;
-    padding:22px;
-    margin:25px 0;
+.price-box h2 {
+    color: #b11226;
+    margin-top: 0;
 }
 
-.price-box h2{
-    color:#b11226;
-    margin-top:0;
+.price-line {
+    margin: 8px 0;
 }
 
-.price-line{
-    font-size:17px;
-    margin:8px 0;
+.total-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #b11226;
+    margin-top: 15px;
 }
 
-.total-price{
-    font-size:24px;
-    font-weight:bold;
-    color:#b11226;
-    margin-top:15px;
+.hidden {
+    display: none !important;
 }
 
-/* =========================
-   HIDDEN
-========================= */
-
-.hidden{
-    display:none !important;
+.submit-btn {
+    width: 100%;
+    padding: 17px;
+    border: none;
+    border-radius: 8px;
+    background: #b11226;
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-/* =========================
-   SUBMIT BUTTON
-========================= */
-
-.submit-btn{
-    width:100%;
-    padding:17px;
-    border:none;
-    border-radius:8px;
-    background:#b11226;
-    color:white;
-    font-size:19px;
-    font-weight:bold;
-    cursor:pointer;
+.submit-btn:hover {
+    background: #870d1c;
 }
 
-.submit-btn:hover{
-    background:#870d1c;
-}
-
-.submit-btn:disabled{
-    background:#888;
-    cursor:not-allowed;
-}
-
-/* =========================
-   SUCCESS MESSAGE
-========================= */
-
-.success-box{
-    display:none;
-    background:#fff;
-    border-left:7px solid #198754;
-    border-radius:12px;
-    padding:30px;
-    margin-top:25px;
-    text-align:center;
-    box-shadow:0 5px 20px rgba(0,0,0,.10);
-}
-
-.success-box h2{
-    color:#198754;
-    margin-top:0;
-    font-size:30px;
-}
-
-.success-box p{
-    font-size:18px;
-    line-height:1.6;
-}
-
-.booking-reference{
-    font-size:22px;
-    font-weight:bold;
-    color:#b11226;
-    margin:15px 0;
-}
-
-.home-btn{
-    display:inline-block;
-    margin-top:15px;
-    padding:13px 25px;
-    background:#b11226;
-    color:#fff;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:600px){
-
-    .booking-page{
-        margin:20px auto;
-        padding:12px;
+@media (max-width: 600px) {
+    .booking-page {
+        margin: 20px auto;
+        padding: 12px;
     }
 
-    .booking-form{
-        padding:20px;
+    .booking-form {
+        padding: 20px;
     }
 
-    .booking-page h1{
-        font-size:30px;
+    .booking-page h1 {
+        font-size: 30px;
     }
-
 }
-
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- =========================
-     HEADER
-========================= -->
-
 <header>
 
-    <div class="logo">
+<div class="logo">
+<h1>STEMA TRANS</h1>
+<p>City Tours, Transfers & Guided Experiences</p>
+</div>
 
-        <h1>STEMA TRANS</h1>
-
-        <p>
-            City Tours, Transfers & Guided Experiences
-        </p>
-
-    </div>
-
-
-    <nav>
-
-        <a href="index.html">Home</a>
-
-        <a href="about.html">About</a>
-
-        <a href="tours.html">Tours</a>
-
-        <a href="transfers.html">Transfers</a>
-
-        <a href="rates.html">Rates</a>
-
-        <a href="fleet.html">Fleet</a>
-
-        <a href="gallery.html">Gallery</a>
-
-        <a href="city-walks.html">City Walks</a>
-
-        <a href="contact.html">Contact</a>
-
-    </nav>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="tours.html">Tours</a>
+<a href="transfers.html">Transfers</a>
+<a href="rates.html">Rates</a>
+<a href="fleet.html">Fleet</a>
+<a href="gallery.html">Gallery</a>
+<a href="city-walks.html">City Walks</a>
+<a href="contact.html">Contact</a>
+</nav>
 
 </header>
 
 
-
-<!-- =========================
-     MAIN BOOKING
-========================= -->
-
 <main class="booking-page">
 
-
-<h1>
-    Book Your Experience
-</h1>
-
+<h1>Book Your Experience</h1>
 
 <p class="booking-intro">
-    Fill in the details below and we will contact you shortly.
+Complete the form below and Stema Trans will contact you to confirm your booking.
 </p>
 
 
-
-<!-- =========================
-     BOOKING FORM
-========================= -->
-
 <form
-    id="bookingForm"
-    class="booking-form"
-    action="https://formsubmit.co/stemawastrans@gmail.com"
-    method="POST"
-    target="formsubmitFrame"
+class="booking-form"
+action="https://formsubmit.co/stemawastrans@gmail.com"
+method="POST"
 >
-
 
 <!-- FORM SUBMIT SETTINGS -->
 
-<input
-    type="hidden"
-    name="_subject"
-    value="NEW STEMA TRANS BOOKING"
->
+<input type="hidden"
+name="_subject"
+value="NEW STEMA TRANS BOOKING">
 
-<input
-    type="hidden"
-    name="_captcha"
-    value="false"
->
+<input type="hidden"
+name="_captcha"
+value="false">
 
-<input
-    type="hidden"
-    name="_template"
-    value="table"
->
+<input type="hidden"
+name="_template"
+value="table">
 
-
-<!-- =========================
-     BOOKING REFERENCE
-========================= -->
-
-<input
-    type="hidden"
-    id="bookingReference"
-    name="Booking Reference"
->
+<!-- VERY IMPORTANT -->
+<input type="hidden"
+name="_next"
+value="https://themaina1.github.io/Stema-Trans-City-tours/booking-success.html">
 
 
-<!-- =========================
-     CALCULATED PRICE
-========================= -->
-
-<input
-    type="hidden"
-    id="calculatedPrice"
-    name="Calculated Booking Price"
->
-
-
-
-<!-- =========================
-     CUSTOMER DETAILS
-========================= -->
+<!-- CUSTOMER -->
 
 <div class="form-group">
 
-<label for="fullName">
-Full Name
-</label>
+<label>Full Name</label>
 
 <input
-    type="text"
-    id="fullName"
-    name="Full Name"
-    placeholder="Full Name"
-    required
->
+type="text"
+name="Full Name"
+placeholder="Your full name"
+required>
 
 </div>
 
 
-
 <div class="form-group">
 
-<label for="phone">
-Phone Number
-</label>
+<label>Phone Number</label>
 
 <input
-    type="tel"
-    id="phone"
-    name="Phone Number"
-    placeholder="Phone Number"
-    required
->
+type="tel"
+name="Phone Number"
+placeholder="Your phone number"
+required>
 
 </div>
 
 
-
 <div class="form-group">
 
-<label for="email">
-Email Address
-</label>
+<label>Email Address</label>
 
 <input
-    type="email"
-    id="email"
-    name="Email Address"
-    placeholder="Email Address"
-    required
->
+type="email"
+name="Email Address"
+placeholder="Your email address"
+required>
 
 </div>
 
 
-
-<!-- =========================
-     SERVICE
-========================= -->
+<!-- SERVICE -->
 
 <div class="form-group">
 
-<label for="service">
-Service
-</label>
+<label>Service</label>
 
 <select
-    id="service"
-    name="Service"
-    required
->
+id="service"
+name="Service"
+required>
 
-<option value="">
-Select Service
-</option>
+<option value="">Select Service</option>
 
 <option value="Nairobi City Tour">
 Nairobi City Tour
+</option>
+
+<option value="Nairobi National Park">
+Nairobi National Park
+</option>
+
+<option value="Giraffe Centre Tour">
+Giraffe Centre Tour
+</option>
+
+<option value="Karen Blixen Museum">
+Karen Blixen Museum
+</option>
+
+<option value="Nairobi National Museum">
+Nairobi National Museum
+</option>
+
+<option value="Bomas of Kenya">
+Bomas of Kenya
 </option>
 
 <option value="City Walk">
@@ -440,32 +286,8 @@ Airport Transfer
 Hotel Transfer
 </option>
 
-<option value="Giraffe Centre Tour">
-Giraffe Centre Tour
-</option>
-
-<option value="Karen Blixen Tour">
-Karen Blixen Tour
-</option>
-
-<option value="Nairobi National Museum">
-Nairobi National Museum
-</option>
-
-<option value="Bomas of Kenya">
-Bomas of Kenya
-</option>
-
-<option value="Nairobi National Park">
-Nairobi National Park
-</option>
-
-<option value="Private Custom City Walk">
-Private Custom City Walk
-</option>
-
-<option value="Private Hire">
-Private Hire
+<option value="Private Custom Tour">
+Private Custom Tour
 </option>
 
 </select>
@@ -473,23 +295,17 @@ Private Hire
 </div>
 
 
-
-<!-- =========================
-     VEHICLE
-========================= -->
+<!-- VEHICLE -->
 
 <div id="vehicleSection">
 
 <div class="form-group">
 
-<label for="vehicle">
-Preferred Vehicle
-</label>
+<label>Preferred Vehicle</label>
 
 <select
-    id="vehicle"
-    name="Preferred Vehicle"
->
+id="vehicle"
+name="Preferred Vehicle">
 
 <option value="">
 Select Vehicle
@@ -514,29 +330,20 @@ Executive Sedan
 </div>
 
 
+<!-- CITY WALK -->
 
-<!-- =========================
-     CITY WALK
-========================= -->
-
-<div
-    id="walkSection"
-    class="hidden"
->
+<div id="walkSection" class="hidden">
 
 <div class="form-group">
 
-<label for="walkType">
-City Walk Type
-</label>
+<label>City Walk Type</label>
 
 <select
-    id="walkType"
-    name="City Walk Type"
->
+id="walkType"
+name="City Walk Type">
 
 <option value="">
-Select City Walk
+Select Walk
 </option>
 
 <option value="Nairobi Highlights Walk">
@@ -556,17 +363,13 @@ Nairobi Food & Local Life Walk
 </div>
 
 
-
 <div class="form-group">
 
-<label for="walkDuration">
-Duration
-</label>
+<label>Walk Duration</label>
 
 <select
-    id="walkDuration"
-    name="Walk Duration"
->
+id="walkDuration"
+name="Walk Duration">
 
 <option value="">
 Select Duration
@@ -587,263 +390,136 @@ Select Duration
 </div>
 
 
-
-<!-- =========================
-     PASSENGERS
-========================= -->
+<!-- PASSENGERS -->
 
 <div class="form-group">
 
-<label for="passengers">
-Number of Passengers
-</label>
+<label>Number of Passengers</label>
 
 <input
-    type="number"
-    id="passengers"
-    name="Number of Passengers"
-    min="1"
-    max="50"
-    placeholder="Number of Passengers"
-    required
->
+type="number"
+id="passengers"
+name="Number of Passengers"
+min="1"
+max="50"
+placeholder="Number of passengers"
+required>
 
 </div>
 
 
-
-<!-- =========================
-     NOTICE
-========================= -->
+<!-- PRICE -->
 
 <div class="notice">
 
-<strong>Important:</strong>
+<strong>Important:</strong><br><br>
 
-<br><br>
+Vehicle-based tour and transport prices are
+<strong>per vehicle</strong>.<br><br>
 
-Transport charges for vehicle-based services are
-<strong>per vehicle</strong>.
+City Walk prices are
+<strong>per person</strong>.<br><br>
 
-<br><br>
-
-City Walk charges are
-<strong>per person</strong>.
-
-<br><br>
-
-Attraction and park entry fees are charged
-<strong>separately</strong> unless otherwise stated.
+Park, attraction and entrance fees are charged separately unless stated otherwise.
 
 </div>
 
-
-
-<!-- =========================
-     PRICE
-========================= -->
 
 <div class="price-box">
 
-<h2>
-Booking Price
-</h2>
+<h2>Booking Price</h2>
 
 <div id="priceDetails">
 
-Select a service and enter the number of passengers.
+Select your service and vehicle to see the estimated price.
 
 </div>
 
 </div>
 
 
-
-<!-- =========================
-     DATE
-========================= -->
+<!-- DATE -->
 
 <div class="form-group">
 
-<label for="date">
-Date
-</label>
+<label>Date</label>
 
 <input
-    type="date"
-    id="date"
-    name="Date"
-    required
->
+type="date"
+name="Date"
+required>
 
 </div>
 
 
-
-<!-- =========================
-     TIME
-========================= -->
+<!-- TIME -->
 
 <div class="form-group">
 
-<label for="time">
-Time
-</label>
+<label>Preferred Time</label>
 
 <input
-    type="time"
-    id="time"
-    name="Time"
-    required
->
+type="time"
+name="Time"
+required>
 
 </div>
 
 
-
-<!-- =========================
-     PICKUP
-========================= -->
+<!-- PICKUP -->
 
 <div class="form-group">
 
-<label for="pickup">
-Pickup Location
-</label>
+<label>Pickup Location</label>
 
 <input
-    type="text"
-    id="pickup"
-    name="Pickup Location"
-    placeholder="Pickup Location"
-    required
->
+type="text"
+name="Pickup Location"
+placeholder="Hotel, airport or other pickup point"
+required>
 
 </div>
 
 
-
-<!-- =========================
-     DESTINATION
-========================= -->
+<!-- DESTINATION -->
 
 <div class="form-group">
 
-<label for="destination">
-Destination / Drop-off
-</label>
+<label>Destination / Drop-off</label>
 
 <input
-    type="text"
-    id="destination"
-    name="Destination / Drop-off"
-    placeholder="Destination / Drop-off"
->
+type="text"
+name="Destination"
+placeholder="Destination or drop-off location">
 
 </div>
 
 
-
-<!-- =========================
-     ADDITIONAL INFORMATION
-========================= -->
+<!-- MESSAGE -->
 
 <div class="form-group">
 
-<label for="message">
-Additional Information
-</label>
+<label>Additional Information</label>
 
 <textarea
-    id="message"
-    name="Additional Information"
-    placeholder="Tell us anything else we should know..."
-></textarea>
+name="Additional Information"
+placeholder="Any special requests or information..."></textarea>
 
 </div>
 
 
-
-<!-- =========================
-     SUBMIT
-========================= -->
-
 <button
-    type="submit"
-    id="submitButton"
-    class="submit-btn"
->
-Submit Booking
-</button>
+type="submit"
+class="submit-btn">
 
+SUBMIT BOOKING
+
+</button>
 
 </form>
 
-
-
-<!-- =========================
-     SUCCESS MESSAGE
-========================= -->
-
-<div
-    id="successBox"
-    class="success-box"
->
-
-<h2>
-    ✓ Booking Submitted Successfully
-</h2>
-
-<p>
-Thank you for booking with <strong>Stema Trans</strong>.
-</p>
-
-<p>
-We have received your booking request and will contact you shortly.
-</p>
-
-<div class="booking-reference">
-
-Booking Reference:
-<span id="referenceDisplay"></span>
-
-</div>
-
-<p>
-Please keep this reference for your records.
-</p>
-
-<a
-    href="index.html"
-    class="home-btn"
->
-Return to Stema Trans
-</a>
-
-</div>
-
-
-
 </main>
 
-
-
-<!-- =========================
-     HIDDEN FORM SUBMIT FRAME
-========================= -->
-
-<iframe
-    name="formsubmitFrame"
-    id="formsubmitFrame"
-    style="display:none;"
->
-</iframe>
-
-
-
-<!-- =========================
-     FOOTER
-========================= -->
 
 <footer>
 
@@ -854,568 +530,284 @@ Return to Stema Trans
 </footer>
 
 
-
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
 <script>
 
-
-/* =========================
-   ELEMENTS
-========================= */
-
-const form =
-    document.getElementById("bookingForm");
-
 const service =
-    document.getElementById("service");
+document.getElementById("service");
 
 const vehicleSection =
-    document.getElementById("vehicleSection");
+document.getElementById("vehicleSection");
 
 const walkSection =
-    document.getElementById("walkSection");
+document.getElementById("walkSection");
 
 const vehicle =
-    document.getElementById("vehicle");
+document.getElementById("vehicle");
 
 const walkType =
-    document.getElementById("walkType");
+document.getElementById("walkType");
 
 const walkDuration =
-    document.getElementById("walkDuration");
+document.getElementById("walkDuration");
 
 const passengers =
-    document.getElementById("passengers");
+document.getElementById("passengers");
 
 const priceDetails =
-    document.getElementById("priceDetails");
-
-const calculatedPrice =
-    document.getElementById("calculatedPrice");
-
-const bookingReference =
-    document.getElementById("bookingReference");
-
-const referenceDisplay =
-    document.getElementById("referenceDisplay");
-
-const successBox =
-    document.getElementById("successBox");
-
-const submitButton =
-    document.getElementById("submitButton");
+document.getElementById("priceDetails");
 
 
+function isCityWalk(value) {
 
-/* =========================
-   CITY WALK CHECK
-========================= */
-
-function isCityWalk(serviceName){
-
-    return (
-        serviceName === "City Walk" ||
-        serviceName === "Private Custom City Walk"
-    );
+return value === "City Walk";
 
 }
 
 
+function updateSections() {
 
-/* =========================
-   UPDATE SECTIONS
-========================= */
+if (isCityWalk(service.value)) {
 
-function updateSections(){
+vehicleSection.classList.add("hidden");
 
-    const selectedService =
-        service.value;
+walkSection.classList.remove("hidden");
 
+vehicle.value = "";
 
-    if(isCityWalk(selectedService)){
+} else {
 
-        vehicleSection
-            .classList
-            .add("hidden");
+vehicleSection.classList.remove("hidden");
 
-        walkSection
-            .classList
-            .remove("hidden");
+walkSection.classList.add("hidden");
 
-        vehicle.value = "";
+walkType.value = "";
+walkDuration.value = "";
 
-    }
+}
 
-    else{
-
-        vehicleSection
-            .classList
-            .remove("hidden");
-
-        walkSection
-            .classList
-            .add("hidden");
-
-        walkType.value = "";
-
-        walkDuration.value = "";
-
-    }
-
-
-    calculatePrice();
+calculatePrice();
 
 }
 
 
+function calculatePrice() {
 
-/* =========================
-   CALCULATE PRICE
-========================= */
+const selectedService = service.value;
 
-function calculatePrice(){
+const selectedVehicle = vehicle.value;
 
-    const selectedService =
-        service.value;
+const people =
+parseInt(passengers.value) || 0;
 
-    const selectedVehicle =
-        vehicle.value;
 
-    const numberOfPassengers =
-        parseInt(passengers.value) || 0;
+if (!selectedService) {
 
+priceDetails.innerHTML =
+"Select your service and vehicle to see the estimated price.";
 
-    if(!selectedService){
-
-        priceDetails.innerHTML =
-            "Select a service and enter the number of passengers.";
-
-        calculatedPrice.value = "";
-
-        return;
-
-    }
-
-
-
-    /* =========================
-       CITY WALK
-    ========================= */
-
-    if(isCityWalk(selectedService)){
-
-        const selectedWalk =
-            walkType.value;
-
-
-        if(!selectedWalk){
-
-            priceDetails.innerHTML =
-                "<strong>City Walk Price:</strong><br>" +
-                "Select a walk type.";
-
-            calculatedPrice.value = "";
-
-            return;
-
-        }
-
-
-        if(numberOfPassengers < 1){
-
-            priceDetails.innerHTML =
-                "<strong>City Walk Price:</strong><br>" +
-                "Enter the number of passengers.";
-
-            calculatedPrice.value = "";
-
-            return;
-
-        }
-
-
-        let pricePerPerson = 2500;
-
-
-        if(
-            selectedWalk ===
-            "Nairobi Food & Local Life Walk"
-        ){
-
-            pricePerPerson = 3500;
-
-        }
-
-
-        const total =
-            pricePerPerson *
-            numberOfPassengers;
-
-
-        priceDetails.innerHTML =
-
-            "<div class='price-line'>" +
-            "<strong>Service:</strong> " +
-            selectedService +
-            "</div>" +
-
-            "<div class='price-line'>" +
-            "<strong>Walk:</strong> " +
-            selectedWalk +
-            "</div>" +
-
-            "<div class='price-line'>" +
-            "<strong>People:</strong> " +
-            numberOfPassengers +
-            "</div>" +
-
-            "<div class='price-line'>" +
-            "<strong>Price per person:</strong> KES " +
-            pricePerPerson.toLocaleString() +
-            "</div>" +
-
-            "<div class='total-price'>" +
-            "Total: KES " +
-            total.toLocaleString() +
-            "</div>";
-
-
-        calculatedPrice.value =
-            "KES " +
-            total.toLocaleString() +
-            " total (" +
-            numberOfPassengers +
-            " people × KES " +
-            pricePerPerson.toLocaleString() +
-            " per person)";
-
-
-        return;
-
-    }
-
-
-
-    /* =========================
-       VEHICLE SERVICE
-    ========================= */
-
-    if(!selectedVehicle){
-
-        priceDetails.innerHTML =
-            "<strong>Transport Charge:</strong><br>" +
-            "Select a vehicle.";
-
-        calculatedPrice.value = "";
-
-        return;
-
-    }
-
-
-
-    let vehiclePrice = 0;
-
-
-
-    /* TOUR VAN */
-
-    if(selectedVehicle === "Tour Van"){
-
-        if(
-            selectedService ===
-            "Nairobi National Park"
-        ){
-
-            vehiclePrice = 8500;
-
-        }
-
-        else{
-
-            vehiclePrice = 5500;
-
-        }
-
-    }
-
-
-
-    /* LAND CRUISER */
-
-    else if(
-        selectedVehicle ===
-        "Land Cruiser"
-    ){
-
-        if(
-            selectedService ===
-            "Nairobi National Park"
-        ){
-
-            vehiclePrice = 12500;
-
-        }
-
-        else{
-
-            vehiclePrice = 8500;
-
-        }
-
-    }
-
-
-
-    /* EXECUTIVE SEDAN */
-
-    else if(
-        selectedVehicle ===
-        "Executive Sedan"
-    ){
-
-        vehiclePrice = 6500;
-
-    }
-
-
-
-    /* PRIVATE HIRE */
-
-    if(
-        selectedService ===
-        "Private Hire"
-    ){
-
-        priceDetails.innerHTML =
-
-            "<div class='price-line'>" +
-            "<strong>Service:</strong> Private Hire" +
-            "</div>" +
-
-            "<div class='price-line'>" +
-            "<strong>Vehicle:</strong> " +
-            selectedVehicle +
-            "</div>" +
-
-            "<div class='total-price'>" +
-            "Custom quotation required" +
-            "</div>";
-
-
-        calculatedPrice.value =
-            "Custom quotation required";
-
-        return;
-
-    }
-
-
-
-    /* VEHICLE TOTAL */
-
-    priceDetails.innerHTML =
-
-        "<div class='price-line'>" +
-        "<strong>Service:</strong> " +
-        selectedService +
-        "</div>" +
-
-        "<div class='price-line'>" +
-        "<strong>Vehicle:</strong> " +
-        selectedVehicle +
-        "</div>" +
-
-        "<div class='price-line'>" +
-        "<strong>Passengers:</strong> " +
-        numberOfPassengers +
-        "</div>" +
-
-        "<div class='price-line'>" +
-        "<strong>Transport charge:</strong> KES " +
-        vehiclePrice.toLocaleString() +
-        " per vehicle" +
-        "</div>" +
-
-        "<div class='total-price'>" +
-        "Transport Total: KES " +
-        vehiclePrice.toLocaleString() +
-        "</div>";
-
-
-    calculatedPrice.value =
-        "KES " +
-        vehiclePrice.toLocaleString() +
-        " per vehicle";
+return;
 
 }
 
 
+/* CITY WALK */
 
-/* =========================
-   EVENTS
-========================= */
+if (isCityWalk(selectedService)) {
+
+if (!walkType.value) {
+
+priceDetails.innerHTML =
+"Select a city walk type.";
+
+return;
+
+}
+
+if (people < 1) {
+
+priceDetails.innerHTML =
+"Enter the number of passengers.";
+
+return;
+
+}
+
+let price = 2500;
+
+if (
+walkType.value ===
+"Nairobi Food & Local Life Walk"
+) {
+
+price = 3500;
+
+}
+
+const total = price * people;
+
+priceDetails.innerHTML =
+
+"<div class='price-line'><strong>Service:</strong> City Walk</div>" +
+
+"<div class='price-line'><strong>Walk:</strong> " +
+walkType.value +
+"</div>" +
+
+"<div class='price-line'><strong>People:</strong> " +
+people +
+"</div>" +
+
+"<div class='price-line'><strong>Price per person:</strong> KES " +
+price.toLocaleString() +
+"</div>" +
+
+"<div class='total-price'>Total: KES " +
+total.toLocaleString() +
+"</div>";
+
+return;
+
+}
+
+
+/* VEHICLE */
+
+if (!selectedVehicle) {
+
+priceDetails.innerHTML =
+"Select your preferred vehicle.";
+
+return;
+
+}
+
+
+let price = 0;
+
+
+/* TOUR VAN */
+
+if (selectedVehicle === "Tour Van") {
+
+price = 5500;
+
+if (
+selectedService ===
+"Nairobi National Park"
+) {
+
+price = 8500;
+
+}
+
+}
+
+
+/* LAND CRUISER */
+
+if (selectedVehicle === "Land Cruiser") {
+
+price = 8500;
+
+if (
+selectedService ===
+"Nairobi National Park"
+) {
+
+price = 12500;
+
+}
+
+}
+
+
+/* EXECUTIVE SEDAN */
+
+if (selectedVehicle === "Executive Sedan") {
+
+price = 6500;
+
+}
+
+
+priceDetails.innerHTML =
+
+"<div class='price-line'><strong>Service:</strong> " +
+selectedService +
+"</div>" +
+
+"<div class='price-line'><strong>Vehicle:</strong> " +
+selectedVehicle +
+"</div>" +
+
+"<div class='price-line'><strong>Passengers:</strong> " +
+people +
+"</div>" +
+
+"<div class='price-line'><strong>Transport:</strong> KES " +
+price.toLocaleString() +
+" per vehicle</div>" +
+
+"<div class='total-price'>Estimated Total: KES " +
+price.toLocaleString() +
+"</div>";
+
+}
+
 
 service.addEventListener(
-    "change",
-    updateSections
+"change",
+updateSections
 );
 
 vehicle.addEventListener(
-    "change",
-    calculatePrice
+"change",
+calculatePrice
 );
 
 walkType.addEventListener(
-    "change",
-    calculatePrice
+"change",
+calculatePrice
 );
 
 walkDuration.addEventListener(
-    "change",
-    calculatePrice
+"change",
+calculatePrice
 );
 
 passengers.addEventListener(
-    "input",
-    calculatePrice
+"input",
+calculatePrice
 );
 
 
+/* READ TOUR LINKS */
 
-/* =========================
-   URL PARAMETERS
-========================= */
-
-const urlParams =
-    new URLSearchParams(
-        window.location.search
-    );
-
-
-const urlVehicle =
-    urlParams.get("vehicle");
+const params =
+new URLSearchParams(window.location.search);
 
 const urlService =
-    urlParams.get("service");
+params.get("service");
+
+const urlVehicle =
+params.get("vehicle");
 
 
-if(urlService){
+if (urlService) {
 
-    service.value =
-        urlService;
-
-}
-
-
-if(urlVehicle){
-
-    vehicle.value =
-        urlVehicle;
+service.value = urlService;
 
 }
 
+if (urlVehicle) {
+
+vehicle.value = urlVehicle;
+
+}
 
 updateSections();
 
-
-
-/* =========================
-   BOOKING REFERENCE
-========================= */
-
-function createBookingReference(){
-
-    const now = new Date();
-
-    const random =
-        Math.floor(
-            1000 +
-            Math.random() * 9000
-        );
-
-    return (
-        "ST-" +
-        now.getFullYear() +
-        String(
-            now.getMonth()+1
-        ).padStart(2,"0") +
-        String(
-            now.getDate()
-        ).padStart(2,"0") +
-        "-" +
-        random
-    );
-
-}
-
-
-
-/* =========================
-   SUBMIT BOOKING
-========================= */
-
-form.addEventListener(
-    "submit",
-    function(){
-
-        const reference =
-            createBookingReference();
-
-
-        bookingReference.value =
-            reference;
-
-
-        referenceDisplay.textContent =
-            reference;
-
-
-        submitButton.disabled =
-            true;
-
-
-        submitButton.textContent =
-            "Submitting Booking...";
-
-
-        /*
-        The form submits to FormSubmit
-        inside the hidden iframe.
-
-        The customer therefore stays
-        on this website.
-        */
-
-
-        setTimeout(
-            function(){
-
-                form.style.display =
-                    "none";
-
-
-                successBox.style.display =
-                    "block";
-
-
-                window.scrollTo({
-                    top:0,
-                    behavior:"smooth"
-                });
-
-            },
-            2500
-        );
-
-    }
-);
-
 </script>
-
 
 </body>
 </html>
