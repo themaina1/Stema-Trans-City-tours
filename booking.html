@@ -3,250 +3,219 @@
 <head>
 
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Book Your Experience | Stema Trans</title>
 
-<link rel="stylesheet"
-      href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
 
 <style>
 
-/* =========================================
-   GENERAL
-========================================= */
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f7f7f7;
-    color: #333;
-}
-
-
-/* =========================================
+/* =========================
    BOOKING PAGE
-========================================= */
+========================= */
 
-.booking-page {
-    max-width: 850px;
-    margin: 40px auto;
-    padding: 20px;
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f7f7f7;
+    color:#333;
 }
 
-.booking-page h1 {
-    text-align: center;
-    color: #b11226;
-    font-size: 38px;
-    margin-bottom: 10px;
+.booking-page{
+    max-width:850px;
+    margin:40px auto;
+    padding:20px;
 }
 
-.booking-intro {
-    text-align: center;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 30px;
+.booking-page h1{
+    text-align:center;
+    color:#b11226;
+    font-size:38px;
+    margin-bottom:10px;
 }
 
-
-/* =========================================
-   FORM
-========================================= */
-
-.booking-form {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+.booking-intro{
+    text-align:center;
+    font-size:18px;
+    margin-bottom:30px;
 }
 
-.form-group {
-    margin-bottom: 20px;
+.booking-form{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.10);
 }
 
-.form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 8px;
-    font-size: 17px;
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-group label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:8px;
+    font-size:17px;
 }
 
 .form-group input,
 .form-group select,
-.form-group textarea {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 14px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    background: white;
+.form-group textarea{
+    width:100%;
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    box-sizing:border-box;
+    background:#fff;
 }
 
-.form-group textarea {
-    min-height: 120px;
-    resize: vertical;
+.form-group textarea{
+    min-height:120px;
+    resize:vertical;
 }
 
-
-/* =========================================
+/* =========================
    NOTICE
-========================================= */
+========================= */
 
-.notice {
-    background: #f5f5f5;
-    border-left: 6px solid #b11226;
-    padding: 18px;
-    margin: 25px 0;
-    line-height: 1.7;
+.notice{
+    background:#f5f5f5;
+    border-left:6px solid #b11226;
+    padding:20px;
+    margin:25px 0;
+    line-height:1.7;
 }
 
-.notice strong {
-    color: #b11226;
+.notice strong{
+    color:#b11226;
 }
 
-
-/* =========================================
+/* =========================
    PRICE BOX
-========================================= */
+========================= */
 
-.price-box {
-    background: white;
-    border: 1px solid #ddd;
-    border-left: 6px solid #b11226;
-    border-radius: 10px;
-    padding: 22px;
-    margin: 25px 0;
+.price-box{
+    background:#fff;
+    border:1px solid #ddd;
+    border-left:6px solid #b11226;
+    border-radius:10px;
+    padding:22px;
+    margin:25px 0;
 }
 
-.price-box h2 {
-    color: #b11226;
-    margin-top: 0;
+.price-box h2{
+    color:#b11226;
+    margin-top:0;
 }
 
-.price-line {
-    font-size: 17px;
-    margin: 9px 0;
+.price-line{
+    font-size:17px;
+    margin:8px 0;
 }
 
-.total-price {
-    font-size: 25px;
-    font-weight: bold;
-    color: #b11226;
-    margin-top: 18px;
+.total-price{
+    font-size:24px;
+    font-weight:bold;
+    color:#b11226;
+    margin-top:15px;
 }
 
-
-/* =========================================
-   BOOKING REFERENCE
-========================================= */
-
-.reference-box {
-    background: #fdf2f3;
-    border: 1px solid #e0a0a8;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 15px;
-}
-
-.reference-box strong {
-    color: #b11226;
-}
-
-
-/* =========================================
+/* =========================
    HIDDEN
-========================================= */
+========================= */
 
-.hidden {
-    display: none !important;
+.hidden{
+    display:none !important;
 }
 
-
-/* =========================================
+/* =========================
    SUBMIT BUTTON
-========================================= */
+========================= */
 
-.submit-btn {
-    width: 100%;
-    padding: 17px;
-    border: none;
-    border-radius: 8px;
-    background: #b11226;
-    color: white;
-    font-size: 19px;
-    font-weight: bold;
-    cursor: pointer;
+.submit-btn{
+    width:100%;
+    padding:17px;
+    border:none;
+    border-radius:8px;
+    background:#b11226;
+    color:white;
+    font-size:19px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-.submit-btn:hover {
-    background: #870d1c;
+.submit-btn:hover{
+    background:#870d1c;
 }
 
+.submit-btn:disabled{
+    background:#888;
+    cursor:not-allowed;
+}
 
-/* =========================================
+/* =========================
    SUCCESS MESSAGE
-========================================= */
+========================= */
 
-.success-message {
-    display: none;
-    background: #ffffff;
-    border-radius: 15px;
-    padding: 35px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+.success-box{
+    display:none;
+    background:#fff;
+    border-left:7px solid #198754;
+    border-radius:12px;
+    padding:30px;
+    margin-top:25px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.10);
 }
 
-.success-message h2 {
-    color: #b11226;
-    font-size: 30px;
+.success-box h2{
+    color:#198754;
+    margin-top:0;
+    font-size:30px;
 }
 
-.success-message p {
-    font-size: 17px;
-    line-height: 1.7;
+.success-box p{
+    font-size:18px;
+    line-height:1.6;
 }
 
-.success-reference {
-    background: #fdf2f3;
-    border: 1px solid #e0a0a8;
-    padding: 15px;
-    border-radius: 8px;
-    font-size: 19px;
-    font-weight: bold;
-    margin: 20px 0;
+.booking-reference{
+    font-size:22px;
+    font-weight:bold;
+    color:#b11226;
+    margin:15px 0;
 }
 
-.home-btn {
-    display: inline-block;
-    background: #b11226;
-    color: white;
-    text-decoration: none;
-    padding: 14px 25px;
-    border-radius: 8px;
-    font-weight: bold;
+.home-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:13px 25px;
+    background:#b11226;
+    color:#fff;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
 }
 
-
-/* =========================================
+/* =========================
    MOBILE
-========================================= */
+========================= */
 
-@media (max-width: 600px) {
+@media(max-width:600px){
 
-    .booking-page {
-        margin: 20px auto;
-        padding: 12px;
+    .booking-page{
+        margin:20px auto;
+        padding:12px;
     }
 
-    .booking-form {
-        padding: 20px;
+    .booking-form{
+        padding:20px;
     }
 
-    .booking-page h1 {
-        font-size: 30px;
+    .booking-page h1{
+        font-size:30px;
     }
 
 }
@@ -259,170 +228,127 @@ body {
 <body>
 
 
-<!-- =========================================
+<!-- =========================
      HEADER
-========================================= -->
+========================= -->
 
 <header>
 
-<div class="logo">
+    <div class="logo">
 
-<h1>STEMA TRANS</h1>
+        <h1>STEMA TRANS</h1>
 
-<p>
-City Tours, Transfers & Guided Experiences
-</p>
+        <p>
+            City Tours, Transfers & Guided Experiences
+        </p>
 
-</div>
+    </div>
 
 
-<nav>
+    <nav>
 
-<a href="index.html">Home</a>
+        <a href="index.html">Home</a>
 
-<a href="about.html">About</a>
+        <a href="about.html">About</a>
 
-<a href="tours.html">Tours</a>
+        <a href="tours.html">Tours</a>
 
-<a href="transfers.html">Transfers</a>
+        <a href="transfers.html">Transfers</a>
 
-<a href="rates.html">Rates</a>
+        <a href="rates.html">Rates</a>
 
-<a href="fleet.html">Fleet</a>
+        <a href="fleet.html">Fleet</a>
 
-<a href="gallery.html">Gallery</a>
+        <a href="gallery.html">Gallery</a>
 
-<a href="city-walks.html">City Walks</a>
+        <a href="city-walks.html">City Walks</a>
 
-<a href="contact.html">Contact</a>
+        <a href="contact.html">Contact</a>
 
-</nav>
+    </nav>
 
 </header>
 
 
 
-<!-- =========================================
-     MAIN
-========================================= -->
+<!-- =========================
+     MAIN BOOKING
+========================= -->
 
 <main class="booking-page">
 
 
-<h1>Book Your Experience</h1>
+<h1>
+    Book Your Experience
+</h1>
 
 
 <p class="booking-intro">
-
-Complete the form below and Stema Trans will
-contact you to confirm your booking.
-
+    Fill in the details below and we will contact you shortly.
 </p>
 
 
 
-<!-- =========================================
-     SUCCESS MESSAGE
-========================================= -->
-
-<div
-id="successMessage"
-class="success-message"
->
-
-<h2>
-Booking Submitted Successfully!
-</h2>
-
-<p>
-
-Thank you for choosing
-<strong>Stema Trans</strong>.
-
-</p>
-
-<p>
-
-We have received your booking request.
-We will contact you shortly to confirm
-the details.
-
-</p>
-
-
-<div class="success-reference">
-
-Booking Reference:
-<span id="successReference"></span>
-
-</div>
-
-
-<a
-href="index.html"
-class="home-btn"
->
-
-Return to Home
-
-</a>
-
-</div>
-
-
-
-<!-- =========================================
+<!-- =========================
      BOOKING FORM
-========================================= -->
+========================= -->
 
 <form
-id="bookingForm"
-class="booking-form"
-
-action="https://formsubmit.co/stemawastrans@gmail.com"
-
-method="POST"
+    id="bookingForm"
+    class="booking-form"
+    action="https://formsubmit.co/stemawastrans@gmail.com"
+    method="POST"
+    target="formsubmitFrame"
 >
 
 
 <!-- FORM SUBMIT SETTINGS -->
 
 <input
-type="hidden"
-name="_subject"
-value="New Stema Trans Booking Request"
+    type="hidden"
+    name="_subject"
+    value="NEW STEMA TRANS BOOKING"
 >
 
 <input
-type="hidden"
-name="_captcha"
-value="false"
+    type="hidden"
+    name="_captcha"
+    value="false"
 >
-
-<!-- Do NOT redirect to another page -->
 
 <input
-type="hidden"
-name="_template"
-value="table"
+    type="hidden"
+    name="_template"
+    value="table"
 >
 
 
-<!-- =========================================
+<!-- =========================
      BOOKING REFERENCE
-========================================= -->
+========================= -->
 
 <input
-type="hidden"
-id="bookingReference"
-name="Booking Reference"
-value=""
+    type="hidden"
+    id="bookingReference"
+    name="Booking Reference"
 >
 
 
-<!-- =========================================
+<!-- =========================
+     CALCULATED PRICE
+========================= -->
+
+<input
+    type="hidden"
+    id="calculatedPrice"
+    name="Calculated Booking Price"
+>
+
+
+
+<!-- =========================
      CUSTOMER DETAILS
-========================================= -->
+========================= -->
 
 <div class="form-group">
 
@@ -431,11 +357,11 @@ Full Name
 </label>
 
 <input
-type="text"
-id="fullName"
-name="Full Name"
-placeholder="Enter your full name"
-required
+    type="text"
+    id="fullName"
+    name="Full Name"
+    placeholder="Full Name"
+    required
 >
 
 </div>
@@ -449,11 +375,11 @@ Phone Number
 </label>
 
 <input
-type="tel"
-id="phone"
-name="Phone Number"
-placeholder="e.g. +254 7XX XXX XXX"
-required
+    type="tel"
+    id="phone"
+    name="Phone Number"
+    placeholder="Phone Number"
+    required
 >
 
 </div>
@@ -467,20 +393,20 @@ Email Address
 </label>
 
 <input
-type="email"
-id="email"
-name="Customer Email"
-placeholder="Enter your email address"
-required
+    type="email"
+    id="email"
+    name="Email Address"
+    placeholder="Email Address"
+    required
 >
 
 </div>
 
 
 
-<!-- =========================================
+<!-- =========================
      SERVICE
-========================================= -->
+========================= -->
 
 <div class="form-group">
 
@@ -489,9 +415,9 @@ Service
 </label>
 
 <select
-id="service"
-name="Service"
-required
+    id="service"
+    name="Service"
+    required
 >
 
 <option value="">
@@ -502,32 +428,8 @@ Select Service
 Nairobi City Tour
 </option>
 
-<option value="Nairobi National Park">
-Nairobi National Park Safari
-</option>
-
-<option value="Giraffe Centre Tour">
-Giraffe Centre Tour
-</option>
-
-<option value="Karen Blixen Tour">
-Karen Blixen Museum Tour
-</option>
-
-<option value="Nairobi National Museum">
-Nairobi National Museum
-</option>
-
-<option value="Bomas of Kenya">
-Bomas of Kenya
-</option>
-
 <option value="City Walk">
-Nairobi City Walk
-</option>
-
-<option value="Private Hire">
-Private Custom Tour
+City Walk
 </option>
 
 <option value="Airport Transfer">
@@ -538,19 +440,45 @@ Airport Transfer
 Hotel Transfer
 </option>
 
+<option value="Giraffe Centre Tour">
+Giraffe Centre Tour
+</option>
+
+<option value="Karen Blixen Tour">
+Karen Blixen Tour
+</option>
+
+<option value="Nairobi National Museum">
+Nairobi National Museum
+</option>
+
+<option value="Bomas of Kenya">
+Bomas of Kenya
+</option>
+
+<option value="Nairobi National Park">
+Nairobi National Park
+</option>
+
+<option value="Private Custom City Walk">
+Private Custom City Walk
+</option>
+
+<option value="Private Hire">
+Private Hire
+</option>
+
 </select>
 
 </div>
 
 
 
-<!-- =========================================
+<!-- =========================
      VEHICLE
-========================================= -->
+========================= -->
 
-<div
-id="vehicleSection"
->
+<div id="vehicleSection">
 
 <div class="form-group">
 
@@ -559,8 +487,8 @@ Preferred Vehicle
 </label>
 
 <select
-id="vehicle"
-name="Preferred Vehicle"
+    id="vehicle"
+    name="Preferred Vehicle"
 >
 
 <option value="">
@@ -587,15 +515,14 @@ Executive Sedan
 
 
 
-<!-- =========================================
-     CITY WALK OPTIONS
-========================================= -->
+<!-- =========================
+     CITY WALK
+========================= -->
 
 <div
-id="walkSection"
-class="hidden"
+    id="walkSection"
+    class="hidden"
 >
-
 
 <div class="form-group">
 
@@ -604,8 +531,8 @@ City Walk Type
 </label>
 
 <select
-id="walkType"
-name="City Walk Type"
+    id="walkType"
+    name="City Walk Type"
 >
 
 <option value="">
@@ -633,12 +560,12 @@ Nairobi Food & Local Life Walk
 <div class="form-group">
 
 <label for="walkDuration">
-Walk Duration
+Duration
 </label>
 
 <select
-id="walkDuration"
-name="Walk Duration"
+    id="walkDuration"
+    name="Walk Duration"
 >
 
 <option value="">
@@ -657,14 +584,13 @@ Select Duration
 
 </div>
 
-
 </div>
 
 
 
-<!-- =========================================
+<!-- =========================
      PASSENGERS
-========================================= -->
+========================= -->
 
 <div class="form-group">
 
@@ -673,22 +599,22 @@ Number of Passengers
 </label>
 
 <input
-type="number"
-id="passengers"
-name="Number of Passengers"
-min="1"
-max="50"
-value="1"
-required
+    type="number"
+    id="passengers"
+    name="Number of Passengers"
+    min="1"
+    max="50"
+    placeholder="Number of Passengers"
+    required
 >
 
 </div>
 
 
 
-<!-- =========================================
+<!-- =========================
      NOTICE
-========================================= -->
+========================= -->
 
 <div class="notice">
 
@@ -696,27 +622,26 @@ required
 
 <br><br>
 
-Vehicle-based tour and transfer prices are
-<strong>per vehicle</strong>, not per person.
+Transport charges for vehicle-based services are
+<strong>per vehicle</strong>.
 
 <br><br>
 
-City Walk prices are
+City Walk charges are
 <strong>per person</strong>.
 
 <br><br>
 
-Park entrance fees, attraction entrance fees,
-parking and meals are charged separately unless
-otherwise stated.
+Attraction and park entry fees are charged
+<strong>separately</strong> unless otherwise stated.
 
 </div>
 
 
 
-<!-- =========================================
+<!-- =========================
      PRICE
-========================================= -->
+========================= -->
 
 <div class="price-box">
 
@@ -726,8 +651,7 @@ Booking Price
 
 <div id="priceDetails">
 
-Select your service and vehicle to see
-the estimated price.
+Select a service and enter the number of passengers.
 
 </div>
 
@@ -735,51 +659,51 @@ the estimated price.
 
 
 
-<!-- =========================================
+<!-- =========================
      DATE
-========================================= -->
+========================= -->
 
 <div class="form-group">
 
 <label for="date">
-Preferred Date
+Date
 </label>
 
 <input
-type="date"
-id="date"
-name="Preferred Date"
-required
+    type="date"
+    id="date"
+    name="Date"
+    required
 >
 
 </div>
 
 
 
-<!-- =========================================
+<!-- =========================
      TIME
-========================================= -->
+========================= -->
 
 <div class="form-group">
 
 <label for="time">
-Preferred Time
+Time
 </label>
 
 <input
-type="time"
-id="time"
-name="Preferred Time"
-required
+    type="time"
+    id="time"
+    name="Time"
+    required
 >
 
 </div>
 
 
 
-<!-- =========================================
+<!-- =========================
      PICKUP
-========================================= -->
+========================= -->
 
 <div class="form-group">
 
@@ -788,20 +712,20 @@ Pickup Location
 </label>
 
 <input
-type="text"
-id="pickup"
-name="Pickup Location"
-placeholder="Hotel, airport, residence etc."
-required
+    type="text"
+    id="pickup"
+    name="Pickup Location"
+    placeholder="Pickup Location"
+    required
 >
 
 </div>
 
 
 
-<!-- =========================================
+<!-- =========================
      DESTINATION
-========================================= -->
+========================= -->
 
 <div class="form-group">
 
@@ -810,19 +734,19 @@ Destination / Drop-off
 </label>
 
 <input
-type="text"
-id="destination"
-name="Destination / Drop-off"
-placeholder="Destination or drop-off location"
+    type="text"
+    id="destination"
+    name="Destination / Drop-off"
+    placeholder="Destination / Drop-off"
 >
 
 </div>
 
 
 
-<!-- =========================================
+<!-- =========================
      ADDITIONAL INFORMATION
-========================================= -->
+========================= -->
 
 <div class="form-group">
 
@@ -831,149 +755,209 @@ Additional Information
 </label>
 
 <textarea
-id="message"
-name="Additional Information"
-placeholder="Tell us anything else we should know..."
+    id="message"
+    name="Additional Information"
+    placeholder="Tell us anything else we should know..."
 ></textarea>
 
 </div>
 
 
 
-<!-- =========================================
-     PRICE SENT TO EMAIL
-========================================= -->
-
-<input
-type="hidden"
-id="calculatedPrice"
-name="Calculated Booking Price"
-value=""
->
-
-
-
-<!-- =========================================
+<!-- =========================
      SUBMIT
-========================================= -->
+========================= -->
 
 <button
-type="submit"
-class="submit-btn"
+    type="submit"
+    id="submitButton"
+    class="submit-btn"
 >
-
 Submit Booking
-
 </button>
 
 
 </form>
 
+
+
+<!-- =========================
+     SUCCESS MESSAGE
+========================= -->
+
+<div
+    id="successBox"
+    class="success-box"
+>
+
+<h2>
+    ✓ Booking Submitted Successfully
+</h2>
+
+<p>
+Thank you for booking with <strong>Stema Trans</strong>.
+</p>
+
+<p>
+We have received your booking request and will contact you shortly.
+</p>
+
+<div class="booking-reference">
+
+Booking Reference:
+<span id="referenceDisplay"></span>
+
+</div>
+
+<p>
+Please keep this reference for your records.
+</p>
+
+<a
+    href="index.html"
+    class="home-btn"
+>
+Return to Stema Trans
+</a>
+
+</div>
+
+
+
 </main>
 
 
 
-<!-- =========================================
+<!-- =========================
+     HIDDEN FORM SUBMIT FRAME
+========================= -->
+
+<iframe
+    name="formsubmitFrame"
+    id="formsubmitFrame"
+    style="display:none;"
+>
+</iframe>
+
+
+
+<!-- =========================
      FOOTER
-========================================= -->
+========================= -->
 
 <footer>
 
 <p>
-
-© 2026 Stema Trans —
-Nairobi City Tours, Transfers & Guided Experiences
-
+© 2026 Stema Trans — Nairobi City Tours, Transfers & Guided Experiences
 </p>
 
 </footer>
 
 
 
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
 
-/* =========================================
+
+/* =========================
    ELEMENTS
-========================================= */
+========================= */
 
 const form =
-document.getElementById("bookingForm");
+    document.getElementById("bookingForm");
 
 const service =
-document.getElementById("service");
-
-const vehicle =
-document.getElementById("vehicle");
+    document.getElementById("service");
 
 const vehicleSection =
-document.getElementById("vehicleSection");
+    document.getElementById("vehicleSection");
 
 const walkSection =
-document.getElementById("walkSection");
+    document.getElementById("walkSection");
+
+const vehicle =
+    document.getElementById("vehicle");
 
 const walkType =
-document.getElementById("walkType");
+    document.getElementById("walkType");
 
 const walkDuration =
-document.getElementById("walkDuration");
+    document.getElementById("walkDuration");
 
 const passengers =
-document.getElementById("passengers");
+    document.getElementById("passengers");
 
 const priceDetails =
-document.getElementById("priceDetails");
+    document.getElementById("priceDetails");
 
 const calculatedPrice =
-document.getElementById("calculatedPrice");
+    document.getElementById("calculatedPrice");
 
 const bookingReference =
-document.getElementById("bookingReference");
+    document.getElementById("bookingReference");
 
-const successMessage =
-document.getElementById("successMessage");
+const referenceDisplay =
+    document.getElementById("referenceDisplay");
 
-const successReference =
-document.getElementById("successReference");
+const successBox =
+    document.getElementById("successBox");
+
+const submitButton =
+    document.getElementById("submitButton");
 
 
 
-/* =========================================
+/* =========================
    CITY WALK CHECK
-========================================= */
+========================= */
 
-function isCityWalk(serviceName) {
+function isCityWalk(serviceName){
 
-    return serviceName === "City Walk";
+    return (
+        serviceName === "City Walk" ||
+        serviceName === "Private Custom City Walk"
+    );
 
 }
 
 
 
-/* =========================================
+/* =========================
    UPDATE SECTIONS
-========================================= */
+========================= */
 
-function updateSections() {
+function updateSections(){
 
     const selectedService =
-    service.value;
+        service.value;
 
 
-    if (isCityWalk(selectedService)) {
+    if(isCityWalk(selectedService)){
 
-        vehicleSection.classList.add("hidden");
+        vehicleSection
+            .classList
+            .add("hidden");
 
-        walkSection.classList.remove("hidden");
+        walkSection
+            .classList
+            .remove("hidden");
 
         vehicle.value = "";
 
     }
 
-    else {
+    else{
 
-        vehicleSection.classList.remove("hidden");
+        vehicleSection
+            .classList
+            .remove("hidden");
 
-        walkSection.classList.add("hidden");
+        walkSection
+            .classList
+            .add("hidden");
 
         walkType.value = "";
 
@@ -988,27 +972,26 @@ function updateSections() {
 
 
 
-/* =========================================
+/* =========================
    CALCULATE PRICE
-========================================= */
+========================= */
 
-function calculatePrice() {
+function calculatePrice(){
 
     const selectedService =
-    service.value;
+        service.value;
 
     const selectedVehicle =
-    vehicle.value;
+        vehicle.value;
 
     const numberOfPassengers =
-    parseInt(passengers.value) || 0;
+        parseInt(passengers.value) || 0;
 
 
-
-    if (!selectedService) {
+    if(!selectedService){
 
         priceDetails.innerHTML =
-        "Select a service and vehicle to see the estimated price.";
+            "Select a service and enter the number of passengers.";
 
         calculatedPrice.value = "";
 
@@ -1018,22 +1001,21 @@ function calculatePrice() {
 
 
 
-    /* =====================================
+    /* =========================
        CITY WALK
-    ===================================== */
+    ========================= */
 
-    if (isCityWalk(selectedService)) {
-
+    if(isCityWalk(selectedService)){
 
         const selectedWalk =
-        walkType.value;
+            walkType.value;
 
 
-        if (!selectedWalk) {
+        if(!selectedWalk){
 
             priceDetails.innerHTML =
-            "<strong>City Walk</strong><br>" +
-            "Select your walk type.";
+                "<strong>City Walk Price:</strong><br>" +
+                "Select a walk type.";
 
             calculatedPrice.value = "";
 
@@ -1042,10 +1024,11 @@ function calculatePrice() {
         }
 
 
-        if (numberOfPassengers < 1) {
+        if(numberOfPassengers < 1){
 
             priceDetails.innerHTML =
-            "Enter the number of passengers.";
+                "<strong>City Walk Price:</strong><br>" +
+                "Enter the number of passengers.";
 
             calculatedPrice.value = "";
 
@@ -1057,10 +1040,10 @@ function calculatePrice() {
         let pricePerPerson = 2500;
 
 
-        if (
+        if(
             selectedWalk ===
             "Nairobi Food & Local Life Walk"
-        ) {
+        ){
 
             pricePerPerson = 3500;
 
@@ -1068,43 +1051,46 @@ function calculatePrice() {
 
 
         const total =
-        pricePerPerson *
-        numberOfPassengers;
+            pricePerPerson *
+            numberOfPassengers;
 
 
         priceDetails.innerHTML =
 
-        "<div class='price-line'>" +
-        "<strong>Service:</strong> City Walk" +
-        "</div>" +
+            "<div class='price-line'>" +
+            "<strong>Service:</strong> " +
+            selectedService +
+            "</div>" +
 
-        "<div class='price-line'>" +
-        "<strong>Walk:</strong> " +
-        selectedWalk +
-        "</div>" +
+            "<div class='price-line'>" +
+            "<strong>Walk:</strong> " +
+            selectedWalk +
+            "</div>" +
 
-        "<div class='price-line'>" +
-        "<strong>People:</strong> " +
-        numberOfPassengers +
-        "</div>" +
+            "<div class='price-line'>" +
+            "<strong>People:</strong> " +
+            numberOfPassengers +
+            "</div>" +
 
-        "<div class='price-line'>" +
-        "<strong>Price per person:</strong> KES " +
-        pricePerPerson.toLocaleString() +
-        "</div>" +
+            "<div class='price-line'>" +
+            "<strong>Price per person:</strong> KES " +
+            pricePerPerson.toLocaleString() +
+            "</div>" +
 
-        "<div class='total-price'>" +
-        "Total: KES " +
-        total.toLocaleString() +
-        "</div>";
+            "<div class='total-price'>" +
+            "Total: KES " +
+            total.toLocaleString() +
+            "</div>";
 
 
         calculatedPrice.value =
-        "KES " +
-        total.toLocaleString() +
-        " total | KES " +
-        pricePerPerson.toLocaleString() +
-        " per person";
+            "KES " +
+            total.toLocaleString() +
+            " total (" +
+            numberOfPassengers +
+            " people × KES " +
+            pricePerPerson.toLocaleString() +
+            " per person)";
 
 
         return;
@@ -1113,15 +1099,15 @@ function calculatePrice() {
 
 
 
-    /* =====================================
-       VEHICLE REQUIRED
-    ===================================== */
+    /* =========================
+       VEHICLE SERVICE
+    ========================= */
 
-    if (!selectedVehicle) {
+    if(!selectedVehicle){
 
         priceDetails.innerHTML =
-        "<strong>Transport Charge:</strong><br>" +
-        "Select a vehicle.";
+            "<strong>Transport Charge:</strong><br>" +
+            "Select a vehicle.";
 
         calculatedPrice.value = "";
 
@@ -1131,28 +1117,24 @@ function calculatePrice() {
 
 
 
-    /* =====================================
-       VEHICLE PRICES
-    ===================================== */
-
     let vehiclePrice = 0;
 
 
 
     /* TOUR VAN */
 
-    if (selectedVehicle === "Tour Van") {
+    if(selectedVehicle === "Tour Van"){
 
-        if (
+        if(
             selectedService ===
             "Nairobi National Park"
-        ) {
+        ){
 
             vehiclePrice = 8500;
 
         }
 
-        else {
+        else{
 
             vehiclePrice = 5500;
 
@@ -1164,21 +1146,21 @@ function calculatePrice() {
 
     /* LAND CRUISER */
 
-    else if (
+    else if(
         selectedVehicle ===
         "Land Cruiser"
-    ) {
+    ){
 
-        if (
+        if(
             selectedService ===
             "Nairobi National Park"
-        ) {
+        ){
 
             vehiclePrice = 12500;
 
         }
 
-        else {
+        else{
 
             vehiclePrice = 8500;
 
@@ -1190,10 +1172,10 @@ function calculatePrice() {
 
     /* EXECUTIVE SEDAN */
 
-    else if (
+    else if(
         selectedVehicle ===
         "Executive Sedan"
-    ) {
+    ){
 
         vehiclePrice = 6500;
 
@@ -1201,33 +1183,31 @@ function calculatePrice() {
 
 
 
-    /* =====================================
-       PRIVATE CUSTOM
-    ===================================== */
+    /* PRIVATE HIRE */
 
-    if (
+    if(
         selectedService ===
         "Private Hire"
-    ) {
+    ){
 
         priceDetails.innerHTML =
 
-        "<div class='price-line'>" +
-        "<strong>Service:</strong> Private Custom Tour" +
-        "</div>" +
+            "<div class='price-line'>" +
+            "<strong>Service:</strong> Private Hire" +
+            "</div>" +
 
-        "<div class='price-line'>" +
-        "<strong>Vehicle:</strong> " +
-        selectedVehicle +
-        "</div>" +
+            "<div class='price-line'>" +
+            "<strong>Vehicle:</strong> " +
+            selectedVehicle +
+            "</div>" +
 
-        "<div class='total-price'>" +
-        "Custom quotation" +
-        "</div>";
+            "<div class='total-price'>" +
+            "Custom quotation required" +
+            "</div>";
 
 
         calculatedPrice.value =
-        "Custom quotation";
+            "Custom quotation required";
 
         return;
 
@@ -1235,205 +1215,204 @@ function calculatePrice() {
 
 
 
-    /* =====================================
-       DISPLAY VEHICLE PRICE
-    ===================================== */
+    /* VEHICLE TOTAL */
 
     priceDetails.innerHTML =
 
-    "<div class='price-line'>" +
-    "<strong>Service:</strong> " +
-    selectedService +
-    "</div>" +
+        "<div class='price-line'>" +
+        "<strong>Service:</strong> " +
+        selectedService +
+        "</div>" +
 
-    "<div class='price-line'>" +
-    "<strong>Vehicle:</strong> " +
-    selectedVehicle +
-    "</div>" +
+        "<div class='price-line'>" +
+        "<strong>Vehicle:</strong> " +
+        selectedVehicle +
+        "</div>" +
 
-    "<div class='price-line'>" +
-    "<strong>Passengers:</strong> " +
-    numberOfPassengers +
-    "</div>" +
+        "<div class='price-line'>" +
+        "<strong>Passengers:</strong> " +
+        numberOfPassengers +
+        "</div>" +
 
-    "<div class='price-line'>" +
-    "<strong>Transport charge:</strong> KES " +
-    vehiclePrice.toLocaleString() +
-    " per vehicle" +
-    "</div>" +
+        "<div class='price-line'>" +
+        "<strong>Transport charge:</strong> KES " +
+        vehiclePrice.toLocaleString() +
+        " per vehicle" +
+        "</div>" +
 
-    "<div class='total-price'>" +
-    "Transport Total: KES " +
-    vehiclePrice.toLocaleString() +
-    "</div>";
+        "<div class='total-price'>" +
+        "Transport Total: KES " +
+        vehiclePrice.toLocaleString() +
+        "</div>";
 
 
     calculatedPrice.value =
-    "KES " +
-    vehiclePrice.toLocaleString() +
-    " per vehicle";
+        "KES " +
+        vehiclePrice.toLocaleString() +
+        " per vehicle";
 
 }
 
 
 
-/* =========================================
+/* =========================
    EVENTS
-========================================= */
+========================= */
 
 service.addEventListener(
-"change",
-updateSections
+    "change",
+    updateSections
 );
 
 vehicle.addEventListener(
-"change",
-calculatePrice
+    "change",
+    calculatePrice
 );
 
 walkType.addEventListener(
-"change",
-calculatePrice
+    "change",
+    calculatePrice
 );
 
 walkDuration.addEventListener(
-"change",
-calculatePrice
+    "change",
+    calculatePrice
 );
 
 passengers.addEventListener(
-"input",
-calculatePrice
+    "input",
+    calculatePrice
 );
 
 
 
-/* =========================================
+/* =========================
    URL PARAMETERS
-========================================= */
+========================= */
 
 const urlParams =
-new URLSearchParams(
-window.location.search
-);
+    new URLSearchParams(
+        window.location.search
+    );
 
-
-const urlService =
-urlParams.get("service");
 
 const urlVehicle =
-urlParams.get("vehicle");
+    urlParams.get("vehicle");
+
+const urlService =
+    urlParams.get("service");
 
 
-
-if (urlService) {
+if(urlService){
 
     service.value =
-    urlService;
+        urlService;
 
 }
 
 
-
-if (urlVehicle) {
+if(urlVehicle){
 
     vehicle.value =
-    urlVehicle;
+        urlVehicle;
 
 }
 
-
-
-/* =========================================
-   INITIALISE
-========================================= */
 
 updateSections();
 
 
 
-/* =========================================
-   GENERATE BOOKING REFERENCE
-========================================= */
+/* =========================
+   BOOKING REFERENCE
+========================= */
 
-function generateBookingReference() {
+function createBookingReference(){
 
-    const now =
-    new Date();
+    const now = new Date();
 
     const random =
-    Math.floor(
-        1000 +
-        Math.random() * 9000
-    );
+        Math.floor(
+            1000 +
+            Math.random() * 9000
+        );
 
-    return "ST-" +
+    return (
+        "ST-" +
         now.getFullYear() +
-        random;
+        String(
+            now.getMonth()+1
+        ).padStart(2,"0") +
+        String(
+            now.getDate()
+        ).padStart(2,"0") +
+        "-" +
+        random
+    );
 
 }
 
 
 
-/* =========================================
-   FORM SUBMISSION
-========================================= */
+/* =========================
+   SUBMIT BOOKING
+========================= */
 
 form.addEventListener(
-"submit",
-function(event) {
+    "submit",
+    function(){
 
-    /*
-       IMPORTANT:
-
-       We allow FormSubmit to receive
-       the booking.
-
-       The success message is displayed
-       immediately after the customer
-       submits.
-    */
+        const reference =
+            createBookingReference();
 
 
-    const reference =
-    generateBookingReference();
+        bookingReference.value =
+            reference;
 
 
-    bookingReference.value =
-    reference;
+        referenceDisplay.textContent =
+            reference;
 
 
-    successReference.textContent =
-    reference;
+        submitButton.disabled =
+            true;
 
 
-    /*
-       Save booking reference locally
-       in case the browser reloads.
-    */
-
-    localStorage.setItem(
-        "stemaBookingReference",
-        reference
-    );
+        submitButton.textContent =
+            "Submitting Booking...";
 
 
-    /*
-       Hide form
-    */
+        /*
+        The form submits to FormSubmit
+        inside the hidden iframe.
 
-    form.style.display =
-    "none";
+        The customer therefore stays
+        on this website.
+        */
 
 
-    /*
-       Show success message
-    */
+        setTimeout(
+            function(){
 
-    successMessage.style.display =
-    "block";
+                form.style.display =
+                    "none";
 
-});
+
+                successBox.style.display =
+                    "block";
+
+
+                window.scrollTo({
+                    top:0,
+                    behavior:"smooth"
+                });
+
+            },
+            2500
+        );
+
+    }
+);
 
 </script>
 
