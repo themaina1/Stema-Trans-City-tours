@@ -10,10 +10,6 @@
 
 <style>
 
-/* ================================
-   TOURS PAGE
-================================ */
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -42,22 +38,14 @@ body {
     line-height: 1.7;
 }
 
-/* ================================
-   TOUR GRID
-================================ */
-
 .tours-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
-/* ================================
-   TOUR CARD
-================================ */
-
 .tour-card {
-    background: white;
+    background: #fff;
     border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 5px 18px rgba(0,0,0,0.10);
@@ -72,47 +60,37 @@ body {
     display: block;
 }
 
-/* ================================
-   CONTENT
-================================ */
-
 .tour-content {
     padding: 22px;
-    flex: 1;
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 .tour-content h2 {
     color: #b11226;
-    margin-top: 0;
-    margin-bottom: 12px;
+    margin: 0 0 12px;
     font-size: 24px;
 }
 
 .tour-content p {
     line-height: 1.6;
-    margin-top: 0;
 }
 
 .tour-info {
+    background: #f7f7f7;
+    padding: 14px;
+    border-radius: 8px;
     margin: 15px 0;
     line-height: 1.8;
-    background: #f8f8f8;
-    padding: 12px;
-    border-radius: 8px;
 }
 
 .tour-price {
-    font-size: 19px;
-    font-weight: bold;
     color: #b11226;
-    margin: 15px 0;
+    font-weight: bold;
+    font-size: 19px;
+    margin: 10px 0 18px;
 }
-
-/* ================================
-   BOOK BUTTON
-================================ */
 
 .tour-btn {
     display: block;
@@ -124,8 +102,8 @@ body {
     text-decoration: none;
     padding: 15px;
     border-radius: 8px;
-    font-weight: bold;
     font-size: 17px;
+    font-weight: bold;
     margin-top: auto;
 }
 
@@ -133,33 +111,19 @@ body {
     background: #870d1c;
 }
 
-/* ================================
-   FOOTER
-================================ */
-
 footer {
-    text-align: center;
     background: #b11226;
     color: white;
+    text-align: center;
     padding: 25px 15px;
     margin-top: 50px;
 }
 
-/* ================================
-   TABLET
-================================ */
-
 @media (max-width: 900px) {
-
     .tours-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
-
-/* ================================
-   PHONE
-================================ */
 
 @media (max-width: 600px) {
 
@@ -172,10 +136,6 @@ footer {
         font-size: 31px;
     }
 
-    .intro {
-        font-size: 16px;
-    }
-
     .tours-grid {
         grid-template-columns: 1fr;
     }
@@ -183,11 +143,6 @@ footer {
     .tour-card img {
         height: 220px;
     }
-
-    .tour-content h2 {
-        font-size: 23px;
-    }
-
 }
 
 </style>
@@ -195,50 +150,32 @@ footer {
 
 <body>
 
-<!-- ================================
-     HEADER
-================================ -->
-
 <header>
 
-    <div class="logo">
+<div class="logo">
 
-        <h1>STEMA TRANS</h1>
+<h1>STEMA TRANS</h1>
 
-        <p>
-            City Tours, Transfers & Guided Experiences
-        </p>
+<p>City Tours, Transfers & Guided Experiences</p>
 
-    </div>
+</div>
 
-    <nav>
+<nav>
 
-        <a href="index.html">Home</a>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="tours.html">Tours</a>
+<a href="transfers.html">Transfers</a>
+<a href="rates.html">Rates</a>
+<a href="fleet.html">Fleet</a>
+<a href="gallery.html">Gallery</a>
+<a href="city-walks.html">City Walks</a>
+<a href="contact.html">Contact</a>
 
-        <a href="about.html">About</a>
-
-        <a href="tours.html">Tours</a>
-
-        <a href="transfers.html">Transfers</a>
-
-        <a href="rates.html">Rates</a>
-
-        <a href="fleet.html">Fleet</a>
-
-        <a href="gallery.html">Gallery</a>
-
-        <a href="city-walks.html">City Walks</a>
-
-        <a href="contact.html">Contact</a>
-
-    </nav>
+</nav>
 
 </header>
 
-
-<!-- ================================
-     MAIN
-================================ -->
 
 <main class="tours-page">
 
@@ -248,11 +185,9 @@ footer {
 
 Discover Nairobi with Stema Trans.
 
-Choose your preferred experience below to see the
-duration, group size, vehicle options and price.
-
-When you are ready, simply click
-<strong>Book This Tour</strong>.
+Choose your experience below and click
+<strong>Book This Tour</strong> to proceed directly
+to our booking form.
 
 </p>
 
@@ -260,15 +195,16 @@ When you are ready, simply click
 <div class="tours-grid">
 
 
-<!-- =================================================
-     1. NAIROBI NATIONAL PARK
-================================================= -->
+<!-- ==============================
+     NAIROBI NATIONAL PARK
+============================== -->
 
 <div class="tour-card">
 
 <img
 src="images/nairobi-national-park.jpg"
 alt="Nairobi National Park"
+onerror="this.style.display='none'"
 >
 
 <div class="tour-content">
@@ -276,11 +212,8 @@ alt="Nairobi National Park"
 <h2>Nairobi National Park Safari</h2>
 
 <p>
-
-Enjoy a guided game drive through Nairobi National Park,
-one of the world's few national parks located next to a
-capital city.
-
+Experience Kenya's wildlife just outside the capital
+with a guided game drive through Nairobi National Park.
 </p>
 
 <div class="tour-info">
@@ -289,25 +222,21 @@ capital city.
 
 <strong>Group:</strong> 1–7 People<br>
 
-<strong>Vehicle:</strong> Tour Van or Land Cruiser<br>
+<strong>Vehicle:</strong> Tour Van / Land Cruiser<br>
 
 <strong>Experience:</strong> Guided Game Drive
 
 </div>
 
 <div class="tour-price">
-
 From KES 8,500 / USD 66 per vehicle
-
 </div>
 
 <a
-class="tour-btn"
 href="booking.html?service=Nairobi%20National%20Park"
+class="tour-btn"
 >
-
-Book This Tour
-
+BOOK THIS TOUR
 </a>
 
 </div>
@@ -315,15 +244,16 @@ Book This Tour
 </div>
 
 
-<!-- =================================================
-     2. GIRAFFE CENTRE
-================================================= -->
+<!-- ==============================
+     GIRAFFE CENTRE
+============================== -->
 
 <div class="tour-card">
 
 <img
 src="images/giraffe-centre.jpg"
 alt="Giraffe Centre"
+onerror="this.style.display='none'"
 >
 
 <div class="tour-content">
@@ -331,11 +261,8 @@ alt="Giraffe Centre"
 <h2>Giraffe Centre Tour</h2>
 
 <p>
-
-Visit the Giraffe Centre and get close to the endangered
-Rothschild's giraffe while learning about wildlife
-conservation in Kenya.
-
+Meet Rothschild's giraffes and learn about wildlife
+conservation at this famous Nairobi attraction.
 </p>
 
 <div class="tour-info">
@@ -344,25 +271,21 @@ conservation in Kenya.
 
 <strong>Group:</strong> 1–7 People<br>
 
-<strong>Vehicle:</strong> Tour Van or Sedan<br>
+<strong>Vehicle:</strong> Tour Van / Sedan<br>
 
 <strong>Experience:</strong> Wildlife & Conservation
 
 </div>
 
 <div class="tour-price">
-
 From KES 5,500 / USD 43 per vehicle
-
 </div>
 
 <a
-class="tour-btn"
 href="booking.html?service=Giraffe%20Centre%20Tour"
+class="tour-btn"
 >
-
-Book This Tour
-
+BOOK THIS TOUR
 </a>
 
 </div>
@@ -370,27 +293,25 @@ Book This Tour
 </div>
 
 
-<!-- =================================================
-     3. KAREN BLIXEN
-================================================= -->
+<!-- ==============================
+     KAREN BLIXEN
+============================== -->
 
 <div class="tour-card">
 
 <img
 src="images/karen-blixen.jpg"
 alt="Karen Blixen Museum"
+onerror="this.style.display='none'"
 >
 
 <div class="tour-content">
 
-<h2>Karen Blixen Museum Tour</h2>
+<h2>Karen Blixen Museum</h2>
 
 <p>
-
 Explore the former home of Karen Blixen and discover
-the history, stories and heritage surrounding one of
-Kenya's most famous literary figures.
-
+Kenya's fascinating colonial and literary history.
 </p>
 
 <div class="tour-info">
@@ -399,25 +320,21 @@ Kenya's most famous literary figures.
 
 <strong>Group:</strong> 1–7 People<br>
 
-<strong>Vehicle:</strong> Tour Van or Sedan<br>
+<strong>Vehicle:</strong> Tour Van / Sedan<br>
 
 <strong>Experience:</strong> History & Culture
 
 </div>
 
 <div class="tour-price">
-
 From KES 5,500 / USD 43 per vehicle
-
 </div>
 
 <a
-class="tour-btn"
 href="booking.html?service=Karen%20Blixen%20Tour"
+class="tour-btn"
 >
-
-Book This Tour
-
+BOOK THIS TOUR
 </a>
 
 </div>
@@ -425,15 +342,16 @@ Book This Tour
 </div>
 
 
-<!-- =================================================
-     4. NAIROBI NATIONAL MUSEUM
-================================================= -->
+<!-- ==============================
+     NATIONAL MUSEUM
+============================== -->
 
 <div class="tour-card">
 
 <img
 src="images/nairobi-national-museum.jpg"
 alt="Nairobi National Museum"
+onerror="this.style.display='none'"
 >
 
 <div class="tour-content">
@@ -441,10 +359,8 @@ alt="Nairobi National Museum"
 <h2>Nairobi National Museum</h2>
 
 <p>
-
-Discover Kenya's history, culture, art, archaeology
-and natural heritage at the Nairobi National Museum.
-
+Discover Kenya's history, culture, archaeology, art
+and natural heritage.
 </p>
 
 <div class="tour-info">
@@ -453,25 +369,21 @@ and natural heritage at the Nairobi National Museum.
 
 <strong>Group:</strong> 1–7 People<br>
 
-<strong>Vehicle:</strong> Tour Van or Sedan<br>
+<strong>Vehicle:</strong> Tour Van / Sedan<br>
 
-<strong>Experience:</strong> History, Culture & Nature
+<strong>Experience:</strong> History & Culture
 
 </div>
 
 <div class="tour-price">
-
 From KES 5,500 / USD 43 per vehicle
-
 </div>
 
 <a
-class="tour-btn"
 href="booking.html?service=Nairobi%20National%20Museum"
+class="tour-btn"
 >
-
-Book This Tour
-
+BOOK THIS TOUR
 </a>
 
 </div>
@@ -479,15 +391,16 @@ Book This Tour
 </div>
 
 
-<!-- =================================================
-     5. BOMAS OF KENYA
-================================================= -->
+<!-- ==============================
+     BOMAS
+============================== -->
 
 <div class="tour-card">
 
 <img
 src="images/bomas-of-kenya.jpg"
 alt="Bomas of Kenya"
+onerror="this.style.display='none'"
 >
 
 <div class="tour-content">
@@ -495,11 +408,8 @@ alt="Bomas of Kenya"
 <h2>Bomas of Kenya</h2>
 
 <p>
-
-Experience Kenya's diverse cultures through
-traditional homesteads, music, dance and cultural
-performances.
-
+Experience Kenya's cultures through traditional
+homesteads, music, dance and cultural performances.
 </p>
 
 <div class="tour-info">
@@ -508,25 +418,21 @@ performances.
 
 <strong>Group:</strong> 1–7 People<br>
 
-<strong>Vehicle:</strong> Tour Van or Sedan<br>
+<strong>Vehicle:</strong> Tour Van / Sedan<br>
 
 <strong>Experience:</strong> Culture & Entertainment
 
 </div>
 
 <div class="tour-price">
-
 From KES 5,500 / USD 43 per vehicle
-
 </div>
 
 <a
-class="tour-btn"
 href="booking.html?service=Bomas%20of%20Kenya"
+class="tour-btn"
 >
-
-Book This Tour
-
+BOOK THIS TOUR
 </a>
 
 </div>
@@ -534,15 +440,16 @@ Book This Tour
 </div>
 
 
-<!-- =================================================
-     6. NAIROBI CITY TOUR
-================================================= -->
+<!-- ==============================
+     NAIROBI CITY TOUR
+============================== -->
 
 <div class="tour-card">
 
 <img
 src="images/nairobi-city.jpg"
 alt="Nairobi City Tour"
+onerror="this.style.display='none'"
 >
 
 <div class="tour-content">
@@ -550,11 +457,8 @@ alt="Nairobi City Tour"
 <h2>Nairobi City Tour</h2>
 
 <p>
-
-Explore Nairobi's landmarks, history, culture,
-markets and modern city life with a local
-driver-guide.
-
+Explore Nairobi's landmarks, history, markets,
+architecture and modern city life.
 </p>
 
 <div class="tour-info">
@@ -563,25 +467,21 @@ driver-guide.
 
 <strong>Group:</strong> 1–7 People<br>
 
-<strong>Vehicle:</strong> Tour Van or Land Cruiser<br>
+<strong>Vehicle:</strong> Tour Van / Land Cruiser<br>
 
 <strong>Experience:</strong> City Sightseeing
 
 </div>
 
 <div class="tour-price">
-
 From KES 5,500 / USD 43 per vehicle
-
 </div>
 
 <a
-class="tour-btn"
 href="booking.html?service=Nairobi%20City%20Tour"
+class="tour-btn"
 >
-
-Book This Tour
-
+BOOK THIS TOUR
 </a>
 
 </div>
@@ -589,15 +489,16 @@ Book This Tour
 </div>
 
 
-<!-- =================================================
-     7. CITY WALK
-================================================= -->
+<!-- ==============================
+     CITY WALK
+============================== -->
 
 <div class="tour-card">
 
 <img
 src="images/city-walk.jpg"
 alt="Nairobi City Walk"
+onerror="this.style.display='none'"
 >
 
 <div class="tour-content">
@@ -605,11 +506,8 @@ alt="Nairobi City Walk"
 <h2>Nairobi City Walk</h2>
 
 <p>
-
-Walk through the heart of Nairobi while discovering
-its history, culture, architecture, markets and
-everyday local life.
-
+Discover Nairobi on foot while exploring its history,
+culture, architecture, markets and local life.
 </p>
 
 <div class="tour-info">
@@ -625,18 +523,14 @@ everyday local life.
 </div>
 
 <div class="tour-price">
-
 From KES 2,500 / USD 20 per person
-
 </div>
 
 <a
-class="tour-btn"
 href="booking.html?service=City%20Walk"
+class="tour-btn"
 >
-
-Book This Walk
-
+BOOK THIS WALK
 </a>
 
 </div>
@@ -644,15 +538,15 @@ Book This Walk
 </div>
 
 
-<!-- =================================================
-     8. PRIVATE CUSTOM TOUR
-================================================= -->
+<!-- ==============================
+     PRIVATE CUSTOM
+============================== -->
 
 <div class="tour-card">
 
 <img
 src="images/hero.jpg"
-alt="Private Custom Nairobi Tour"
+alt="Private Custom Tour"
 >
 
 <div class="tour-content">
@@ -660,11 +554,8 @@ alt="Private Custom Nairobi Tour"
 <h2>Private Custom Tour</h2>
 
 <p>
-
-Create your own Nairobi experience. Tell us where
-you want to go and we can help design a private
-itinerary around your interests.
-
+Create your own Nairobi experience around your
+interests, schedule and preferred destinations.
 </p>
 
 <div class="tour-info">
@@ -675,23 +566,19 @@ itinerary around your interests.
 
 <strong>Vehicle:</strong> Subject to itinerary<br>
 
-<strong>Experience:</strong> Fully Customised
+<strong>Experience:</strong> Customised
 
 </div>
 
 <div class="tour-price">
-
 Custom quotation
-
 </div>
 
 <a
-class="tour-btn"
 href="booking.html?service=Private%20Hire"
+class="tour-btn"
 >
-
-Request a Quote
-
+REQUEST A QUOTE
 </a>
 
 </div>
@@ -704,17 +591,11 @@ Request a Quote
 </main>
 
 
-<!-- ================================
-     FOOTER
-================================ -->
-
 <footer>
 
 <p>
-
-© 2026 Stema Trans —
-Nairobi City Tours, Transfers & Guided Experiences
-
+© 2026 Stema Trans — Nairobi City Tours,
+Transfers & Guided Experiences
 </p>
 
 </footer>
