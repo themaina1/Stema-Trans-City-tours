@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contact | Stema Trans</title>
+<title>Contact Stema Trans | Nairobi Tours & Transfers</title>
 
 <link rel="stylesheet" href="css/style.css">
 
@@ -17,7 +17,7 @@ body {
 }
 
 .contact-page {
-    max-width: 850px;
+    max-width: 1000px;
     margin: 40px auto;
     padding: 20px;
 }
@@ -36,63 +36,70 @@ body {
     margin-bottom: 35px;
 }
 
-.contact-box,
-.contact-form {
-    background: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.10);
-    margin-bottom: 30px;
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
 }
 
-.contact-box h2 {
+.contact-box,
+.inquiry-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+}
+
+.contact-box h2,
+.inquiry-box h2 {
     color: #b11226;
     margin-top: 0;
 }
 
-.contact-info {
+.contact-box p {
+    line-height: 1.8;
     font-size: 17px;
-    line-height: 2;
 }
 
-.contact-info a {
+.contact-box strong {
     color: #b11226;
-    text-decoration: none;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .form-group label {
     display: block;
     font-weight: bold;
-    margin-bottom: 8px;
+    margin-bottom: 7px;
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
     width: 100%;
     padding: 14px;
+    box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 .form-group textarea {
-    min-height: 150px;
+    min-height: 130px;
     resize: vertical;
 }
 
 .send-btn {
     width: 100%;
-    padding: 17px;
+    padding: 16px;
     border: none;
     border-radius: 8px;
     background: #b11226;
     color: white;
-    font-size: 19px;
+    font-size: 18px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -101,52 +108,82 @@ body {
     background: #870d1c;
 }
 
-@media (max-width: 600px) {
+/* SUCCESS MESSAGE */
+
+.success-message {
+    display: none;
+    background: #e9f8ee;
+    border-left: 6px solid #198754;
+    color: #155724;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.success-message.show {
+    display: block;
+}
+
+.success-message strong {
+    font-size: 20px;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 13px 20px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+
     .contact-page {
         margin: 20px auto;
         padding: 12px;
     }
 
     .contact-page h1 {
-        font-size: 30px;
+        font-size: 31px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
     }
 
     .contact-box,
-    .contact-form {
-        padding: 20px;
+    .inquiry-box {
+        padding: 22px;
     }
 }
 </style>
-
 </head>
 
 <body>
 
 <header>
 
-<div class="logo">
+    <div class="logo">
+        <h1>STEMA TRANS</h1>
+        <p>City Tours, Transfers & Guided Experiences</p>
+    </div>
 
-<h1>STEMA TRANS</h1>
-
-<p>
-City Tours, Transfers & Guided Experiences
-</p>
-
-</div>
-
-<nav>
-
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="tours.html">Tours</a>
-<a href="transfers.html">Transfers</a>
-<a href="rates.html">Rates</a>
-<a href="fleet.html">Fleet</a>
-<a href="gallery.html">Gallery</a>
-<a href="city-walks.html">City Walks</a>
-<a href="contact.html">Contact</a>
-
-</nav>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="tours.html">Tours</a>
+        <a href="transfers.html">Transfers</a>
+        <a href="rates.html">Rates</a>
+        <a href="fleet.html">Fleet</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="city-walks.html">City Walks</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
 </header>
 
@@ -156,50 +193,85 @@ City Tours, Transfers & Guided Experiences
 <h1>Contact Stema Trans</h1>
 
 <p class="contact-intro">
-
-Have a question, need a quotation, or want to plan a
-Nairobi tour or transfer? Send us a message.
-
+Have a question, need a quotation, or want to plan your Nairobi
+experience? Send us an inquiry and we will get back to you.
 </p>
 
+
+<!-- SUCCESS MESSAGE -->
+
+<div id="successMessage" class="success-message">
+
+<strong>✓ Inquiry Sent Successfully!</strong>
+
+<br><br>
+
+Thank you for contacting Stema Trans.
+
+We have received your inquiry and will get back to you shortly.
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<!-- =========================
+     CONTACT INFORMATION
+========================= -->
 
 <div class="contact-box">
 
 <h2>Get In Touch</h2>
 
-<div class="contact-info">
+<p>
+<strong>Stema Trans</strong>
+</p>
 
-<strong>Phone:</strong>
+<p>
+Nairobi City Tours, Transfers & Guided Experiences
+</p>
 
-<a href="tel:0722910913">
-0722 910 913
-</a>
+<p>
+<strong>Phone:</strong><br>
+0722910913
+</p>
 
-<br>
-
-<strong>Email:</strong>
-
-<a href="mailto:stemawastrans@gmail.com">
+<p>
+<strong>Email:</strong><br>
 stemawastrans@gmail.com
+</p>
+
+<p>
+<strong>Location:</strong><br>
+Nairobi, Kenya
+</p>
+
+<a
+href="https://wa.me/254722910913"
+class="whatsapp-btn"
+target="_blank"
+>
+WhatsApp Us
 </a>
 
-<br>
-
-<strong>Location:</strong>
-Nairobi, Kenya
-
 </div>
 
-</div>
 
+<!-- =========================
+     INQUIRY FORM
+========================= -->
+
+<div class="inquiry-box">
+
+<h2>Send an Inquiry</h2>
 
 <form
-class="contact-form"
 action="https://formsubmit.co/stemawastrans@gmail.com"
 method="POST"
 >
 
-<!-- EMAIL SUBJECT -->
+<!-- FORM SUBMIT SETTINGS -->
 
 <input
 type="hidden"
@@ -207,33 +279,22 @@ name="_subject"
 value="New Stema Trans Website Inquiry"
 >
 
-
-<!-- CAPTCHA OFF -->
-
 <input
 type="hidden"
 name="_captcha"
 value="false"
 >
 
-
-<!-- EMAIL FORMAT -->
-
-<input
-type="hidden"
-name="_template"
-value="table"
->
-
-
-<!-- REDIRECT -->
+<!-- THIS IS THE IMPORTANT FIX -->
 
 <input
 type="hidden"
 name="_next"
-value="https://themaina1.github.io/Stema-Trans-City-tours/contact-success.html"
+value="https://themaina1.github.io/Stema-Trans-City-tours/contact.html?sent=1"
 >
 
+
+<!-- NAME -->
 
 <div class="form-group">
 
@@ -252,6 +313,8 @@ required
 </div>
 
 
+<!-- EMAIL -->
+
 <div class="form-group">
 
 <label for="email">
@@ -268,6 +331,8 @@ required
 
 </div>
 
+
+<!-- PHONE -->
 
 <div class="form-group">
 
@@ -286,33 +351,85 @@ required
 </div>
 
 
+<!-- SERVICE -->
+
 <div class="form-group">
 
-<label for="subject">
-Subject
+<label for="service">
+Service
 </label>
 
-<input
-type="text"
-id="subject"
-name="Subject"
-placeholder="What can we help you with?"
+<select
+id="service"
+name="Service"
 required
 >
+
+<option value="">
+Select a service
+</option>
+
+<option value="Nairobi City Tour">
+Nairobi City Tour
+</option>
+
+<option value="Nairobi National Park">
+Nairobi National Park
+</option>
+
+<option value="Giraffe Centre">
+Giraffe Centre
+</option>
+
+<option value="Karen Blixen Museum">
+Karen Blixen Museum
+</option>
+
+<option value="Nairobi National Museum">
+Nairobi National Museum
+</option>
+
+<option value="Bomas of Kenya">
+Bomas of Kenya
+</option>
+
+<option value="City Walk">
+City Walk
+</option>
+
+<option value="Airport Transfer">
+Airport Transfer
+</option>
+
+<option value="Hotel Transfer">
+Hotel Transfer
+</option>
+
+<option value="Private Hire">
+Private Hire
+</option>
+
+<option value="Other">
+Other
+</option>
+
+</select>
 
 </div>
 
 
+<!-- MESSAGE -->
+
 <div class="form-group">
 
 <label for="message">
-Your Message
+Your Inquiry
 </label>
 
 <textarea
 id="message"
 name="Message"
-placeholder="Write your inquiry here..."
+placeholder="Tell us what you would like to know or book..."
 required
 ></textarea>
 
@@ -323,12 +440,14 @@ required
 type="submit"
 class="send-btn"
 >
-
-SEND INQUIRY
-
+Send Inquiry
 </button>
 
 </form>
+
+</div>
+
+</div>
 
 </main>
 
@@ -340,6 +459,36 @@ SEND INQUIRY
 </p>
 
 </footer>
+
+
+<script>
+
+/* =====================================
+   SHOW SUCCESS MESSAGE AFTER REDIRECT
+===================================== */
+
+const params =
+new URLSearchParams(window.location.search);
+
+if (params.get("sent") === "1") {
+
+    document
+        .getElementById("successMessage")
+        .classList
+        .add("show");
+
+    /* Remove ?sent=1 from browser address
+       without reloading the page */
+
+    window.history.replaceState(
+        {},
+        document.title,
+        "contact.html"
+    );
+
+}
+
+</script>
 
 </body>
 </html>
