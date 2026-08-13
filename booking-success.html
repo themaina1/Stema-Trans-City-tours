@@ -1,162 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Booking Successful | Stema Trans</title>
 
-<link rel="stylesheet" href="css/style.css">
-
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f7f7f7;
-    color: #333;
+
+* {
+box-sizing: border-box;
 }
 
-.success-page {
-    min-height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: #f7f7f7;
+color: #333;
+}
+
+.success-container {
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 25px;
 }
 
 .success-box {
-    max-width: 650px;
-    width: 100%;
-    background: white;
-    padding: 45px 30px;
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+background: white;
+max-width: 600px;
+width: 100%;
+padding: 45px 30px;
+text-align: center;
+border-radius: 18px;
+box-shadow: 0 8px 30px rgba(0,0,0,0.12);
 }
 
-.success-icon {
-    font-size: 65px;
-    margin-bottom: 15px;
+.check {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+background: #b11226;
+color: white;
+font-size: 48px;
+line-height: 80px;
+margin: 0 auto 25px;
 }
 
-.success-box h1 {
-    color: #b11226;
-    font-size: 36px;
-    margin-bottom: 15px;
+h1 {
+color: #b11226;
+font-size: 34px;
+margin-bottom: 15px;
 }
 
-.success-box p {
-    font-size: 18px;
-    line-height: 1.7;
+p {
+font-size: 18px;
+line-height: 1.7;
 }
 
-.success-note {
-    background: #f5f5f5;
-    border-left: 5px solid #b11226;
-    padding: 18px;
-    margin: 25px 0;
-    text-align: left;
+.small {
+font-size: 15px;
+color: #666;
+margin-top: 20px;
 }
 
 .home-btn {
-    display: inline-block;
-    background: #b11226;
-    color: white;
-    text-decoration: none;
-    padding: 15px 28px;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 17px;
-    margin-top: 15px;
+display: inline-block;
+margin-top: 25px;
+padding: 15px 30px;
+background: #b11226;
+color: white;
+text-decoration: none;
+border-radius: 8px;
+font-weight: bold;
 }
 
 .home-btn:hover {
-    background: #870d1c;
+background: #870d1c;
 }
 
-.booking-btn {
-    display: inline-block;
-    color: #b11226;
-    text-decoration: none;
-    margin-top: 20px;
-    font-weight: bold;
-}
-
-@media (max-width: 600px) {
-    .success-box {
-        padding: 35px 20px;
-    }
-
-    .success-box h1 {
-        font-size: 29px;
-    }
-}
 </style>
+
 </head>
 
 <body>
 
-<header>
-    <div class="logo">
-        <h1>STEMA TRANS</h1>
-        <p>City Tours, Transfers & Guided Experiences</p>
-    </div>
+<div class="success-container">
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="tours.html">Tours</a>
-        <a href="transfers.html">Transfers</a>
-        <a href="rates.html">Rates</a>
-        <a href="fleet.html">Fleet</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="city-walks.html">City Walks</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+<div class="success-box">
 
-<main class="success-page">
+<div class="check">
+✓
+</div>
 
-    <div class="success-box">
+<h1>Booking Received!</h1>
 
-        <div class="success-icon">✓</div>
+<p>
+Thank you for choosing <strong>Stema Trans</strong>.
+</p>
 
-        <h1>Booking Submitted Successfully!</h1>
+<p>
+Your booking request has been successfully submitted.
+Our team will review your request and contact you shortly to confirm the details.
+</p>
 
-        <p>
-            Thank you for choosing <strong>Stema Trans</strong>.
-        </p>
+<p class="small">
+Please keep your phone available in case we need to contact you regarding your booking.
+</p>
 
-        <p>
-            We have received your booking request and will contact you
-            shortly to confirm the details.
-        </p>
+<a
+href="index.html"
+class="home-btn">
 
-        <div class="success-note">
-            <strong>Important:</strong><br><br>
-            Your booking is a request and will be confirmed by Stema Trans
-            after we review availability and the information you provided.
-        </div>
+BACK TO STEMA TRANS
 
-        <a href="index.html" class="home-btn">
-            Return to Home
-        </a>
+</a>
 
-        <br>
+</div>
 
-        <a href="booking.html" class="booking-btn">
-            Make Another Booking
-        </a>
-
-    </div>
-
-</main>
-
-<footer>
-    <p>
-        © 2026 Stema Trans — Nairobi City Tours, Transfers & Guided Experiences
-    </p>
-</footer>
+</div>
 
 </body>
 </html>
