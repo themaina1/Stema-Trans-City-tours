@@ -1,179 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gallery - STEMA TRANS</title>
+<title>Gallery | Stema Trans</title>
+
+<link rel="stylesheet" href="css/style.css">
 
 <style>
 
-* {
-  box-sizing: border-box;
-}
-
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  color: #333;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    color: #333;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 header {
-  background: #b30d24;
-  color: white;
-  padding: 18px 10px;
-  text-align: center;
+    background: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-header h1 {
-  margin: 0 0 18px;
-  font-size: 28px;
+.logo h1 {
+    margin: 0;
+    color: #b11226;
 }
 
-/* NAVIGATION */
+.logo p {
+    margin: 4px 0 12px;
+}
 
 nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 nav a {
-  display: inline-block;
-  color: white;
-  background: #8f0b1d;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 15px;
-  padding: 10px 12px;
-  border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 10px;
 }
 
 nav a:hover {
-  background: #700817;
+    color: #b11226;
 }
 
-/* CITY WALKS BUTTON */
 
-nav a.citywalk {
-  background: white;
-  color: #b30d24;
-  border: 2px solid white;
+/* =========================
+   PAGE
+========================= */
+
+.gallery-page {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
 }
 
-/* MAIN */
-
-main {
-  max-width: 1000px;
-  margin: auto;
-  padding: 45px 20px;
+.gallery-page h1 {
+    text-align: center;
+    color: #b11226;
+    font-size: 42px;
+    margin-bottom: 10px;
 }
 
-.page-title {
-  text-align: center;
-  color: #b30d24;
-  font-size: 44px;
-  margin: 0 0 40px;
+.gallery-intro {
+    max-width: 750px;
+    margin: 0 auto 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.7;
 }
 
-/* GALLERY */
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+/* =========================
+   DESTINATION GRID
+========================= */
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
-.card {
-  background: white;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+
+/* =========================
+   DESTINATION CARD
+========================= */
+
+.destination-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
 }
 
-.card img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  display: block;
+.destination-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-.card-content {
-  padding: 20px;
+.destination-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
 }
 
-.card h2 {
-  margin: 0 0 8px;
-  color: #b30d24;
-  font-size: 25px;
+.destination-content {
+    padding: 22px;
 }
 
-.card p {
-  margin: 0;
-  font-size: 17px;
-  line-height: 1.5;
+.destination-content h2 {
+    color: #b11226;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
 }
 
-/* VEHICLES */
-
-.vehicles {
-  margin-top: 55px;
+.destination-content p {
+    line-height: 1.6;
+    margin-bottom: 18px;
 }
 
-/* FOOTER */
+
+/* =========================
+   VIEW GALLERY BUTTON
+========================= */
+
+.view-gallery {
+    display: block;
+    text-align: center;
+    background: #b11226;
+    color: white;
+    text-decoration: none;
+    padding: 13px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.view-gallery:hover {
+    background: #870d1c;
+}
+
+
+/* =========================
+   BOOKING NOTE
+========================= */
+
+.gallery-note {
+    margin-top: 45px;
+    padding: 25px;
+    background: white;
+    border-left: 6px solid #b11226;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.gallery-note h2 {
+    color: #b11226;
+    margin-top: 0;
+}
+
+.gallery-note p {
+    line-height: 1.7;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-  background: #b30d24;
-  color: white;
-  text-align: center;
-  padding: 25px;
-  margin-top: 40px;
+    text-align: center;
+    background: #222;
+    color: white;
+    padding: 25px 15px;
+    margin-top: 50px;
 }
 
-/* MOBILE */
+footer a {
+    color: white;
+}
 
-@media (max-width: 700px) {
 
-  header h1 {
-    font-size: 25px;
-  }
+/* =========================
+   TABLET
+========================= */
 
-  nav {
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding: 5px 2px 10px;
-    gap: 8px;
-  }
+@media (max-width: 900px) {
 
-  nav a {
-    flex: 0 0 auto;
-    white-space: nowrap;
-    font-size: 14px;
-  }
+    .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-  nav a.citywalk {
-    background: white;
-    color: #b30d24;
-  }
+}
 
-  .gallery {
-    grid-template-columns: 1fr;
-  }
 
-  .page-title {
-    font-size: 36px;
-  }
+/* =========================
+   MOBILE
+========================= */
 
-  .card img {
-    height: 250px;
-  }
+@media (max-width: 600px) {
+
+    .gallery-page {
+        margin: 20px auto;
+        padding: 12px;
+    }
+
+    .gallery-page h1 {
+        font-size: 32px;
+    }
+
+    .gallery-intro {
+        font-size: 16px;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-card img {
+        height: 230px;
+    }
+
 }
 
 </style>
@@ -184,177 +245,379 @@ footer {
 <body>
 
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
-<h1>STEMA TRANS CITY TOURS</h1>
+<div class="logo">
+
+<h1>STEMA TRANS</h1>
+
+<p>
+City Tours, Transfers & Guided Experiences
+</p>
+
+</div>
+
 
 <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="tours.html">Tours</a>
-  <a href="transfers.html">Transfers</a>
-  <a href="rates.html">Rates</a>
-  <a href="fleet.html">Fleet</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="citywalks.html">City Walks</a>
-  <a href="contact.html">Contact</a>
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="tours.html">Tours</a>
+
+<a href="transfers.html">Transfers</a>
+
+<a href="rates.html">Rates</a>
+
+<a href="fleet.html">Fleet</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="city-walks.html">City Walks</a>
+
+<a href="contact.html">Contact</a>
+
 </nav>
 
 </header>
 
 
-<!-- MAIN CONTENT -->
 
-<main>
+<!-- =========================
+     MAIN GALLERY
+========================= -->
+
+<main class="gallery-page">
 
 
-<h1 class="page-title">
-Our Gallery
+<h1>
+Explore Our Destinations
 </h1>
 
 
-<section class="gallery">
+<p class="gallery-intro">
+
+Explore photographs and experiences from the destinations
+offered by Stema Trans. Select a destination below to view
+its dedicated photo gallery and tour information.
+
+</p>
 
 
-<!-- NAIROBI NATIONAL PARK -->
 
-<div class="card">
+<div class="destination-grid">
+
+
+<!-- =========================
+     1. NAIROBI NATIONAL PARK
+========================= -->
+
+<div class="destination-card">
 
 <img
-src="images/hero.jpg"
+src="images/nairobi-national-park1.jpg"
 alt="Nairobi National Park"
 >
 
-<div class="card-content">
+<div class="destination-content">
 
 <h2>
 Nairobi National Park
 </h2>
 
 <p>
-Experience Nairobi's wildlife just outside the city.
+Explore Kenya's wildlife just outside Nairobi.
+See the park's landscapes, wildlife and game-drive
+experiences.
 </p>
 
-</div>
+<a
+href="nairobi-national-park-gallery.html"
+class="view-gallery"
+>
+View Park Gallery
+</a>
 
 </div>
 
+</div>
 
-<!-- GIRAFFE CENTRE -->
 
-<div class="card">
+
+<!-- =========================
+     2. GIRAFFE CENTRE
+========================= -->
+
+<div class="destination-card">
 
 <img
-src="images/giraffe-center.jpg"
+src="images/giraffe-centre.jpg"
 alt="Giraffe Centre"
 >
 
-<div class="card-content">
+<div class="destination-content">
 
 <h2>
 Giraffe Centre
 </h2>
 
 <p>
-Meet and learn about the famous Rothschild's giraffes.
+Get close to Rothschild's giraffes and discover
+one of Nairobi's most popular conservation
+experiences.
 </p>
 
-</div>
+<a
+href="giraffe-centre-gallery.html"
+class="view-gallery"
+>
+View Gallery
+</a>
 
 </div>
 
+</div>
 
-<!-- WILDLIFE -->
 
-<div class="card">
+
+<!-- =========================
+     3. KAREN BLIXEN
+========================= -->
+
+<div class="destination-card">
 
 <img
-src="images/Screenshot_20260801_163624_Gallery.jpg"
-alt="Nairobi wildlife experience"
+src="images/karen-blixen.jpg"
+alt="Karen Blixen Museum"
 >
 
-<div class="card-content">
+<div class="destination-content">
 
 <h2>
-Nairobi Wildlife Experience
+Karen Blixen Museum
 </h2>
 
 <p>
-Discover memorable Nairobi attractions and wildlife experiences.
+Explore the historic home, gardens and story
+behind one of Kenya's best-known literary figures.
 </p>
 
-</div>
+<a
+href="karen-blixen-gallery.html"
+class="view-gallery"
+>
+View Gallery
+</a>
 
 </div>
 
-
-</section>
-
-
-<!-- VEHICLES -->
-
-<section class="vehicles">
+</div>
 
 
-<h1 class="page-title">
-Our Vehicles
-</h1>
 
+<!-- =========================
+     4. NAIROBI NATIONAL MUSEUM
+========================= -->
 
-<div class="gallery">
-
-
-<!-- LAND CRUISER -->
-
-<div class="card">
+<div class="destination-card">
 
 <img
-src="images/landcruiser.jpg"
-alt="Stema Trans Land Cruiser"
+src="images/nairobi-national-museum.jpg"
+alt="Nairobi National Museum"
 >
 
-<div class="card-content">
+<div class="destination-content">
 
 <h2>
-Land Cruiser
+Nairobi National Museum
 </h2>
 
 <p>
-Comfortable and reliable transport for safari and city journeys.
+Discover Kenya's history, culture, art, archaeology
+and natural heritage.
 </p>
 
-</div>
+<a
+href="nairobi-national-museum-gallery.html"
+class="view-gallery"
+>
+View Gallery
+</a>
 
 </div>
 
+</div>
 
-<!-- TOUR VAN -->
 
-<div class="card">
+
+<!-- =========================
+     5. BOMAS OF KENYA
+========================= -->
+
+<div class="destination-card">
 
 <img
-src="images/tourvan.jpg"
-alt="Stema Trans Tour Van"
+src="images/bomas-of-kenya.jpg"
+alt="Bomas of Kenya"
 >
 
-<div class="card-content">
+<div class="destination-content">
 
 <h2>
-Tour Van
+Bomas of Kenya
 </h2>
 
 <p>
-Comfortable transport for city tours, transfers and sightseeing.
+Experience Kenya's diverse cultures through
+traditional homesteads, music, dance and
+cultural performances.
 </p>
 
+<a
+href="bomas-of-kenya-gallery.html"
+class="view-gallery"
+>
+View Gallery
+</a>
+
 </div>
+
+</div>
+
+
+
+<!-- =========================
+     6. NAIROBI CITY TOUR
+========================= -->
+
+<div class="destination-card">
+
+<img
+src="images/nairobi-city.jpg"
+alt="Nairobi City Tour"
+>
+
+<div class="destination-content">
+
+<h2>
+Nairobi City Tour
+</h2>
+
+<p>
+Discover Nairobi's landmarks, history, markets,
+architecture and modern city life.
+</p>
+
+<a
+href="nairobi-city-tour-gallery.html"
+class="view-gallery"
+>
+View Gallery
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- =========================
+     7. NAIROBI CITY WALK
+========================= -->
+
+<div class="destination-card">
+
+<img
+src="images/city-walk.jpg"
+alt="Nairobi City Walk"
+>
+
+<div class="destination-content">
+
+<h2>
+Nairobi City Walk
+</h2>
+
+<p>
+Walk through the heart of Nairobi and discover
+its history, culture, architecture and local life.
+</p>
+
+<a
+href="city-walk-gallery.html"
+class="view-gallery"
+>
+View Walk Gallery
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- =========================
+     8. NAIROBI WILDLIFE
+========================= -->
+
+<div class="destination-card">
+
+<img
+src="images/nairobi-national-park2.jpg"
+alt="Nairobi Wildlife"
+>
+
+<div class="destination-content">
+
+<h2>
+Nairobi Wildlife
+</h2>
+
+<p>
+Discover the wildlife experiences available
+around Nairobi and the surrounding conservation
+areas.
+</p>
+
+<a
+href="nairobi-wildlife-gallery.html"
+class="view-gallery"
+>
+View Wildlife Gallery
+</a>
+
+</div>
+
+</div>
+
+
 
 </div>
 
 
-</div>
+
+<!-- =========================
+     NOTE
+========================= -->
+
+<section class="gallery-note">
+
+<h2>
+Choose Your Experience
+</h2>
+
+<p>
+
+Select any destination above to explore its photographs.
+Each dedicated gallery will also provide useful tour
+information, pricing and a direct booking option.
+
+</p>
 
 </section>
 
@@ -362,21 +625,27 @@ Comfortable transport for city tours, transfers and sightseeing.
 </main>
 
 
-<!-- FOOTER -->
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-<strong>
-STEMA TRANS CITY TOURS
-</strong>
+<p>
+© 2026 Stema Trans —
+Nairobi City Tours, Transfers & Guided Experiences
+</p>
 
 <p>
-Nairobi, Kenya
+Email:
+<a href="mailto:stemawastrans@gmail.com">
+stemawastrans@gmail.com
+</a>
 </p>
 
 </footer>
 
 
 </body>
-
 </html>
