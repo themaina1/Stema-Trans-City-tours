@@ -4,181 +4,941 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Airport Transfers | Stema Trans</title>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Transfers | Stema Trans</title>
 
 <link rel="stylesheet" href="css/style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+
+/* =========================================
+   TRANSFERS PAGE
+========================================= */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    color: #333;
+}
+
+.transfers-page {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.transfers-page h1 {
+    text-align: center;
+    color: #b11226;
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.transfer-intro {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   TRANSFER GRID
+========================================= */
+
+.transfers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.transfer-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,0.10);
+
+    display: flex;
+    flex-direction: column;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.transfer-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.15);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.transfer-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.transfer-content {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.transfer-content h2 {
+    color: #b11226;
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 24px;
+}
+
+.transfer-content p {
+    line-height: 1.65;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   INFO
+========================================= */
+
+.transfer-info {
+    line-height: 1.9;
+    margin: 10px 0 15px;
+    font-size: 16px;
+}
+
+.transfer-info strong {
+    color: #444;
+}
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+.transfer-price {
+    color: #b11226;
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   BOOK BUTTON
+========================================= */
+
+.transfer-btn {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background: #b11226;
+    color: #fff;
+
+    text-decoration: none;
+
+    padding: 15px 12px;
+
+    border-radius: 8px;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    margin-top: auto;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.transfer-btn:hover {
+    background: #870d1c;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   WHY CHOOSE US
+========================================= */
+
+.transfer-benefits {
+    margin-top: 55px;
+
+    background: #fff;
+
+    padding: 30px;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,0.08);
+
+    text-align: center;
+}
+
+.transfer-benefits h2 {
+    color: #b11226;
+    margin-top: 0;
+}
+
+.benefits-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-top: 25px;
+}
+
+.benefit {
+    padding: 15px;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .transfers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .transfers-page {
+        margin: 20px auto;
+        padding: 12px;
+    }
+
+    .transfers-page h1 {
+        font-size: 31px;
+    }
+
+    .transfer-intro {
+        font-size: 17px;
+        margin-bottom: 30px;
+    }
+
+    .transfers-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .transfer-card img {
+        height: 220px;
+    }
+
+    .transfer-content {
+        padding: 20px;
+    }
+
+    .transfer-content h2 {
+        font-size: 23px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
 
 </head>
 
+
 <body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
 
 <header>
 
-<div class="logo">
+    <div class="logo">
 
-<h1>STEMA TRANS</h1>
+        <h1>STEMA TRANS</h1>
 
-<p>Explore Nairobi with Comfort, Safety & Professionalism</p>
+        <p>
+            City Tours, Transfers & Guided Experiences
+        </p>
 
-</div>
+    </div>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="tours.html">Tours</a>
-  <a href="transfers.html">Transfers</a>
-  <a href="rates.html">Rates</a>
-  <a href="fleet.html">Fleet</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="citywalks.html">City Walks</a>
-  <a href="contact.html">Contact</a>
-</nav>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="tours.html">Tours</a>
+
+        <a href="transfers.html">Transfers</a>
+
+        <a href="rates.html">Rates</a>
+
+        <a href="fleet.html">Fleet</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="city-walks.html">City Walks</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
 
 </header>
 
-<section>
 
-<h2>Airport & Transfer Services</h2>
 
-<div class="cards">
+<!-- =========================================
+     MAIN
+========================================= -->
 
-<div class="card">
+<main class="transfers-page">
 
-<h3>✈ JKIA Airport Transfers</h3>
+
+<h1>
+Airport & Transfer Services
+</h1>
+
+
+<p class="transfer-intro">
+
+Reliable, comfortable and professional transport
+for airport pickups, hotel transfers, business travel,
+private hire and journeys around Nairobi and beyond.
+
+</p>
+
+
+
+<div class="transfers-grid">
+
+
+
+<!-- =========================================
+     1. JKIA
+========================================= -->
+
+<div class="transfer-card">
+
+
+<img
+src="images/airport-transfer.jpg"
+alt="JKIA Airport Transfer"
+onerror="this.style.display='none';"
+>
+
+
+<div class="transfer-content">
+
+
+<h2>
+JKIA Airport Transfer
+</h2>
+
 
 <p>
 
-Fast, reliable and comfortable transfers between Jomo Kenyatta International Airport and hotels, homes or offices across Nairobi.
+Comfortable airport pickup and drop-off
+between Jomo Kenyatta International Airport
+and your hotel, home or office.
 
 </p>
+
+
+<div class="transfer-info">
+
+<strong>Service:</strong>
+Airport Pickup / Drop-off
+
+<br>
+
+<strong>Vehicle:</strong>
+Tour Van / Sedan
+
+<br>
+
+<strong>Driver:</strong>
+Professional Driver
+
+<br>
+
+<strong>Availability:</strong>
+Day & Night
 
 </div>
 
-<div class="card">
 
-<h3>🛩 Wilson Airport Transfers</h3>
+<div class="transfer-price">
 
-<p>
-
-Convenient transfers for safari departures, domestic flights and business travel.
-
-</p>
+From KES 2,500
 
 </div>
 
-<div class="card">
 
-<h3>🏨 Hotel Transfers</h3>
+<a
+class="transfer-btn"
+href="booking.html?service=Airport%20Transfer"
+>
 
-<p>
-
-Travel comfortably between hotels, Airbnb properties, conference venues and shopping centres.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>💼 Corporate Transport</h3>
-
-<p>
-
-Professional transport for meetings, conferences, business events and VIP guests.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🚐 Private Hire</h3>
-
-<p>
-
-Book a vehicle with a professional driver for hourly, daily or multi-day transport.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🛣 Out-of-Town Transfers</h3>
-
-<p>
-
-Travel safely to Naivasha, Nakuru, Nanyuki, Thika, Machakos and many other destinations across Kenya.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="welcome">
-
-<h2>Why Choose Stema Trans?</h2>
-
-<p>
-
-✔ Always On Time<br><br>
-
-✔ Clean & Comfortable Vehicles<br><br>
-
-✔ Professional Driver Guide<br><br>
-
-✔ Affordable Pricing<br><br>
-
-✔ Safe & Reliable Service<br><br>
-
-✔ 24/7 Customer Support
-
-</p>
-
-</section>
-
-<section class="cta">
-
-<h2>Need an Airport Transfer?</h2>
-
-<p>
-
-Book your transfer today and travel with confidence.
-
-</p>
-
-<a class="btn" href="https://wa.me/254722910913">
-
-Book via WhatsApp
+BOOK THIS TRANSFER
 
 </a>
 
+
+</div>
+
+</div>
+
+
+
+<!-- =========================================
+     2. WILSON
+========================================= -->
+
+<div class="transfer-card">
+
+
+<img
+src="images/wilson-airport.jpg"
+alt="Wilson Airport Transfer"
+onerror="this.style.display='none';"
+>
+
+
+<div class="transfer-content">
+
+
+<h2>
+Wilson Airport Transfer
+</h2>
+
+
+<p>
+
+Convenient transfers to and from Wilson Airport
+for safari departures, domestic flights and
+business travel.
+
+</p>
+
+
+<div class="transfer-info">
+
+<strong>Service:</strong>
+Airport Transfer
+
+<br>
+
+<strong>Vehicle:</strong>
+Tour Van / Sedan
+
+<br>
+
+<strong>Driver:</strong>
+Professional Driver
+
+<br>
+
+<strong>Ideal For:</strong>
+Safari & Domestic Flights
+
+</div>
+
+
+<div class="transfer-price">
+
+From KES 2,500
+
+</div>
+
+
+<a
+class="transfer-btn"
+href="booking.html?service=Airport%20Transfer"
+>
+
+BOOK THIS TRANSFER
+
+</a>
+
+
+</div>
+
+</div>
+
+
+
+<!-- =========================================
+     3. HOTEL
+========================================= -->
+
+<div class="transfer-card">
+
+
+<img
+src="images/hotel-transfer.jpg"
+alt="Hotel Transfer Nairobi"
+onerror="this.style.display='none';"
+>
+
+
+<div class="transfer-content">
+
+
+<h2>
+Hotel Transfers
+</h2>
+
+
+<p>
+
+Travel comfortably between Nairobi hotels,
+Airbnb properties, conference venues,
+shopping centres and other locations.
+
+</p>
+
+
+<div class="transfer-info">
+
+<strong>Service:</strong>
+Hotel Transfer
+
+<br>
+
+<strong>Vehicle:</strong>
+Tour Van / Sedan
+
+<br>
+
+<strong>Group:</strong>
+1–7 People
+
+<br>
+
+<strong>Driver:</strong>
+Professional Driver
+
+</div>
+
+
+<div class="transfer-price">
+
+From KES 2,000
+
+</div>
+
+
+<a
+class="transfer-btn"
+href="booking.html?service=Hotel%20Transfer"
+>
+
+BOOK THIS TRANSFER
+
+</a>
+
+
+</div>
+
+</div>
+
+
+
+<!-- =========================================
+     4. CORPORATE
+========================================= -->
+
+<div class="transfer-card">
+
+
+<img
+src="images/corporate-transport.jpg"
+alt="Corporate Transport Nairobi"
+onerror="this.style.display='none';"
+>
+
+
+<div class="transfer-content">
+
+
+<h2>
+Corporate Transport
+</h2>
+
+
+<p>
+
+Professional transport for meetings,
+conferences, business events and VIP guests
+requiring reliable private transport.
+
+</p>
+
+
+<div class="transfer-info">
+
+<strong>Service:</strong>
+Corporate Transport
+
+<br>
+
+<strong>Vehicle:</strong>
+Sedan / Tour Van
+
+<br>
+
+<strong>Driver:</strong>
+Professional Driver
+
+<br>
+
+<strong>Booking:</strong>
+Advance Required
+
+</div>
+
+
+<div class="transfer-price">
+
+Quotation Based
+
+</div>
+
+
+<a
+class="transfer-btn"
+href="booking.html?service=Private%20Hire"
+>
+
+REQUEST QUOTE
+
+</a>
+
+
+</div>
+
+</div>
+
+
+
+<!-- =========================================
+     5. PRIVATE HIRE
+========================================= -->
+
+<div class="transfer-card">
+
+
+<img
+src="images/private-hire.jpg"
+alt="Private Vehicle Hire"
+onerror="this.style.display='none';"
+>
+
+
+<div class="transfer-content">
+
+
+<h2>
+Private Hire
+</h2>
+
+
+<p>
+
+Hire a vehicle with a professional driver
+for hourly, daily or multi-day transport
+around Nairobi and beyond.
+
+</p>
+
+
+<div class="transfer-info">
+
+<strong>Service:</strong>
+Private Hire
+
+<br>
+
+<strong>Vehicle:</strong>
+Tour Van / Land Cruiser / Sedan
+
+<br>
+
+<strong>Duration:</strong>
+Hourly / Daily / Multi-Day
+
+<br>
+
+<strong>Driver:</strong>
+Professional Driver
+
+</div>
+
+
+<div class="transfer-price">
+
+Custom Quotation
+
+</div>
+
+
+<a
+class="transfer-btn"
+href="booking.html?service=Private%20Hire"
+>
+
+REQUEST A QUOTE
+
+</a>
+
+
+</div>
+
+</div>
+
+
+
+<!-- =========================================
+     6. OUT OF TOWN
+========================================= -->
+
+<div class="transfer-card">
+
+
+<img
+src="images/out-of-town.jpg"
+alt="Out of Town Transfer Kenya"
+onerror="this.style.display='none';"
+>
+
+
+<div class="transfer-content">
+
+
+<h2>
+Out-of-Town Transfers
+</h2>
+
+
+<p>
+
+Travel safely from Nairobi to destinations
+such as Naivasha, Nakuru, Nanyuki, Thika,
+Machakos and other destinations across Kenya.
+
+</p>
+
+
+<div class="transfer-info">
+
+<strong>Service:</strong>
+Private Long Distance Transfer
+
+<br>
+
+<strong>Vehicle:</strong>
+Tour Van / Land Cruiser
+
+<br>
+
+<strong>Driver:</strong>
+Professional Driver-Guide
+
+<br>
+
+<strong>Booking:</strong>
+Advance Required
+
+</div>
+
+
+<div class="transfer-price">
+
+Quotation Based
+
+</div>
+
+
+<a
+class="transfer-btn"
+href="booking.html?service=Private%20Hire"
+>
+
+REQUEST A QUOTE
+
+</a>
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+<!-- =========================================
+     WHY CHOOSE STEMA TRANS
+========================================= -->
+
+<section class="transfer-benefits">
+
+
+<h2>
+Why Choose Stema Trans?
+</h2>
+
+
+<div class="benefits-grid">
+
+
+<div class="benefit">
+
+<strong>✓ Always On Time</strong>
+
+<br>
+
+We value your schedule and aim
+to provide timely pickups.
+
+</div>
+
+
+<div class="benefit">
+
+<strong>✓ Clean & Comfortable Vehicles</strong>
+
+<br>
+
+Travel in a clean and comfortable
+vehicle suited to your journey.
+
+</div>
+
+
+<div class="benefit">
+
+<strong>✓ Professional Driver</strong>
+
+<br>
+
+Experienced and courteous
+driver service.
+
+</div>
+
+
+<div class="benefit">
+
+<strong>✓ Safe & Reliable</strong>
+
+<br>
+
+Your comfort and safety remain
+our priority.
+
+</div>
+
+
+<div class="benefit">
+
+<strong>✓ Flexible Services</strong>
+
+<br>
+
+Airport, hotel, business and
+private transport options.
+
+</div>
+
+
+<div class="benefit">
+
+<strong>✓ Nairobi Based</strong>
+
+<br>
+
+Convenient service within Nairobi
+and across Kenya.
+
+</div>
+
+
+</div>
+
 </section>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
 
 <footer>
 
-<h3>STEMA TRANS</h3>
+<p>
 
-<p>Nairobi, Kenya</p>
+© 2026 Stema Trans —
+Nairobi City Tours, Transfers & Guided Experiences
 
-<p>Phone: +254 722 910 913</p>
-
-<p>Email: info@stematranstours.com</p>
-
-<p>© 2026 Stema Trans. All Rights Reserved.</p>
+</p>
 
 </footer>
-  <a href="https://wa.me/254722910913" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
-💬
-</a>
-<script src="js/script.js"></script>
+
+
 </body>
 
 </html>
