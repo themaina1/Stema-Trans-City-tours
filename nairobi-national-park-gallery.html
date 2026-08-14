@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gallery | Stema Trans</title>
+<title>Nairobi National Park | Stema Trans</title>
 
 <link rel="stylesheet" href="css/style.css">
 
@@ -18,221 +19,233 @@ body {
     color: #333;
 }
 
-/* =========================
-   HEADER
-========================= */
+
+/* HEADER */
 
 header {
-    background: #fff;
-    padding: 15px 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    background: #b11226;
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
 }
 
 .logo h1 {
     margin: 0;
-    color: #b11226;
+    font-size: 38px;
 }
 
 .logo p {
-    margin: 4px 0 12px;
+    margin: 8px 0 20px;
+    font-size: 18px;
 }
 
 nav {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 10px;
 }
 
 nav a {
+    color: white;
     text-decoration: none;
-    color: #333;
     font-weight: bold;
-    padding: 8px 10px;
+    padding: 9px 12px;
 }
 
 nav a:hover {
+    background: white;
     color: #b11226;
+    border-radius: 6px;
 }
 
 
-/* =========================
-   PAGE
-========================= */
+/* PAGE */
 
-.gallery-page {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
+.park-page {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 15px;
 }
 
-.gallery-page h1 {
+
+/* TITLE */
+
+.park-title {
     text-align: center;
     color: #b11226;
-    font-size: 42px;
+    font-size: 40px;
     margin-bottom: 10px;
 }
 
-.gallery-intro {
-    max-width: 750px;
-    margin: 0 auto 40px;
+.park-intro {
+    max-width: 800px;
+    margin: 0 auto 35px;
     text-align: center;
     font-size: 18px;
     line-height: 1.7;
 }
 
 
-/* =========================
-   DESTINATION GRID
-========================= */
+/* GALLERY */
 
-.destination-grid {
+.photo-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 18px;
 }
 
-
-/* =========================
-   DESTINATION CARD
-========================= */
-
-.destination-card {
+.photo-card {
     background: white;
-    border-radius: 14px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.10);
-    transition: transform 0.2s ease,
-                box-shadow 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
 }
 
-.destination-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-
-.destination-card img {
+.photo-card img {
     width: 100%;
-    height: 220px;
+    height: 230px;
     object-fit: cover;
     display: block;
 }
 
-.destination-content {
-    padding: 22px;
+
+/* TOUR INFORMATION */
+
+.tour-box {
+    background: white;
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.10);
 }
 
-.destination-content h2 {
+.tour-box h2 {
     color: #b11226;
     margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 24px;
 }
 
-.destination-content p {
-    line-height: 1.6;
-    margin-bottom: 18px;
+.tour-box p {
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+.tour-details {
+    margin: 20px 0;
+    line-height: 2;
+    font-size: 17px;
 }
 
 
-/* =========================
-   VIEW GALLERY BUTTON
-========================= */
+/* PRICE */
 
-.view-gallery {
+.price-box {
+    border-left: 6px solid #b11226;
+    background: #f8f8f8;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.price-box h3 {
+    color: #b11226;
+    margin-top: 0;
+}
+
+.price {
+    font-size: 25px;
+    font-weight: bold;
+    color: #b11226;
+}
+
+
+/* BUTTONS */
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.book-btn,
+.back-btn {
     display: block;
     text-align: center;
-    background: #b11226;
-    color: white;
     text-decoration: none;
-    padding: 13px;
+    padding: 15px 25px;
     border-radius: 8px;
     font-weight: bold;
+    font-size: 17px;
 }
 
-.view-gallery:hover {
+.book-btn {
+    background: #b11226;
+    color: white;
+    flex: 1;
+}
+
+.book-btn:hover {
     background: #870d1c;
 }
 
-
-/* =========================
-   BOOKING NOTE
-========================= */
-
-.gallery-note {
-    margin-top: 45px;
-    padding: 25px;
-    background: white;
-    border-left: 6px solid #b11226;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    text-align: center;
+.back-btn {
+    background: #333;
+    color: white;
+    flex: 1;
 }
 
-.gallery-note h2 {
-    color: #b11226;
-    margin-top: 0;
-}
-
-.gallery-note p {
-    line-height: 1.7;
+.back-btn:hover {
+    background: #555;
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
-    text-align: center;
+    margin-top: 50px;
     background: #222;
     color: white;
+    text-align: center;
     padding: 25px 15px;
-    margin-top: 50px;
-}
-
-footer a {
-    color: white;
 }
 
 
-/* =========================
-   TABLET
-========================= */
+/* MOBILE */
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
 
-    .destination-grid {
+    .photo-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
 }
 
 
-/* =========================
-   MOBILE
-========================= */
-
 @media (max-width: 600px) {
 
-    .gallery-page {
+    .park-page {
         margin: 20px auto;
         padding: 12px;
     }
 
-    .gallery-page h1 {
-        font-size: 32px;
+    .park-title {
+        font-size: 31px;
     }
 
-    .gallery-intro {
-        font-size: 16px;
-    }
-
-    .destination-grid {
+    .photo-grid {
         grid-template-columns: 1fr;
     }
 
-    .destination-card img {
-        height: 230px;
+    .photo-card img {
+        height: 250px;
+    }
+
+    .tour-box {
+        padding: 22px;
+    }
+
+    .buttons {
+        flex-direction: column;
     }
 
 }
@@ -245,9 +258,7 @@ footer a {
 <body>
 
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- HEADER -->
 
 <header>
 
@@ -288,264 +299,227 @@ City Tours, Transfers & Guided Experiences
 
 
 
-<!-- =========================
-     MAIN GALLERY
-========================= -->
+<!-- MAIN -->
 
-<main class="gallery-page">
+<main class="park-page">
 
 
-<h1>
-Explore Our Destinations
+<h1 class="park-title">
+Nairobi National Park
 </h1>
 
 
-<p class="gallery-intro">
+<p class="park-intro">
 
-Explore photographs and experiences from the destinations
-offered by Stema Trans. Select a destination below to view
-its dedicated photo gallery and tour information.
+Explore Nairobi National Park through our gallery and
+experience the wildlife, landscapes and unique setting
+of Kenya's capital city wildlife destination.
 
 </p>
 
 
 
-<div class="destination-grid">
+<!-- PHOTO GALLERY -->
+
+<div class="photo-grid">
 
 
-<!-- =========================
-     1. NAIROBI NATIONAL PARK
-========================= -->
-
-<div class="destination-card">
+<div class="photo-card">
 
 <img
 src="images/nairobi-national-park1.jpg"
+alt="Nairobi National Park wildlife"
+>
+
+</div>
+
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park2.jpg"
 alt="Nairobi National Park"
 >
 
-<div class="destination-content">
-
-<h2>
-Nairobi National Park
-</h2>
-
-<p>
-Explore Kenya's wildlife just outside Nairobi.
-See the park's landscapes, wildlife and game-drive
-experiences.
-</p>
-
-<a
-href="nairobi-national-park-gallery.html"
-class="view-gallery"
->
-View Park Gallery
-</a>
-
-</div>
-
 </div>
 
 
-
-<!-- =========================
-     2. GIRAFFE CENTRE
-========================= -->
-
-<div class="destination-card">
+<div class="photo-card">
 
 <img
-src="images/giraffe-centre.jpg"
-alt="Giraffe Centre"
+src="images/nairobi-national-park3.jpg"
+alt="Nairobi National Park wildlife"
 >
-
-<div class="destination-content">
-
-<h2>
-Giraffe Centre
-</h2>
-
-<p>
-Get close to Rothschild's giraffes and discover
-one of Nairobi's most popular conservation
-experiences.
-</p>
-
-<a
-href="giraffe-centre-gallery.html"
-class="view-gallery"
->
-View Gallery
-</a>
-
-</div>
 
 </div>
 
 
-
-<!-- =========================
-     3. KAREN BLIXEN
-========================= -->
-
-<div class="destination-card">
+<div class="photo-card">
 
 <img
-src="images/karen-blixen.jpg"
-alt="Karen Blixen Museum"
+src="images/nairobi-national-park4.jpg"
+alt="Nairobi National Park scenery"
 >
-
-<div class="destination-content">
-
-<h2>
-Karen Blixen Museum
-</h2>
-
-<p>
-Explore the historic home, gardens and story
-behind one of Kenya's best-known literary figures.
-</p>
-
-<a
-href="karen-blixen-gallery.html"
-class="view-gallery"
->
-View Gallery
-</a>
-
-</div>
 
 </div>
 
 
-
-<!-- =========================
-     4. NAIROBI NATIONAL MUSEUM
-========================= -->
-
-<div class="destination-card">
+<div class="photo-card">
 
 <img
-src="images/nairobi-national-museum.jpg"
-alt="Nairobi National Museum"
+src="images/nairobi-national-park5.jpg"
+alt="Nairobi National Park safari"
 >
-
-<div class="destination-content">
-
-<h2>
-Nairobi National Museum
-</h2>
-
-<p>
-Discover Kenya's history, culture, art, archaeology
-and natural heritage.
-</p>
-
-<a
-href="nairobi-national-museum-gallery.html"
-class="view-gallery"
->
-View Gallery
-</a>
-
-</div>
 
 </div>
 
 
-
-<!-- =========================
-     5. BOMAS OF KENYA
-========================= -->
-
-<div class="destination-card">
+<div class="photo-card">
 
 <img
-src="images/bomas-of-kenya.jpg"
-alt="Bomas of Kenya"
+src="images/nairobi-national-park6.jpg"
+alt="Nairobi National Park animals"
 >
-
-<div class="destination-content">
-
-<h2>
-Bomas of Kenya
-</h2>
-
-<p>
-Experience Kenya's diverse cultures through
-traditional homesteads, music, dance and
-cultural performances.
-</p>
-
-<a
-href="bomas-of-kenya-gallery.html"
-class="view-gallery"
->
-View Gallery
-</a>
-
-</div>
 
 </div>
 
 
-
-<!-- =========================
-     6. NAIROBI CITY TOUR
-========================= -->
-
-<div class="destination-card">
+<div class="photo-card">
 
 <img
-src="images/nairobi-city.jpg"
-alt="Nairobi City Tour"
+src="images/nairobi-national-park7.jpg"
+alt="Nairobi National Park landscape"
 >
-
-<div class="destination-content">
-
-<h2>
-Nairobi City Tour
-</h2>
-
-<p>
-Discover Nairobi's landmarks, history, markets,
-architecture and modern city life.
-</p>
-
-<a
-href="nairobi-city-tour-gallery.html"
-class="view-gallery"
->
-View Gallery
-</a>
-
-</div>
 
 </div>
 
 
-
-<!-- =========================
-     7. NAIROBI CITY WALK
-========================= -->
-
-<div class="destination-card">
+<div class="photo-card">
 
 <img
-src="images/city-walk.jpg"
-alt="Nairobi City Walk"
+src="images/nairobi-national-park8.jpg"
+alt="Nairobi National Park game drive"
 >
 
-<div class="destination-content">
+</div>
+
+
+</div>
+
+
+
+<!-- TOUR INFORMATION -->
+
+<section class="tour-box">
+
 
 <h2>
-Nairobi City Walk
+Nairobi National Park Safari
 </h2>
 
+
 <p>
-Walk through the heart of Nairobi and discover
-its history, culture, architecture and local life.
+
+Enjoy a guided game drive through Nairobi National Park,
+one of the world's most unique wildlife destinations,
+located just outside Nairobi.
+
+Visitors may encounter lions, giraffes, zebras,
+buffaloes, rhinos, antelopes, warthogs and many species
+of birds depending on the season and location within
+the park.
+
 </p>
 
+
+<div class="tour-details">
+
+<strong>Duration:</strong> 4–5 Hours<br>
+
+<strong>Group:</strong> 1–7 People<br>
+
+<strong>Departure:</strong> Nairobi<br>
+
+<strong>Experience:</strong> Guided Game Drive<br>
+
+<strong>Vehicle:</strong> Tour Van or Land Cruiser
+
+</div>
+
+
+
+<!-- PRICE -->
+
+<div class="price-box">
+
+<h3>
+Transport Package
+</h3>
+
+<div class="price">
+From KES 8,500 / USD 66 per vehicle
+</div>
+
+<p>
+
+The transport price is per vehicle, not per person.
+
+Park entrance fees and other attraction fees are
+paid separately unless specifically included in your
+quotation.
+
+</p>
+
+</div>
+
+
+
+<!-- BUTTONS -->
+
+<div class="buttons">
+
+
 <a
+href="booking.html?service=Nairobi%20National%20Park"
+class="book-btn"
+>
+Book Nairobi National Park
+</a>
+
+
+<a
+href="gallery.html"
+class="back-btn"
+>
+Back to Places
+</a>
+
+
+</div>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Stema Trans — Nairobi City Tours, Transfers & Guided Experiences
+</p>
+
+<p>
+Email: stemawastrans@gmail.com
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
