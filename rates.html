@@ -1,210 +1,1719 @@
-.<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rates | STEMA TRANS</title>
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Rates | Stema Trans</title>
+
 <link rel="stylesheet" href="css/style.css">
+
+<style>
+
+/* =========================================
+   RATES PAGE
+========================================= */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    color: #333;
+}
+
+.rates-page {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.rates-page h1 {
+    text-align: center;
+    color: #b11226;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.rates-intro {
+    max-width: 850px;
+    margin: 0 auto 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   RATE NOTICE
+========================================= */
+
+.rate-notice {
+    background: #fff;
+    border-left: 6px solid #b11226;
+    padding: 25px;
+    margin-bottom: 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+}
+
+.rate-notice h2 {
+    color: #b11226;
+    margin-top: 0;
+}
+
+.rate-notice p {
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.rate-section {
+    margin-bottom: 45px;
+}
+
+.rate-section h2 {
+    color: #b11226;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.section-description {
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.rate-table-wrapper {
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+.rate-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+}
+
+.rate-table th {
+    background: #b11226;
+    color: #fff;
+    padding: 16px 12px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.rate-table td {
+    padding: 16px 12px;
+    border-bottom: 1px solid #ddd;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+
+.rate-table tr:last-child td {
+    border-bottom: none;
+}
+
+.rate-table tr:hover {
+    background: #fafafa;
+}
+
+.price {
+    font-weight: bold;
+    color: #b11226;
+}
+
+
+/* =========================================
+   BOOK BUTTON
+========================================= */
+
+.rate-btn {
+    display: inline-block;
+
+    background: #b11226;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 15px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+.rate-btn:hover {
+    background: #870d1c;
+}
+
+
+/* =========================================
+   CITY WALK CARDS
+========================================= */
+
+.walk-rates {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.walk-card {
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.08);
+}
+
+.walk-card h3 {
+    color: #b11226;
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.walk-price {
+    font-size: 21px;
+    font-weight: bold;
+    color: #b11226;
+    margin: 15px 0;
+}
+
+
+/* =========================================
+   OUT OF TOWN
+========================================= */
+
+.out-town {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.out-card {
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.08);
+}
+
+.out-card h3 {
+    color: #b11226;
+    margin-top: 0;
+}
+
+.out-price {
+    color: #b11226;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+
+/* =========================================
+   INCLUDED / EXCLUDED
+========================================= */
+
+.inclusion-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.inclusion-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.08);
+}
+
+.inclusion-box h3 {
+    color: #b11226;
+    margin-top: 0;
+}
+
+.inclusion-box ul {
+    padding-left: 22px;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   IMPORTANT NOTES
+========================================= */
+
+.notes-box {
+    background: #fff;
+
+    border-left: 6px solid #b11226;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.07);
+
+    line-height: 1.8;
+}
+
+.notes-box strong {
+    color: #b11226;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.rates-cta {
+    text-align: center;
+
+    background: #b11226;
+    color: white;
+
+    padding: 35px 20px;
+
+    border-radius: 14px;
+
+    margin-top: 45px;
+}
+
+.rates-cta h2 {
+    margin-top: 0;
+    font-size: 30px;
+}
+
+.rates-cta p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.cta-btn {
+    display: inline-block;
+
+    background: white;
+    color: #b11226;
+
+    padding: 14px 25px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    margin-top: 10px;
+}
+
+.cta-btn:hover {
+    background: #f1f1f1;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .walk-rates,
+    .out-town,
+    .inclusion-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .rates-page {
+        margin: 20px auto;
+        padding: 12px;
+    }
+
+    .rates-page h1 {
+        font-size: 31px;
+    }
+
+    .rates-intro {
+        font-size: 17px;
+    }
+
+    .rate-section h2 {
+        font-size: 25px;
+    }
+
+    .rate-notice,
+    .inclusion-box,
+    .walk-card,
+    .out-card,
+    .notes-box {
+        padding: 20px;
+    }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
 <header>
+
     <div class="logo">
+
         <h1>STEMA TRANS</h1>
-        <p>Nairobi City Tours & Airport Transfers</p>
+
+        <p>
+            City Tours, Transfers & Guided Experiences
+        </p>
+
     </div>
 
+
     <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="tours.html">Tours</a>
-  <a href="transfers.html">Transfers</a>
-  <a href="rates.html">Rates</a>
-  <a href="fleet.html">Fleet</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="citywalks.html">City Walks</a>
-  <a href="contact.html">Contact</a>
-</nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="tours.html">Tours</a>
+
+        <a href="transfers.html">Transfers</a>
+
+        <a href="rates.html">Rates</a>
+
+        <a href="fleet.html">Fleet</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="city-walks.html">City Walks</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
 </header>
 
-<section class="hero">
-    <h2>Tour Rates & Entry Fees</h2>
-    <p>Transparent pricing with no hidden charges.</p>
-</section>
 
-<section class="services">
 
-<h2>Nairobi City Highlights Tour</h2>
+<!-- =========================================
+     MAIN
+========================================= -->
 
-<p><strong>Duration:</strong> 4–5 Hours</p>
+<main class="rates-page">
 
-<h3>Transport Charges (Per Vehicle)</h3>
 
-<ul>
-<li>🚐 Tour Van (1–7 Passengers): <strong>KES 5,500 | USD 43</strong></li>
-<li>🚙 Safari Land Cruiser (1–7 Passengers): <strong>KES 8,500 | USD 66</strong></li>
-</ul>
+<h1>
+Stema Trans Rates
+</h1>
 
-<h3>Places Visited</h3>
 
-<ul>
-<li>KICC Rooftop</li>
-<li>Parliament Buildings</li>
-<li>City Market</li>
-<li>Jeevanjee Gardens</li>
-<li>Uhuru Park</li>
-<li>Railway Museum (Optional)</li>
-</ul>
+<p class="rates-intro">
 
-<h3>Entry Fees (Per Person)</h3>
+Professional Nairobi transport, tours and guided
+experiences at transparent and competitive rates.
 
-<table>
+</p>
+
+
+
+<!-- =========================================
+     IMPORTANT PRICING EXPLANATION
+========================================= -->
+
+<div class="rate-notice">
+
+<h2>
+How Our Rates Work
+</h2>
+
+<p>
+
+<strong>Vehicle-based tours and transfers are charged per vehicle,
+not per passenger.</strong>
+
+</p>
+
+<p>
+
+For example, a Tour Van costing
+<strong>KES 5,500 / approximately USD 42</strong>
+can carry the agreed passenger capacity without charging
+KES 5,500 for every individual passenger.
+
+</p>
+
+<p>
+
+<strong>City Walks are charged per person</strong>
+because they are walking experiences rather than vehicle hire.
+
+</p>
+
+<p>
+
+Park entrance fees and attraction admission fees are
+<strong>separate unless specifically stated as included.</strong>
+
+</p>
+
+</div>
+
+
+
+<!-- =========================================
+     SECTION 1
+     NAIROBI CITY TOURS
+========================================= -->
+
+<section class="rate-section">
+
+
+<h2>
+Nairobi City Tours & Attractions
+</h2>
+
+
+<p class="section-description">
+
+Vehicle and driver-guide rates for selected Nairobi
+experiences. Rates shown are for the vehicle and agreed
+itinerary.
+
+</p>
+
+
+<div class="rate-table-wrapper">
+
+
+<table class="rate-table">
+
+
+<thead>
+
 <tr>
-<th>Attraction</th>
-<th>Entry Fee</th>
+
+<th>
+Experience
+</th>
+
+<th>
+Duration
+</th>
+
+<th>
+Tour Van
+</th>
+
+<th>
+Land Cruiser
+</th>
+
+<th>
+Sedan
+</th>
+
+<th>
+Booking
+</th>
+
 </tr>
 
-<tr>
-<td>KICC Rooftop</td>
-<td>KES 500</td>
-</tr>
+</thead>
+
+
+<tbody>
+
 
 <tr>
-<td>Railway Museum</td>
-<td>KES 200 (Residents) | USD 5 (Non-Residents)</td>
+
+<td>
+<strong>Nairobi City Tour</strong>
+</td>
+
+<td>
+4–5 hours
+</td>
+
+<td class="price">
+KES 5,500 / $42
+</td>
+
+<td class="price">
+KES 8,500 / $65
+</td>
+
+<td class="price">
+KES 5,000 / $38
+</td>
+
+<td>
+
+<a
+class="rate-btn"
+href="booking.html?service=Nairobi%20City%20Tour"
+>
+
+BOOK
+
+</a>
+
+</td>
+
 </tr>
 
-<tr>
-<td>City Market</td>
-<td>FREE</td>
-</tr>
+
 
 <tr>
-<td>Uhuru Park</td>
-<td>FREE</td>
+
+<td>
+<strong>Giraffe Centre</strong>
+</td>
+
+<td>
+2–3 hours
+</td>
+
+<td class="price">
+KES 5,500 / $42
+</td>
+
+<td class="price">
+KES 8,500 / $65
+</td>
+
+<td class="price">
+KES 5,000 / $38
+</td>
+
+<td>
+
+<a
+class="rate-btn"
+href="booking.html?service=Giraffe%20Centre%20Tour"
+>
+
+BOOK
+
+</a>
+
+</td>
+
 </tr>
 
+
+
 <tr>
-<td>Jeevanjee Gardens</td>
-<td>FREE</td>
+
+<td>
+<strong>Karen Blixen Museum</strong>
+</td>
+
+<td>
+2–3 hours
+</td>
+
+<td class="price">
+KES 5,500 / $42
+</td>
+
+<td class="price">
+KES 8,500 / $65
+</td>
+
+<td class="price">
+KES 5,000 / $38
+</td>
+
+<td>
+
+<a
+class="rate-btn"
+href="booking.html?service=Karen%20Blixen%20Tour"
+>
+
+BOOK
+
+</a>
+
+</td>
+
 </tr>
+
+
+
+<tr>
+
+<td>
+<strong>Nairobi National Museum</strong>
+</td>
+
+<td>
+2–3 hours
+</td>
+
+<td class="price">
+KES 5,500 / $42
+</td>
+
+<td class="price">
+KES 8,500 / $65
+</td>
+
+<td class="price">
+KES 5,000 / $38
+</td>
+
+<td>
+
+<a
+class="rate-btn"
+href="booking.html?service=Nairobi%20National%20Museum"
+>
+
+BOOK
+
+</a>
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+<strong>Bomas of Kenya</strong>
+</td>
+
+<td>
+3–4 hours
+</td>
+
+<td class="price">
+KES 5,500 / $42
+</td>
+
+<td class="price">
+KES 8,500 / $65
+</td>
+
+<td class="price">
+KES 5,000 / $38
+</td>
+
+<td>
+
+<a
+class="rate-btn"
+href="booking.html?service=Bomas%20of%20Kenya"
+>
+
+BOOK
+
+</a>
+
+</td>
+
+</tr>
+
+
+</tbody>
 
 </table>
 
-<p>
-<a class="btn" href="booking.html">Book This Tour</a>
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     SECTION 2
+     NAIROBI NATIONAL PARK
+========================================= -->
+
+<section class="rate-section">
+
+
+<h2>
+Nairobi National Park
+</h2>
+
+
+<p class="section-description">
+
+Half-day Nairobi National Park transport and
+driver-guide service.
+
 </p>
 
-<hr>
 
-<h2>Giraffe Centre Tour</h2>
+<div class="rate-table-wrapper">
 
-<p><strong>Duration:</strong> 2–3 Hours</p>
 
-<h3>Transport Charges (Per Vehicle)</h3>
+<table class="rate-table">
 
-<ul>
-<li>🚐 Tour Van: <strong>KES 5,500 | USD 43</strong></li>
-<li>🚙 Land Cruiser: <strong>KES 8,500 | USD 66</strong></li>
-</ul>
 
-<h3>Entry Fees (Per Person)</h3>
-
-<ul>
-<li>Kenyan Adult — KES 400</li>
-<li>Kenyan Child — KES 200</li>
-<li>Resident Adult — KES 1,500</li>
-<li>Resident Child — KES 750</li>
-<li>Non-Resident Adult — USD 15</li>
-<li>Non-Resident Child — USD 7</li>
-</ul>
-
-<p>
-<a class="btn" href="booking.html">Book This Tour</a>
-</p>
-
-<hr>
-
-<h2>Nairobi National Park</h2>
-
-<h3>Transport Charges (Per Vehicle)</h3>
-
-<ul>
-<li>🚐 Tour Van: <strong>KES 8,500 | USD 66</strong></li>
-<li>🚙 Land Cruiser: <strong>KES 12,500 | USD 97</strong></li>
-</ul>
-
-<h3>Park Entry (Per Person)</h3>
-
-<ul>
-<li>Kenyan Adult — KES 430</li>
-<li>Kenyan Child — KES 215</li>
-<li>Resident Adult — KES 1,030</li>
-<li>Resident Child — KES 515</li>
-<li>Non-Resident Adult — USD 43</li>
-<li>Non-Resident Child — USD 22</li>
-</ul>
-
-<p>
-<a class="btn" href="booking.html">Book This Tour</a>
-</p>
-
-<hr>
-
-<h2>Airport Transfers</h2>
-
-<table>
+<thead>
 
 <tr>
-<th>Route</th>
-<th>Tour Van</th>
-<th>Land Cruiser</th>
+
+<th>
+Service
+</th>
+
+<th>
+Duration
+</th>
+
+<th>
+Tour Van
+</th>
+
+<th>
+Land Cruiser
+</th>
+
+<th>
+What's Included
+</th>
+
+<th>
+Booking
+</th>
+
 </tr>
 
-<tr>
-<td>JKIA ⇄ Nairobi CBD</td>
-<td>KES 3,500 (USD 27)</td>
-<td>KES 5,500 (USD 43)</td>
-</tr>
+</thead>
+
+
+<tbody>
+
 
 <tr>
-<td>Wilson Airport ⇄ Nairobi CBD</td>
-<td>KES 2,500 (USD 20)</td>
-<td>KES 4,000 (USD 31)</td>
+
+<td>
+<strong>Nairobi National Park</strong>
+</td>
+
+<td>
+4–5 hours
+</td>
+
+<td class="price">
+KES 8,500 / $65
+</td>
+
+<td class="price">
+KES 12,500 / $96
+</td>
+
+<td>
+Vehicle + Driver-Guide
+</td>
+
+<td>
+
+<a
+class="rate-btn"
+href="booking.html?service=Nairobi%20National%20Park"
+>
+
+BOOK
+
+</a>
+
+</td>
+
 </tr>
+
+
+</tbody>
 
 </table>
 
-<br>
+</div>
 
-<a class="btn" href="booking.html">Book Your Transfer</a>
+
+<div class="rate-notice">
+
+<p>
+
+<strong>Important:</strong>
+Nairobi National Park entrance fees are
+not included in the vehicle rate unless specifically
+agreed in your quotation.
+
+</p>
+
+</div>
+
 
 </section>
 
-<section class="cta">
 
-<h2>Important Information</h2>
 
-<p>
-✔ Transport charges are <strong>per vehicle</strong>, not per person.
-</p>
+<!-- =========================================
+     SECTION 3
+     AIRPORT TRANSFERS
+========================================= -->
 
-<p>
-✔ Attraction and park entry fees are charged <strong>per person</strong> and are normally paid separately unless otherwise stated.
-</p>
+<section class="rate-section">
 
-<p>
-✔ Prices may change if attraction operators revise their official entry fees.
-</p>
+
+<h2>
+Airport & Hotel Transfers
+</h2>
+
+
+<div class="rate-table-wrapper">
+
+
+<table class="rate-table">
+
+
+<thead>
+
+<tr>
+
+<th>
+Transfer
+</th>
+
+<th>
+Tour Van
+</th>
+
+<th>
+Land Cruiser
+</th>
+
+<th>
+Sedan
+</th>
+
+<th>
+Booking
+</th>
+
+</tr>
+
+</thead>
+
+
+<tbody>
+
+
+<tr>
+
+<td>
+<strong>JKIA Airport Transfer</strong>
+</td>
+
+<td class="price">
+From KES 3,000 / $23
+</td>
+
+<td class="price">
+From KES 5,000 / $38
+</td>
+
+<td class="price">
+From KES 2,500 / $19
+</td>
+
+<td>
+
+<a
+class="rate-btn"
+href="booking.html?service=Airport%20Transfer"
+>
+
+BOOK
+
+</a>
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+<strong>Wilson Airport Transfer</strong>
+</td>
+
+<td class="price">
+From KES 3,000 / $23
+</td>
+
+<td class="price">
+From KES 5,000 / $38
+</td>
+
+<td class="price">
+From KES 2,500 / $19
+</td>
+
+<td>
+
+<a
+class="rate-btn"
+href="booking.html?service=Airport%20Transfer"
+>
+
+BOOK
+
+</a>
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+<strong>Hotel Transfer</strong>
+</td>
+
+<td class="price">
+From KES 3,000 / $23
+</td>
+
+<td class="price">
+From KES 5,000 / $38
+</td>
+
+<td class="price">
+From KES 2,500 / $19
+</td>
+
+<td>
+
+<a
+class="rate-btn"
+href="booking.html?service=Hotel%20Transfer"
+>
+
+BOOK
+
+</a>
+
+</td>
+
+</tr>
+
+
+</tbody>
+
+</table>
+
+</div>
 
 </section>
+
+
+
+<!-- =========================================
+     SECTION 4
+     CITY WALKS
+========================================= -->
+
+<section class="rate-section">
+
+
+<h2>
+Nairobi City Walks
+</h2>
+
+
+<p class="section-description">
+
+City walks are charged <strong>per person</strong>.
+
+</p>
+
+
+<div class="walk-rates">
+
+
+<div class="walk-card">
+
+<h3>
+Nairobi Highlights Walk
+</h3>
+
+<p>
+Discover Nairobi's central landmarks,
+history and architecture on foot.
+</p>
+
+<div class="walk-price">
+KES 2,500 / $19 per person
+</div>
+
+<a
+class="rate-btn"
+href="booking.html?service=City%20Walk"
+>
+
+BOOK WALK
+
+</a>
+
+</div>
+
+
+
+<div class="walk-card">
+
+<h3>
+Nairobi History & Culture Walk
+</h3>
+
+<p>
+Explore Nairobi's history, heritage,
+architecture and cultural stories.
+</p>
+
+<div class="walk-price">
+KES 2,500 / $19 per person
+</div>
+
+<a
+class="rate-btn"
+href="booking.html?service=City%20Walk"
+>
+
+BOOK WALK
+
+</a>
+
+</div>
+
+
+
+<div class="walk-card">
+
+<h3>
+Nairobi Food & Local Life Walk
+</h3>
+
+<p>
+Experience local food, markets,
+street life and Nairobi's everyday culture.
+</p>
+
+<div class="walk-price">
+KES 3,500 / $27 per person
+</div>
+
+<a
+class="rate-btn"
+href="booking.html?service=City%20Walk"
+>
+
+BOOK WALK
+
+</a>
+
+</div>
+
+
+
+<div class="walk-card">
+
+<h3>
+Private Custom City Walk
+</h3>
+
+<p>
+Create a private walking experience
+around your interests and schedule.
+</p>
+
+<div class="walk-price">
+From KES 3,500 / $27 per person
+</div>
+
+<a
+class="rate-btn"
+href="booking.html?service=Private%20Custom%20City%20Walk"
+>
+
+BOOK WALK
+
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     SECTION 5
+     PRIVATE HIRE
+========================================= -->
+
+<section class="rate-section">
+
+
+<h2>
+Private Hire
+</h2>
+
+
+<div class="rate-table-wrapper">
+
+
+<table class="rate-table">
+
+
+<thead>
+
+<tr>
+
+<th>
+Vehicle
+</th>
+
+<th>
+Starting Rate
+</th>
+
+<th>
+Suitable For
+</th>
+
+<th>
+Booking
+</th>
+
+</tr>
+
+</thead>
+
+
+<tbody>
+
+
+<tr>
+
+<td>
+Tour Van
+</td>
+
+<td class="price">
+From KES 7,000 / $54
+</td>
+
+<td>
+Private transport, business,
+events and day hire
+</td>
+
+<td>
+
+<a
+class="rate-btn"
+href="booking.html?service=Private%20Hire&vehicle=Tour%20Van"
+>
+
+REQUEST
+
+</a>
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+Land Cruiser
+</td>
+
+<td class="price">
+From KES 10,000 / $77
+</td>
+
+<td>
+Premium private transport,
+safari and out-of-town travel
+</td>
+
+<td>
+
+<a
+class="rate-btn"
+href="booking.html?service=Private%20Hire&vehicle=Land%20Cruiser"
+>
+
+REQUEST
+
+</a>
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+Executive Sedan
+</td>
+
+<td class="price">
+From KES 6,000 / $46
+</td>
+
+<td>
+Airport, business and
+executive transport
+</td>
+
+<td>
+
+<a
+class="rate-btn"
+href="booking.html?service=Private%20Hire&vehicle=Executive%20Sedan"
+>
+
+REQUEST
+
+</a>
+
+</td>
+
+</tr>
+
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     SECTION 6
+     OUT OF TOWN
+========================================= -->
+
+<section class="rate-section">
+
+
+<h2>
+Out-of-Town Transfers
+</h2>
+
+
+<p class="section-description">
+
+Long-distance journeys are quoted according to
+destination, vehicle, duration, fuel requirements
+and itinerary.
+
+</p>
+
+
+<div class="out-town">
+
+
+<div class="out-card">
+
+<h3>
+Thika
+</h3>
+
+<p>
+Day/out-of-town transfer from Nairobi.
+</p>
+
+<div class="out-price">
+From KES 7,000 / $54
+</div>
+
+<a
+class="rate-btn"
+href="booking.html?service=Private%20Hire"
+>
+
+REQUEST QUOTE
+
+</a>
+
+</div>
+
+
+
+<div class="out-card">
+
+<h3>
+Naivasha
+</h3>
+
+<p>
+Private transport from Nairobi to Naivasha
+and surrounding attractions.
+</p>
+
+<div class="out-price">
+From KES 12,000 / $92
+</div>
+
+<a
+class="rate-btn"
+href="booking.html?service=Private%20Hire"
+>
+
+REQUEST QUOTE
+
+</a>
+
+</div>
+
+
+
+<div class="out-card">
+
+<h3>
+Nakuru
+</h3>
+
+<p>
+Private Nairobi–Nakuru transport and
+day-trip services.
+</p>
+
+<div class="out-price">
+From KES 15,000 / $115
+</div>
+
+<a
+class="rate-btn"
+href="booking.html?service=Private%20Hire"
+>
+
+REQUEST QUOTE
+
+</a>
+
+</div>
+
+
+
+<div class="out-card">
+
+<h3>
+Amboseli & Masai Mara
+</h3>
+
+<p>
+Multi-day safari and long-distance journeys
+are individually quoted according to itinerary.
+</p>
+
+<div class="out-price">
+Custom Quotation
+</div>
+
+<a
+class="rate-btn"
+href="booking.html?service=Private%20Hire"
+>
+
+REQUEST QUOTE
+
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     SECTION 7
+     INCLUDED / EXCLUDED
+========================================= -->
+
+<section class="rate-section">
+
+
+<h2>
+What's Included & Excluded
+</h2>
+
+
+<div class="inclusion-grid">
+
+
+<div class="inclusion-box">
+
+<h3>
+Included
+</h3>
+
+<ul>
+
+<li>Agreed vehicle</li>
+
+<li>Professional driver / driver-guide</li>
+
+<li>Fuel for the agreed itinerary</li>
+
+<li>Pickup within the agreed service area</li>
+
+<li>Transport during the agreed tour</li>
+
+<li>Basic assistance during the journey</li>
+
+</ul>
+
+</div>
+
+
+
+<div class="inclusion-box">
+
+<h3>
+Not Included
+</h3>
+
+<ul>
+
+<li>National park entrance fees</li>
+
+<li>Attraction entrance fees</li>
+
+<li>Meals and drinks</li>
+
+<li>Accommodation</li>
+
+<li>Special activities</li>
+
+<li>Personal expenses</li>
+
+<li>Additional parking charges where applicable</li>
+
+<li>Extra mileage or hours outside the agreed itinerary</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     SECTION 8
+     IMPORTANT NOTES
+========================================= -->
+
+<section class="rate-section">
+
+
+<h2>
+Important Booking Notes
+</h2>
+
+
+<div class="notes-box">
+
+<p>
+
+<strong>1. Vehicle rates:</strong>
+Unless otherwise stated, vehicle-based rates are
+charged per vehicle, not per passenger.
+
+</p>
+
+
+<p>
+
+<strong>2. Passenger capacity:</strong>
+The number of passengers must remain within the
+safe/legal capacity of the selected vehicle.
+
+</p>
+
+
+<p>
+
+<strong>3. Attraction fees:</strong>
+Park and attraction entrance fees are separate
+unless specifically stated in the quotation.
+
+</p>
+
+
+<p>
+
+<strong>4. Extra time:</strong>
+Additional hours beyond the agreed itinerary may
+attract an additional charge.
+
+</p>
+
+
+<p>
+
+<strong>5. Out-of-town travel:</strong>
+Long-distance journeys are quoted according to
+the complete itinerary.
+
+</p>
+
+
+<p>
+
+<strong>6. USD prices:</strong>
+USD figures are approximate conversions for
+international clients. Final payment may be
+made in Kenyan Shillings according to the
+agreed quotation.
+
+</p>
+
+
+<p>
+
+<strong>7. Rates:</strong>
+Displayed rates are starting rates and may vary
+according to date, itinerary, vehicle availability,
+distance and special requirements.
+
+</p>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     CTA
+========================================= -->
+
+<section class="rates-cta">
+
+
+<h2>
+Ready to Book?
+</h2>
+
+
+<p>
+
+Choose your experience and submit your booking
+request. Stema Trans will confirm availability,
+the final itinerary and the applicable price.
+
+</p>
+
+
+<a
+class="cta-btn"
+href="booking.html"
+>
+
+BOOK YOUR EXPERIENCE
+
+</a>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
 
 <footer>
 
-<p>&copy; 2026 STEMA TRANS. All Rights Reserved.</p>
+<p>
+
+© 2026 Stema Trans —
+Nairobi City Tours, Transfers & Guided Experiences
+
+</p>
+
+<p>
+
+Email:
+<a
+href="mailto:stemawastrans@gmail.com"
+style="color:inherit;"
+>
+
+stemawastrans@gmail.com
+
+</a>
+
+</p>
 
 </footer>
 
+
 </body>
+
 </html>
