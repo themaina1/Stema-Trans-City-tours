@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gallery | Stema Trans</title>
+<title>Nairobi National Park Gallery | Stema Trans</title>
 
 <link rel="stylesheet" href="css/style.css">
 
@@ -22,181 +22,235 @@ body {
 /* HEADER */
 
 header {
-    background: #fff;
-    padding: 15px 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    background: #b11226;
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
 }
 
 .logo h1 {
     margin: 0;
-    color: #b11226;
+    font-size: 38px;
 }
 
 .logo p {
-    margin: 4px 0 12px;
+    margin: 8px 0 20px;
+    font-size: 18px;
 }
 
 nav {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 8px;
 }
 
 nav a {
+    color: white;
     text-decoration: none;
-    color: #333;
     font-weight: bold;
-    padding: 8px 10px;
+    padding: 9px 12px;
 }
 
 nav a:hover {
+    background: white;
     color: #b11226;
+    border-radius: 6px;
 }
 
 
 /* PAGE */
 
-.gallery-page {
+.park-page {
     max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
+    margin: 35px auto;
+    padding: 15px;
 }
 
-.gallery-page h1 {
+.park-title {
     text-align: center;
     color: #b11226;
     font-size: 42px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
-.gallery-intro {
-    max-width: 750px;
-    margin: 0 auto 40px;
+.park-intro {
+    max-width: 850px;
+    margin: 0 auto 35px;
     text-align: center;
     font-size: 18px;
     line-height: 1.7;
 }
 
 
-/* PLACES GRID */
+/* PHOTO GALLERY */
 
-.places-grid {
+.photo-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 18px;
+}
+
+.photo-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.photo-card img:hover {
+    transform: scale(1.03);
 }
 
 
-/* PLACE CARD */
+/* TOUR INFORMATION */
 
-.place-card {
+.tour-box {
     background: white;
-    border-radius: 14px;
-    overflow: hidden;
+    margin-top: 45px;
+    padding: 30px;
+    border-radius: 15px;
     box-shadow: 0 5px 18px rgba(0,0,0,0.10);
 }
 
-.place-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-}
-
-.place-content {
-    padding: 22px;
-}
-
-.place-content h2 {
+.tour-box h2 {
     color: #b11226;
-    margin: 0 0 12px;
-    font-size: 24px;
+    margin-top: 0;
+    font-size: 30px;
 }
 
-.place-content p {
-    line-height: 1.6;
-    margin-bottom: 20px;
+.tour-box p {
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+.tour-details {
+    margin: 20px 0;
+    line-height: 2;
+    font-size: 17px;
 }
 
 
-/* LINKS */
+/* PRICE */
 
-.place-links {
+.price-box {
+    border-left: 6px solid #b11226;
+    background: #f8f8f8;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+.price-box h3 {
+    color: #b11226;
+    margin-top: 0;
+}
+
+.price {
+    font-size: 25px;
+    font-weight: bold;
+    color: #b11226;
+}
+
+
+/* BUTTONS */
+
+.buttons {
     display: flex;
-    gap: 10px;
-    flex-direction: column;
+    gap: 15px;
+    margin-top: 28px;
 }
 
-.gallery-link,
-.book-link {
+.book-btn,
+.back-btn {
     display: block;
     text-align: center;
-    padding: 13px;
-    border-radius: 8px;
     text-decoration: none;
+    padding: 16px 25px;
+    border-radius: 8px;
     font-weight: bold;
+    font-size: 17px;
+    flex: 1;
 }
 
-.gallery-link {
-    background: #333;
-    color: white;
-}
-
-.gallery-link:hover {
-    background: #555;
-}
-
-.book-link {
+.book-btn {
     background: #b11226;
     color: white;
 }
 
-.book-link:hover {
+.book-btn:hover {
     background: #870d1c;
+}
+
+.back-btn {
+    background: #333;
+    color: white;
+}
+
+.back-btn:hover {
+    background: #555;
 }
 
 
 /* FOOTER */
 
 footer {
-    text-align: center;
+    margin-top: 50px;
     background: #222;
     color: white;
+    text-align: center;
     padding: 25px 15px;
-    margin-top: 50px;
-}
-
-footer a {
-    color: white;
 }
 
 
-/* TABLET */
+/* MOBILE */
 
-@media (max-width: 900px) {
+@media (max-width: 850px) {
 
-    .places-grid {
+    .photo-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
 }
 
 
-/* PHONE */
-
 @media (max-width: 600px) {
 
-    .gallery-page {
+    .park-page {
         margin: 20px auto;
         padding: 12px;
     }
 
-    .gallery-page h1 {
-        font-size: 32px;
+    .park-title {
+        font-size: 31px;
     }
 
-    .places-grid {
+    .park-intro {
+        font-size: 17px;
+    }
+
+    .photo-grid {
         grid-template-columns: 1fr;
+    }
+
+    .photo-card img {
+        height: 260px;
+    }
+
+    .tour-box {
+        padding: 22px;
+    }
+
+    .buttons {
+        flex-direction: column;
     }
 
 }
@@ -244,374 +298,247 @@ City Tours, Transfers & Guided Experiences
 
 <!-- MAIN -->
 
-<main class="gallery-page">
+<main class="park-page">
 
 
-<h1>
-Places & Experiences
+<h1 class="park-title">
+Nairobi National Park Gallery
 </h1>
 
 
-<p class="gallery-intro">
+<p class="park-intro">
 
-Explore the destinations and experiences offered by
-Stema Trans. Select a place to view its photographs
-or make a booking.
+Explore Nairobi National Park through our collection of
+wildlife, landscapes and safari photographs.
+
+Experience the unique opportunity to enjoy a genuine
+wildlife experience just outside Nairobi city.
 
 </p>
-
-
-
-<div class="places-grid">
-
-
-<!-- =========================
-     NAIROBI NATIONAL PARK
-========================= -->
-
-<div class="place-card">
-
-<img
-src="images/nairobi-national-park1.jpg"
-alt="Nairobi National Park"
->
-
-<div class="place-content">
-
-<h2>
-Nairobi National Park
-</h2>
-
-<p>
-Experience Kenya's wildlife just outside Nairobi,
-including game drives, wildlife viewing and
-beautiful park landscapes.
-</p>
-
-<div class="place-links">
-
-<a
-href="nairobi-national-park-gallery.html"
-class="gallery-link"
->
-View Park Gallery
-</a>
-
-<a
-href="booking.html?service=Nairobi%20National%20Park"
-class="book-link"
->
-Book This Tour
-</a>
-
-</div>
-
-</div>
-
-</div>
 
 
 
 <!-- =========================
-     GIRAFFE CENTRE
+     35 PHOTOS
 ========================= -->
 
-<div class="place-card">
+<div class="photo-grid">
 
-<img
-src="images/giraffe-centre.jpg"
-alt="Giraffe Centre"
->
 
-<div class="place-content">
-
-<h2>
-Giraffe Centre
-</h2>
-
-<p>
-Meet the Rothschild's giraffes and enjoy a
-conservation experience in Nairobi's Karen area.
-</p>
-
-<div class="place-links">
-
-<a
-href="giraffe-centre-gallery.html"
-class="gallery-link"
->
-View Gallery
-</a>
-
-<a
-href="booking.html?service=Giraffe%20Centre%20Tour"
-class="book-link"
->
-Book This Tour
-</a>
-
-</div>
-
-</div>
-
+<div class="photo-card">
+<img src="images/nairobi-national-park1.jpg"
+alt="Nairobi National Park photo 1">
 </div>
 
 
-
-<!-- =========================
-     KAREN BLIXEN
-========================= -->
-
-<div class="place-card">
-
-<img
-src="images/karen-blixen.jpg"
-alt="Karen Blixen Museum"
->
-
-<div class="place-content">
-
-<h2>
-Karen Blixen Museum
-</h2>
-
-<p>
-Discover the historic home, gardens and story
-of Karen Blixen.
-</p>
-
-<div class="place-links">
-
-<a
-href="karen-blixen-gallery.html"
-class="gallery-link"
->
-View Gallery
-</a>
-
-<a
-href="booking.html?service=Karen%20Blixen%20Tour"
-class="book-link"
->
-Book This Tour
-</a>
-
-</div>
-
-</div>
-
+<div class="photo-card">
+<img src="images/nairobi-national-park2.jpg"
+alt="Nairobi National Park photo 2">
 </div>
 
 
-
-<!-- =========================
-     NAIROBI NATIONAL MUSEUM
-========================= -->
-
-<div class="place-card">
-
-<img
-src="images/nairobi-national-museum.jpg"
-alt="Nairobi National Museum"
->
-
-<div class="place-content">
-
-<h2>
-Nairobi National Museum
-</h2>
-
-<p>
-Explore Kenya's history, culture, art,
-archaeology and natural heritage.
-</p>
-
-<div class="place-links">
-
-<a
-href="nairobi-national-museum-gallery.html"
-class="gallery-link"
->
-View Gallery
-</a>
-
-<a
-href="booking.html?service=Nairobi%20National%20Museum"
-class="book-link"
->
-Book This Tour
-</a>
-
-</div>
-
-</div>
-
+<div class="photo-card">
+<img src="images/nairobi-national-park3.jpg"
+alt="Nairobi National Park photo 3">
 </div>
 
 
-
-<!-- =========================
-     BOMAS
-========================= -->
-
-<div class="place-card">
-
-<img
-src="images/bomas-of-kenya.jpg"
-alt="Bomas of Kenya"
->
-
-<div class="place-content">
-
-<h2>
-Bomas of Kenya
-</h2>
-
-<p>
-Experience traditional homesteads, music,
-dance and cultural performances.
-</p>
-
-<div class="place-links">
-
-<a
-href="bomas-of-kenya-gallery.html"
-class="gallery-link"
->
-View Gallery
-</a>
-
-<a
-href="booking.html?service=Bomas%20of%20Kenya"
-class="book-link"
->
-Book This Tour
-</a>
-
+<div class="photo-card">
+<img src="images/nairobi-national-park4.jpg"
+alt="Nairobi National Park photo 4">
 </div>
 
+
+<div class="photo-card">
+<img src="images/nairobi-national-park5.jpg"
+alt="Nairobi National Park photo 5">
 </div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park6.jpg"
+alt="Nairobi National Park photo 6">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park7.jpg"
+alt="Nairobi National Park photo 7">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park8.jpg"
+alt="Nairobi National Park photo 8">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park9.jpg"
+alt="Nairobi National Park photo 9">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park10.jpg"
+alt="Nairobi National Park photo 10">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park11.jpg"
+alt="Nairobi National Park photo 11">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park12.jpg"
+alt="Nairobi National Park photo 12">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park13.jpg"
+alt="Nairobi National Park photo 13">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park14.jpg"
+alt="Nairobi National Park photo 14">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park15.jpg"
+alt="Nairobi National Park photo 15">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park16.jpg"
+alt="Nairobi National Park photo 16">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park17.jpg"
+alt="Nairobi National Park photo 17">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park18.jpg"
+alt="Nairobi National Park photo 18">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park19.jpg"
+alt="Nairobi National Park photo 19">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park20.jpg"
+alt="Nairobi National Park photo 20">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park21.jpg"
+alt="Nairobi National Park photo 21">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park22.jpg"
+alt="Nairobi National Park photo 22">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park23.jpg"
+alt="Nairobi National Park photo 23">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park24.jpg"
+alt="Nairobi National Park photo 24">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park25.jpg"
+alt="Nairobi National Park photo 25">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park26.jpg"
+alt="Nairobi National Park photo 26">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park27.jpg"
+alt="Nairobi National Park photo 27">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park28.jpg"
+alt="Nairobi National Park photo 28">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park29.jpg"
+alt="Nairobi National Park photo 29">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park30.jpg"
+alt="Nairobi National Park photo 30">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park31.jpg"
+alt="Nairobi National Park photo 31">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park32.jpg"
+alt="Nairobi National Park photo 32">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park33.jpg"
+alt="Nairobi National Park photo 33">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park34.jpg"
+alt="Nairobi National Park photo 34">
+</div>
+
+
+<div class="photo-card">
+<img src="images/nairobi-national-park35.jpg"
+alt="Nairobi National Park photo 35">
+</div>
+
 
 </div>
 
 
 
 <!-- =========================
-     NAIROBI CITY TOUR
-========================= -->
-
-<div class="place-card">
-
-<img
-src="images/nairobi-city.jpg"
-alt="Nairobi City"
->
-
-<div class="place-content">
-
-<h2>
-Nairobi City Tour
-</h2>
-
-<p>
-Discover Nairobi's landmarks, history,
-markets, architecture and modern city life.
-</p>
-
-<div class="place-links">
-
-<a
-href="nairobi-city-tour-gallery.html"
-class="gallery-link"
->
-View Gallery
-</a>
-
-<a
-href="booking.html?service=Nairobi%20City%20Tour"
-class="book-link"
->
-Book This Tour
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- =========================
-     CITY WALK
-========================= -->
-
-<div class="place-card">
-
-<img
-src="images/city-walk.jpg"
-alt="Nairobi City Walk"
->
-
-<div class="place-content">
-
-<h2>
-Nairobi City Walk
-</h2>
-
-<p>
-Walk through the heart of Nairobi and discover
-its history, culture, architecture and local life.
-</p>
-
-<div class="place-links">
-
-<a
-href="city-walk-gallery.html"
-class="gallery-link"
->
-View Gallery
-</a>
-
-<a
-href="booking.html?service=City%20Walk"
-class="book-link"
->
-Book This Walk
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-</div>
-
-</main>
-
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<p>
-© 2026 Stema Trans —
-Nairobi City Tours, Transfers & Guided Experiences
-</p>
-
-<p>
-Email:
-<a href="mailto:stemawastrans@gmail.com">
-stemawastrans@gmail.com
-</a>
-</p>
-
-</footer>
-
-
-</body>
-
-</html>
+     TOUR INFORMATION
+================
