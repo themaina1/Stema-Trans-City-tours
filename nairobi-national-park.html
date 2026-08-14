@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nairobi National Park Safari | Stema Trans</title>
+<title>Nairobi National Park Gallery | Stema Trans</title>
 
 <link rel="stylesheet" href="css/style.css">
 
@@ -13,308 +14,149 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f7f7f7;
+    background: #f5f5f5;
     color: #333;
 }
 
 /* =========================
-   TOUR HERO
+   PAGE
 ========================= */
 
-.tour-hero {
-    background: #b11226;
-    color: white;
+.gallery-page {
+    max-width: 1200px;
+    margin: 35px auto;
+    padding: 20px;
+}
+
+.gallery-title {
     text-align: center;
-    padding: 55px 20px;
+    color: #b11226;
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
-.tour-hero h1 {
-    margin: 0 0 15px;
-    font-size: 44px;
-}
-
-.tour-hero p {
-    max-width: 850px;
-    margin: auto;
-    font-size: 20px;
+.gallery-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 18px;
     line-height: 1.7;
 }
 
 /* =========================
-   MAIN CONTENT
+   BUTTONS
 ========================= */
 
-.tour-container {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
+.top-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 25px 0 35px;
 }
 
-/* =========================
-   IMAGE
-========================= */
-
-.tour-image {
-    width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    border-radius: 18px;
-    display: block;
-    margin-bottom: 35px;
-}
-
-/* =========================
-   DESCRIPTION
-========================= */
-
-.tour-description {
-    background: white;
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    margin-bottom: 35px;
-}
-
-.tour-description h2 {
-    color: #b11226;
-    margin-top: 0;
-}
-
-.tour-description p {
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-/* =========================
-   INFORMATION CARDS
-========================= */
-
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-    margin: 30px 0;
-}
-
-.info-card {
-    background: white;
-    padding: 25px 15px;
-    text-align: center;
-    border-radius: 14px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-}
-
-.info-card h3 {
-    color: #b11226;
-    margin-top: 0;
-}
-
-.info-card p {
-    margin-bottom: 0;
-    font-size: 17px;
-}
-
-/* =========================
-   BOOK NOW
-========================= */
-
-.main-book-button {
-    display: block;
-    width: fit-content;
-    margin: 30px auto 45px;
-    background: #b11226;
-    color: white;
-    text-decoration: none;
-    padding: 17px 45px;
-    border-radius: 8px;
-    font-size: 21px;
-    font-weight: bold;
-}
-
-.main-book-button:hover {
-    background: #870d1c;
-}
-
-/* =========================
-   PRICING
-========================= */
-
-.pricing-section {
-    background: white;
-    padding: 35px;
-    border-radius: 16px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    margin-bottom: 40px;
-}
-
-.pricing-section h2 {
-    text-align: center;
-    color: #b11226;
-    font-size: 32px;
-    margin-top: 0;
-}
-
-.pricing-note {
-    text-align: center;
-    font-size: 17px;
-    margin-bottom: 30px;
-}
-
-/* =========================
-   PRICE CARDS
-========================= */
-
-.price-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-}
-
-.price-card {
-    border: 2px solid #eee;
-    border-radius: 15px;
-    padding: 28px;
-    text-align: center;
-}
-
-.price-card h3 {
-    color: #b11226;
-    font-size: 25px;
-    margin-top: 0;
-}
-
-.price {
-    font-size: 30px;
-    font-weight: bold;
-    color: #b11226;
-    margin: 15px 0;
-}
-
-.price-card p {
-    font-size: 17px;
-    line-height: 1.6;
-}
-
-.book-vehicle {
+.top-btn {
     display: inline-block;
-    background: #b11226;
-    color: white;
-    text-decoration: none;
     padding: 14px 25px;
-    border-radius: 7px;
+    border-radius: 8px;
+    text-decoration: none;
     font-weight: bold;
-    margin-top: 10px;
+    font-size: 16px;
 }
 
-.book-vehicle:hover {
-    background: #870d1c;
+.back-btn {
+    background: #333;
+    color: white;
 }
 
-/* =========================
-   INCLUDED
-========================= */
-
-.details-box {
-    background: white;
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    margin-bottom: 40px;
-}
-
-.details-box h2 {
-    color: #b11226;
-}
-
-.details-box li {
-    margin-bottom: 12px;
-    font-size: 17px;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
+.book-btn {
     background: #b11226;
     color: white;
+}
+
+.top-btn:hover {
+    opacity: 0.85;
+}
+
+/* =========================
+   PHOTO GRID
+========================= */
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.photo-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.10);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 260px;
+    display: block;
+    object-fit: cover;
+}
+
+.photo-caption {
+    padding: 13px;
     text-align: center;
-    padding: 25px;
-    margin-top: 50px;
+    font-weight: bold;
+    color: #555;
 }
 
 /* =========================
    MOBILE
 ========================= */
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
 
-    .tour-hero {
-        padding: 40px 15px;
-    }
-
-    .tour-hero h1 {
-        font-size: 34px;
-    }
-
-    .tour-hero p {
-        font-size: 18px;
-    }
-
-    .tour-container {
-        padding: 0 14px;
-        margin-top: 25px;
-    }
-
-    .info-grid {
+    .photo-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .price-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .tour-description,
-    .pricing-section,
-    .details-box {
-        padding: 22px;
-    }
-
-    .main-book-button {
-        width: 90%;
-        text-align: center;
-        padding: 16px 10px;
-    }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 600px) {
 
-    .tour-hero h1 {
+    .gallery-page {
+        padding: 12px;
+        margin: 20px auto;
+    }
+
+    .gallery-title {
         font-size: 30px;
     }
 
-    .info-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
+    .gallery-intro {
+        font-size: 16px;
     }
 
-    .info-card {
-        padding: 20px 10px;
+    .photo-grid {
+        grid-template-columns: 1fr;
     }
 
-    .info-card h3 {
-        font-size: 17px;
+    .photo-card img {
+        height: 240px;
     }
 
-    .info-card p {
-        font-size: 15px;
+    .top-btn {
+        width: 90%;
+        text-align: center;
     }
+
 }
 
 </style>
+
 </head>
 
 <body>
+
 
 <!-- =========================
      HEADER
@@ -323,296 +165,690 @@ footer {
 <header>
 
     <div class="logo">
+
         <h1>STEMA TRANS</h1>
-        <p>City Tours, Transfers & Guided Experiences</p>
+
+        <p>
+            City Tours, Transfers & Guided Experiences
+        </p>
+
     </div>
 
+
     <nav>
+
         <a href="index.html">Home</a>
+
         <a href="about.html">About</a>
+
         <a href="tours.html">Tours</a>
+
         <a href="transfers.html">Transfers</a>
+
         <a href="rates.html">Rates</a>
+
         <a href="fleet.html">Fleet</a>
+
         <a href="gallery.html">Gallery</a>
+
         <a href="city-walks.html">City Walks</a>
+
         <a href="contact.html">Contact</a>
+
     </nav>
 
 </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
-
-<section class="tour-hero">
-
-    <h1>Nairobi National Park Safari</h1>
-
-    <p>
-        Experience the unique wildlife of Nairobi National Park,
-        one of the world's few national parks located next to a
-        capital city.
-    </p>
-
-</section>
-
 
 <!-- =========================
-     CONTENT
+     MAIN
 ========================= -->
 
-<main class="tour-container">
+<main class="gallery-page">
+
+
+<h1 class="gallery-title">
+Nairobi National Park
+</h1>
+
+
+<p class="gallery-intro">
+
+Explore some of the wildlife, landscapes and safari
+experiences you can discover during a Nairobi National
+Park game drive with Stema Trans.
+
+</p>
+
 
 
 <!-- =========================
-     IMAGE
+     BUTTONS
 ========================= -->
+
+<div class="top-buttons">
+
+    <!-- THIS RETURNS TO GALLERY.HTML -->
+
+    <a
+        href="gallery.html"
+        class="top-btn back-btn"
+    >
+        ← Back to Places
+    </a>
+
+
+    <!-- BOOKING -->
+
+    <a
+        href="booking.html?service=Nairobi%20National%20Park"
+        class="top-btn book-btn"
+    >
+        Book Nairobi National Park Tour
+    </a>
+
+</div>
+
+
+
+<!-- =========================
+     PHOTO GALLERY
+========================= -->
+
+<div class="photo-grid">
+
+
+<!-- 1 -->
+
+<div class="photo-card">
 
 <img
-    class="tour-image"
-    src="images/nairobi-national-park.jpg"
-    alt="Nairobi National Park Safari"
-    onerror="this.onerror=null;this.src='images/hero.jpg';"
+src="images/nairobi-national-park1.jpg"
+alt="Nairobi National Park wildlife"
+loading="lazy"
 >
 
+<div class="photo-caption">
+Nairobi National Park
+</div>
 
-<!-- =========================
-     DESCRIPTION
-========================= -->
-
-<section class="tour-description">
-
-    <h2>Discover Nairobi National Park</h2>
-
-    <p>
-        Enjoy a guided game drive through Nairobi National Park
-        with Stema Trans and discover wildlife, beautiful scenery
-        and the fascinating conservation story of Nairobi's
-        famous national park.
-    </p>
-
-    <p>
-        The park offers the unusual experience of seeing wildlife
-        against the backdrop of Nairobi's skyline. Depending on
-        the season and conditions, guests may encounter lions,
-        giraffes, zebras, buffaloes, rhinos, elands, warthogs,
-        hippos and many species of birds.
-    </p>
-
-</section>
+</div>
 
 
-<!-- =========================
-     TOUR INFORMATION
-========================= -->
+<!-- 2 -->
 
-<section class="info-grid">
+<div class="photo-card">
 
-    <div class="info-card">
-        <h3>Duration</h3>
-        <p>4–5 Hours</p>
-    </div>
-
-    <div class="info-card">
-        <h3>Group</h3>
-        <p>1–7 People</p>
-    </div>
-
-    <div class="info-card">
-        <h3>Departure</h3>
-        <p>Nairobi</p>
-    </div>
-
-    <div class="info-card">
-        <h3>Experience</h3>
-        <p>Guided Game Drive</p>
-    </div>
-
-</section>
-
-
-<!-- =========================
-     MAIN BOOK BUTTON
-========================= -->
-
-<a
-    class="main-book-button"
-    href="booking.html?service=Nairobi%20National%20Park"
+<img
+src="images/nairobi-national-park2.jpg"
+alt="Nairobi National Park wildlife"
+loading="lazy"
 >
-    BOOK THIS TOUR
-</a>
+
+<div class="photo-caption">
+Wildlife Experience
+</div>
+
+</div>
 
 
-<!-- =========================
-     PRICING
-========================= -->
+<!-- 4 -->
 
-<section class="pricing-section">
+<div class="photo-card">
 
-    <h2>Safari Transport Rates</h2>
-
-    <p class="pricing-note">
-        Transport charges are per vehicle.
-        Park and attraction entry fees are charged separately.
-    </p>
-
-
-    <div class="price-grid">
-
-
-        <!-- TOUR VAN -->
-
-        <div class="price-card">
-
-            <h3>Tour Van</h3>
-
-            <div class="price">
-                KES 8,500
-            </div>
-
-            <p>
-                Capacity: 1–7 passengers
-            </p>
-
-            <p>
-                Guided Nairobi National Park
-                safari transport.
-            </p>
-
-            <a
-                class="book-vehicle"
-                href="booking.html?service=Nairobi%20National%20Park&vehicle=Tour%20Van"
-            >
-                BOOK TOUR VAN
-            </a>
-
-        </div>
-
-
-        <!-- LAND CRUISER -->
-
-        <div class="price-card">
-
-            <h3>Land Cruiser</h3>
-
-            <div class="price">
-                KES 12,500
-            </div>
-
-            <p>
-                Capacity: 1–7 passengers
-            </p>
-
-            <p>
-                Comfortable safari vehicle
-                suitable for game viewing.
-            </p>
-
-            <a
-                class="book-vehicle"
-                href="booking.html?service=Nairobi%20National%20Park&vehicle=Land%20Cruiser"
-            >
-                BOOK LAND CRUISER
-            </a>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     WHAT TO EXPECT
-========================= -->
-
-<section class="details-box">
-
-    <h2>What to Expect</h2>
-
-    <ul>
-
-        <li>
-            Guided game drive through Nairobi National Park.
-        </li>
-
-        <li>
-            Opportunities to see wildlife in their natural
-            environment.
-        </li>
-
-        <li>
-            Professional Stema Trans driver/guide.
-        </li>
-
-        <li>
-            Comfortable transport from your Nairobi pickup point.
-        </li>
-
-        <li>
-            Opportunities for photography and wildlife viewing.
-        </li>
-
-        <li>
-            Flexible departure arrangements depending on
-            your booking.
-        </li>
-
-    </ul>
-
-</section>
-
-
-<!-- =========================
-     IMPORTANT INFORMATION
-========================= -->
-
-<section class="details-box">
-
-    <h2>Important Information</h2>
-
-    <ul>
-
-        <li>
-            Park entrance fees are not included in the transport
-            rate unless specifically stated.
-        </li>
-
-        <li>
-            Transport rates shown above are per vehicle,
-            not per passenger.
-        </li>
-
-        <li>
-            Please provide the number of passengers when booking.
-        </li>
-
-        <li>
-            Booking confirmation will be sent after your request
-            has been received.
-        </li>
-
-    </ul>
-
-</section>
-
-
-<!-- =========================
-     FINAL BOOK BUTTON
-========================= -->
-
-<a
-    class="main-book-button"
-    href="booking.html?service=Nairobi%20National%20Park"
+<img
+src="images/nairobi-national-park4.jpg"
+alt="Nairobi National Park"
+loading="lazy"
 >
-    BOOK YOUR NAIROBI SAFARI
-</a>
+
+<div class="photo-caption">
+Park Landscape
+</div>
+
+</div>
+
+
+<!-- 6 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park6.jpg"
+alt="Nairobi National Park wildlife"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Wildlife Viewing
+</div>
+
+</div>
+
+
+<!-- 7 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park7.jpg"
+alt="Nairobi National Park"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Safari Drive
+</div>
+
+</div>
+
+
+<!-- 8 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park8.jpg"
+alt="Nairobi National Park wildlife"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Wildlife
+</div>
+
+</div>
+
+
+<!-- 9 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park9.jpg"
+alt="Nairobi National Park"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Nairobi Safari
+</div>
+
+</div>
+
+
+<!-- 10 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park10.jpg"
+alt="Nairobi National Park wildlife"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Wildlife Experience
+</div>
+
+</div>
+
+
+<!-- 11 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park11.jpg"
+alt="Nairobi National Park"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Park Wildlife
+</div>
+
+</div>
+
+
+<!-- 14 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park14.jpg"
+alt="Nairobi National Park"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Nairobi National Park
+</div>
+
+</div>
+
+
+<!-- 15 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park15.jpg"
+alt="Nairobi National Park"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Safari Landscape
+</div>
+
+</div>
+
+
+<!-- 16 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park16.jpg"
+alt="Nairobi National Park wildlife"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Wildlife
+</div>
+
+</div>
+
+
+<!-- 17 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park17.jpg"
+alt="Nairobi National Park"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Safari Experience
+</div>
+
+</div>
+
+
+<!-- 18 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park18.jpg"
+alt="Nairobi National Park"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Park Scenery
+</div>
+
+</div>
+
+
+<!-- 19 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park19.jpg"
+alt="Nairobi National Park wildlife"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Wildlife Viewing
+</div>
+
+</div>
+
+
+<!-- 20 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park20.jpg"
+alt="Nairobi National Park"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Nairobi Safari
+</div>
+
+</div>
+
+
+<!-- 21 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park21.jpg"
+alt="Nairobi National Park wildlife"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Wildlife
+</div>
+
+</div>
+
+
+<!-- 22 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park22.jpg"
+alt="Nairobi National Park"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Park Experience
+</div>
+
+</div>
+
+
+<!-- 23 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park23.jpg"
+alt="Nairobi National Park"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Safari Drive
+</div>
+
+</div>
+
+
+<!-- 24 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park24.jpg"
+alt="Nairobi National Park wildlife"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Wildlife
+</div>
+
+</div>
+
+
+<!-- 25 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park25.jpg"
+alt="Nairobi National Park"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Nairobi National Park
+</div>
+
+</div>
+
+
+<!-- 26 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park26.jpg"
+alt="Nairobi National Park"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Park Landscape
+</div>
+
+</div>
+
+
+<!-- 28 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park28.jpg"
+alt="Nairobi National Park wildlife"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Wildlife Experience
+</div>
+
+</div>
+
+
+<!-- 29 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park29.jpg"
+alt="Nairobi National Park"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Safari
+</div>
+
+</div>
+
+
+<!-- 30 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park30.jpg"
+alt="Nairobi National Park"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Park Wildlife
+</div>
+
+</div>
+
+
+<!-- 31 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park31.jpg"
+alt="Nairobi National Park"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Nairobi Safari
+</div>
+
+</div>
+
+
+<!-- 32 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park32.jpg"
+alt="Nairobi National Park wildlife"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Wildlife Viewing
+</div>
+
+</div>
+
+
+<!-- 33 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park33.jpg"
+alt="Nairobi National Park"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Park Experience
+</div>
+
+</div>
+
+
+<!-- 34 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park34.jpg"
+alt="Nairobi National Park"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Safari Landscape
+</div>
+
+</div>
+
+
+<!-- 36 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park36.jpg"
+alt="Nairobi National Park"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Nairobi National Park
+</div>
+
+</div>
+
+
+<!-- 37 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park37.jpg"
+alt="Nairobi National Park wildlife"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Wildlife
+</div>
+
+</div>
+
+
+<!-- 38 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park38.jpg"
+alt="Nairobi National Park"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Safari Experience
+</div>
+
+</div>
+
+
+<!-- 39 -->
+
+<div class="photo-card">
+
+<img
+src="images/nairobi-national-park39.jpg"
+alt="Nairobi National Park"
+loading="lazy"
+>
+
+<div class="photo-caption">
+Park Wildlife
+</div>
+
+</div>
+
+
+</div>
+
+
+<!-- =========================
+     BOTTOM BUTTONS
+========================= -->
+
+<div class="top-buttons">
+
+    <a
+        href="gallery.html"
+        class="top-btn back-btn"
+    >
+        ← Back to Places
+    </a>
+
+
+    <a
+        href="booking.html?service=Nairobi%20National%20Park"
+        class="top-btn book-btn"
+    >
+        Book This Tour
+    </a>
+
+</div>
 
 
 </main>
+
 
 
 <!-- =========================
@@ -621,12 +857,13 @@ footer {
 
 <footer>
 
-    <p>
-        © 2026 Stema Trans — Nairobi City Tours,
-        Transfers & Guided Experiences
-    </p>
+<p>
+© 2026 Stema Trans — Nairobi City Tours,
+Transfers & Guided Experiences
+</p>
 
 </footer>
+
 
 </body>
 </html>
