@@ -1,182 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Nairobi National Park Gallery | Stema Trans</title>
 
-<link rel="stylesheet" href="css/style.css">
-
 <style>
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background: #f5f5f5;
     color: #333;
 }
 
-.gallery-page {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
-}
+/* HEADER */
 
-.gallery-page h1 {
+header {
+    background: #222;
+    color: white;
+    padding: 18px 15px;
     text-align: center;
-    color: #b11226;
-    font-size: 40px;
-    margin-bottom: 10px;
 }
 
-.gallery-intro {
-    max-width: 800px;
-    margin: 0 auto 35px;
-    text-align: center;
-    font-size: 18px;
-    line-height: 1.7;
+.logo h1 {
+    margin: 0;
+    color: #c1122f;
+    font-size: 28px;
 }
 
-/* BACK BUTTON */
+.logo p {
+    margin: 5px 0 15px;
+    font-size: 14px;
+}
 
-.back-button {
-    display: inline-block;
-    background: #333;
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+nav a {
     color: white;
     text-decoration: none;
-    padding: 12px 20px;
-    border-radius: 7px;
-    margin-bottom: 25px;
+    padding: 10px 12px;
     font-weight: bold;
 }
 
-.back-button:hover {
+nav a:hover {
+    color: #c1122f;
+}
+
+/* MAIN */
+
+.page {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 18px 60px;
+}
+
+h1 {
+    text-align: center;
+    color: #b11226;
+    font-size: 40px;
+    margin: 25px 0 15px;
+}
+
+.intro {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    text-align: center;
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+/* BUTTONS */
+
+.buttons {
+    max-width: 650px;
+    margin: 0 auto 40px;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    padding: 17px;
+    margin: 14px 0;
+    border-radius: 10px;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.back-button {
+    background: #333;
+    color: white;
+}
+
+.book-button {
     background: #b11226;
+    color: white;
+}
+
+.button:hover {
+    opacity: 0.9;
 }
 
 /* GALLERY */
 
-.park-gallery {
+.gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 24px;
 }
 
-.gallery-item {
+.photo-card {
     background: white;
-    border-radius: 12px;
+    border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.12);
 }
 
-.gallery-item img {
+.photo-card img {
     display: block;
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    height: 260px;
+
+    /* IMPORTANT:
+       Shows the entire photograph */
+    object-fit: contain;
+
+    background: #eee;
 }
 
-/* BOOKING */
-
-.booking-box {
-    background: white;
-    margin-top: 45px;
-    padding: 35px 25px;
-    border-radius: 15px;
+.photo-title {
+    padding: 15px;
     text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.10);
-}
-
-.booking-box h2 {
-    color: #b11226;
-    margin-top: 0;
-    font-size: 30px;
-}
-
-.booking-box p {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-.book-button {
-    display: inline-block;
-    background: #b11226;
-    color: white;
-    text-decoration: none;
-    padding: 15px 35px;
-    border-radius: 8px;
-    font-size: 18px;
     font-weight: bold;
-    margin-top: 15px;
+    font-size: 17px;
+    color: #555;
 }
 
-.book-button:hover {
-    background: #870d1c;
+/* FOOTER */
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 30px;
 }
 
-/* MOBILE */
+footer p {
+    margin: 0;
+}
 
-@media (max-width: 800px) {
+/* TABLET */
 
-    .park-gallery {
+@media (max-width: 900px) {
+
+    .gallery {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    h1 {
+        font-size: 34px;
+    }
 }
+
+/* PHONE */
 
 @media (max-width: 600px) {
 
-    .gallery-page {
-        margin: 20px auto;
-        padding: 12px;
+    .page {
+        padding: 20px 12px 40px;
     }
 
-    .gallery-page h1 {
-        font-size: 30px;
+    h1 {
+        font-size: 31px;
+        line-height: 1.25;
     }
 
-    .gallery-intro {
+    .intro {
         font-size: 17px;
     }
 
-    .park-gallery {
+    .gallery {
         grid-template-columns: 1fr;
-        gap: 18px;
+        gap: 20px;
     }
 
-    .gallery-item img {
-        height: 250px;
+    .photo-card img {
+        height: 240px;
     }
 
+    .button {
+        font-size: 17px;
+    }
 }
 
 </style>
-
 </head>
 
-
 <body>
-
-
-<!-- HEADER -->
 
 <header>
 
     <div class="logo">
-
         <h1>STEMA TRANS</h1>
-
-        <p>
-            City Tours, Transfers & Guided Experiences
-        </p>
-
+        <p>Nairobi City Tours, Transfers & Guided Experiences</p>
     </div>
-
 
     <nav>
 
@@ -194,7 +234,7 @@ body {
 
         <a href="gallery.html">Gallery</a>
 
-        <a href="city-walks.html">City Walks</a>
+        <a href="citywalks.html">City Walks</a>
 
         <a href="contact.html">Contact</a>
 
@@ -203,320 +243,369 @@ body {
 </header>
 
 
+<main class="page">
 
-<!-- MAIN PAGE -->
+<h1>Nairobi National Park Gallery</h1>
 
-<main class="gallery-page">
+<p class="intro">
 
+Explore Nairobi National Park through our collection of
+wildlife, landscapes and game-drive photographs.
 
-<a
-    href="gallery.html"
-    class="back-button"
->
-← Back to Places
-</a>
-
-
-<h1>
-Nairobi National Park Gallery
-</h1>
-
-
-<p class="gallery-intro">
-
-Explore Nairobi National Park through our collection
-of photographs. See the landscapes, wildlife and
-game-drive experience available with Stema Trans.
+See the wildlife and scenery available on a Nairobi National
+Park experience with Stema Trans.
 
 </p>
 
 
+<div class="buttons">
 
-<!-- PHOTO GALLERY -->
+    <!-- DIRECT LINK - NOT BROWSER HISTORY -->
 
-<div class="park-gallery">
+    <a href="gallery.html" class="button back-button">
+        ← Back to Places
+    </a>
+
+    <!-- DIRECT BOOKING LINK -->
+
+    <a href="booking.html?service=Nairobi%20National%20Park%20Tour"
+       class="button book-button">
+        Book Nairobi National Park Tour
+    </a>
+
+</div>
 
 
-<div class="gallery-item">
+<section class="gallery">
+
+
+<!-- 1 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park1.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Nairobi National Park</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 2 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park2.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park wildlife">
+<div class="photo-title">Nairobi National Park Wildlife</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 3 -->
+
+<div class="photo-card">
+<img src="images/nairobi-national-park3.jpg"
+     alt="Nairobi National Park wildlife">
+<div class="photo-title">Wildlife Experience</div>
+</div>
+
+
+<!-- 4 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park4.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Park Landscape</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 5 -->
+
+<div class="photo-card">
+<img src="images/nairobi-national-park5.jpg"
+     alt="Nairobi National Park">
+<div class="photo-title">Nairobi National Park</div>
+</div>
+
+
+<!-- 6 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park6.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Wildlife Viewing</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 7 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park7.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Game Drive</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 8 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park8.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Park Scenery</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 9 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park9.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Wildlife</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 10 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park10.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Nairobi National Park</div>
 </div>
 
 
-<div class="gallery-item">
-<img src="images/nairobi-national-park11.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+<!-- 12 -->
+
+<div class="photo-card">
+<img src="images/nairobi-national-park12.jpg"
+     alt="Nairobi National Park">
+<div class="photo-title">Wildlife Experience</div>
 </div>
 
 
-<div class="gallery-item">
-<img src="images/nairobi-national-park14.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+<!-- 13 -->
+
+<div class="photo-card">
+<img src="images/nairobi-national-park13.jpg"
+     alt="Nairobi National Park">
+<div class="photo-title">Park Wildlife</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 15 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park15.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Nairobi National Park</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 16 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park16.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Wildlife</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 17 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park17.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Game Drive</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 18 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park18.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Park Scenery</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 19 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park19.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Wildlife Viewing</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 20 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park20.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Nairobi National Park</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 21 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park21.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Park Wildlife</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 22 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park22.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Wildlife Experience</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 23 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park23.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Game Drive</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 24 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park24.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Park Landscape</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 25 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park25.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Nairobi National Park</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 26 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park26.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Wildlife</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 28 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park28.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Park Scenery</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 29 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park29.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Wildlife Viewing</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 30 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park30.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Game Drive</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 31 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park31.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Nairobi National Park</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 32 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park32.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Park Wildlife</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 33 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park33.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Wildlife Experience</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 34 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park34.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Park Landscape</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 36 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park36.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Nairobi National Park</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 37 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park37.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Wildlife</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 38 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park38.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Game Drive</div>
 </div>
 
 
-<div class="gallery-item">
+<!-- 39 -->
+
+<div class="photo-card">
 <img src="images/nairobi-national-park39.jpg"
-     alt="Nairobi National Park"
-     loading="lazy">
+     alt="Nairobi National Park">
+<div class="photo-title">Nairobi National Park</div>
 </div>
 
-
-</div>
-
-
-
-<!-- BOOKING SECTION -->
-
-<section class="booking-box">
-
-<h2>
-Ready to Experience Nairobi National Park?
-</h2>
-
-<p>
-
-Join Stema Trans for a guided Nairobi National Park
-game drive. Choose your preferred vehicle and
-submit your booking request.
-
-</p>
-
-
-<a
-    href="booking.html?service=Nairobi%20National%20Park"
-    class="book-button"
->
-Book Nairobi National Park Tour
-</a>
 
 </section>
-
 
 </main>
 
 
-
-<!-- FOOTER -->
-
 <footer>
 
 <p>
-
-© 2026 Stema Trans —
-Nairobi City Tours, Transfers & Guided Experiences
-
+© 2026 Stema Trans — Nairobi City Tours, Transfers & Guided Experiences
 </p>
 
 </footer>
 
-
 </body>
-
 </html>
